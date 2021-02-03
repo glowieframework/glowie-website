@@ -1,0 +1,55 @@
+section.index-banner{
+    background-color: $soft;
+    padding-bottom: 150px;
+    
+    img{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 36px;
+        color: $strong;
+    }
+
+    h5{
+        font-weight: 300;
+    }
+
+    .button{
+        display: inline-block;
+        background-color: $primary;
+        color: white;
+        margin-top: 20px;
+        padding: 10px 25px;
+        text-decoration: none;
+        border: 1px solid $primary;
+        @include transitionAll();
+
+        &:hover{
+            background-color: $strong;
+        }
+        
+        &.docs{
+            margin-left: 10px;
+            background-color: white;
+            color: $primary;
+
+            &:hover{
+                background-color: #f3f3f3;
+            }
+        }
+
+    }
+
+    .fa-ul{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        flex-wrap: wrap;
+
+        li{
+            width: 50%;
+            color: $strong;
+        }
+    }
+}

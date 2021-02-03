@@ -1,0 +1,21 @@
+section.footer{
+    background-color: $primary;
+    color: white;
+    font-size: 14px;
+    padding: 20px 0;
+
+    a{
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px dotted white;
+        @include transitionAll();
+
+        &:hover{
+            color: $soft;
+        }
+    }
+
+    i{
+        color: $soft;
+    }
+}
