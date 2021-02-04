@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" onclick="javascript:toggleMobileMenu();" class="mobile-menu-button"><i class="fas fa-bars"></i></a>

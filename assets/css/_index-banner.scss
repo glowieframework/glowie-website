@@ -52,4 +52,39 @@ section.index-banner{
             color: $strong;
         }
     }
+
+    @media (max-width: 375px){
+         .button{
+            width: 100%;
+            text-align: center;
+            max-width: 300px;
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
+    @media (max-width: 575px){
+        .fa-ul{
+            li{
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 991px){
+        padding: 30px 0;
+
+        h1{
+            font-size: 26px;
+        }
+
+        h5{
+            font-size: 16px;
+        }
+
+        .img-banner{
+            display: none;
+        }
+    }    
 }

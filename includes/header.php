@@ -5,25 +5,22 @@
                 <div class="col-12 col-lg-3">
                     <a href="./"><img src="assets/images/logo.png" class="logo"></a>
                 </div>
-                <div class="col-12 col-lg-9">
+                <div class="col-12 col-lg-9 menu-links">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
                             <a href="./" class="nav-link <?= $page == 'home' ? 'active' : '' ?>">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="downloads" class="nav-link <?= $page == 'download' ? 'active' : '' ?>">Download</a>
+                            <a href="downloads" class="nav-link <?= $page == 'download' ? 'active' : '' ?>">Downloads</a>
                         </li>
                         <li class="nav-item">
                             <a href="docs" class="nav-link <?= $page == 'docs' ? 'active' : '' ?>">Docs</a>
                         </li>
                         <li class="nav-item">
-                            <a href="projects" class="nav-link <?= $page == 'projects' ? 'active' : '' ?>">Projects</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="https://github.com/glowieframework" target="_blank" class="nav-link">Source</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://glowie.forumeiros.com" target="_blank" class="nav-link">Support</a>
+                            <a href="https://github.com/glowieframework/glowie/discussions" target="_blank" class="nav-link">Support</a>
                         </li>
                     </ul>
                 </div>

@@ -65,6 +65,25 @@ section.header section.menu .logo {
   height: 50px;
 }
 
+@media (max-width: 991px) {
+  section.header {
+    min-height: auto;
+  }
+  section.header section.menu {
+    padding: 30px 0;
+  }
+  section.header .logo {
+    display: block;
+    margin: auto;
+  }
+  section.header .shape-divider {
+    display: none;
+  }
+  section.header .menu-links {
+    display: none;
+  }
+}
+
 section.index-banner {
   background-color: #fcecf3;
   padding-bottom: 150px;
@@ -124,6 +143,38 @@ section.index-banner .fa-ul {
 section.index-banner .fa-ul li {
   width: 50%;
   color: #ec1c64;
+}
+
+@media (max-width: 375px) {
+  section.index-banner .button {
+    width: 100%;
+    text-align: center;
+    max-width: 300px;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 575px) {
+  section.index-banner .fa-ul li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  section.index-banner {
+    padding: 30px 0;
+  }
+  section.index-banner h1 {
+    font-size: 26px;
+  }
+  section.index-banner h5 {
+    font-size: 16px;
+  }
+  section.index-banner .img-banner {
+    display: none;
+  }
 }
 
 section.index-separator {
@@ -204,6 +255,31 @@ section.index-separator .card-body i {
   margin-bottom: 30px;
 }
 
+@media (max-width: 991px) {
+  section.index-separator .card {
+    margin: 10px 0;
+  }
+}
+
+a.mobile-menu-button {
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background-color: #ed578b;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 15px;
+  z-index: 2;
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  a.mobile-menu-button {
+    display: none;
+  }
+}
+
 section.footer {
   background-color: #ed578b;
   color: white;
@@ -237,6 +313,53 @@ section.docs-header h1 {
   color: #ec1c64;
 }
 
+section.docs-header a {
+  color: #ec1c64;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  section.docs-header {
+    padding: 30px 0;
+  }
+  section.docs-header h1 {
+    font-size: 30px;
+  }
+}
+
 section.docs {
   padding: 30px 0;
+}
+
+section.docs a {
+  color: #ed578b;
+}
+
+section.docs h1 {
+  font-weight: 500;
+  font-size: 32px;
+  color: #ed578b;
+  margin-bottom: 30px;
+}
+
+section.docs h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+section.docs pre {
+  background-color: #fafafa;
+  padding: 10px;
+  font-family: 'Lucida Console', monospace !important;
+}
+
+section.docs pre * {
+  font-family: 'Lucida Console', monospace !important;
+}
+
+@media (max-width: 991px) {
+  section.docs h1 {
+    font-size: 26px;
+  }
 }

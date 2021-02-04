@@ -6,8 +6,54 @@ section.docs-header{
         font-size: 36px;
         color: $strong;
     }
+
+    a{
+        color: $strong;
+        text-decoration: none;
+    }
+
+    @media (max-width: 991px){
+        padding: 30px 0;
+
+        h1{
+            font-size: 30px;
+        }
+    }
 }
 
 section.docs{
     padding: 30px 0;
+
+    a{
+        color: $primary;
+    }
+
+    h1{
+        font-weight: 500;
+        font-size: 32px;
+        color: $primary;
+        margin-bottom: 30px;
+    }
+    
+    h3{
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    pre{
+        background-color: #fafafa;
+        padding: 10px;
+        font-family: 'Lucida Console', monospace !important;
+        
+        *{
+            font-family: 'Lucida Console', monospace !important;
+        }
+    }
+
+    @media (max-width: 991px){
+        h1{
+            font-size: 26px;
+        }
+    }
 }

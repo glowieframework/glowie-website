@@ -69,4 +69,10 @@ section.index-separator{
             margin-bottom: 30px;
         }
     }
+
+    @media (max-width: 991px){
+        .card{
+            margin: 10px 0;
+        }
+    }
 }

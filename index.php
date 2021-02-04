@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php include 'includes/header.php';?>
+        <?php include 'includes/mobile-menu.php';?>
         <section class="index-banner">
             <div class="container">
                 <div class="row align-items-end">
@@ -19,10 +20,10 @@
                             <li><span class="fa-li"><i class="fas fa-check"></i></span>Tiny blueprint</li>
                             <li><span class="fa-li"><i class="fas fa-check"></i></span>Flexible and scalable</li>
                         </ul>
-                        <a class="button" href="download">Get Started</a>
+                        <a class="button" href="downloads">Get Started</a>
                         <a class="button docs" href="docs">Documentation</a>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6 img-banner">
                         <img src="assets/images/banner.png">
                     </div>
                 </div>
@@ -34,7 +35,7 @@
                 <h5>Forget about those fancy frameworks with thousands of useless functions and classes with stuff you will never use.
                 Glowie is packed with only what you need for your application to run smoothly.</h5>
                 <div class="row mt-5">
-                    <div class="col-12 col-lg-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-route"></i>
@@ -42,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-database"></i>
@@ -50,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-check-circle"></i>
@@ -58,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-cloud-upload-alt"></i>
@@ -67,8 +68,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-12 col-lg-3">
+                <div class="row mt-lg-4">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-globe-americas"></i>
@@ -76,7 +77,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-language"></i>
@@ -84,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-users"></i>
@@ -92,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-body">
                                 <i class="fas fa-cogs"></i>
@@ -107,7 +108,7 @@
             <div class="container text-center">
                 <h1>Ready to create something awesome?</h1>
                 <h5>You are a few steps from the best programming experience you'll ever have.</h5>
-                <a class="button" href="download">Get Started</a>
+                <a class="button" href="downloads">Get Started</a>
                 <a class="button docs" href="docs">Documentation</a>
             </div>
         </section>
