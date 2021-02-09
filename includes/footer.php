@@ -1,4 +1,4 @@
-<section class="footer">
+<footer>
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-6 text-center text-sm-left">
@@ -9,4 +9,5 @@
             </div>
         </div>
     </div>
-</section>
+</footer>
+<script src="assets/js/glowie.js"></script>

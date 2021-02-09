@@ -1,0 +1,67 @@
+﻿section.error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: $soft;
+    color: white;
+    text-align: center;
+    text-align: center;
+    padding: 20px;
+
+    img{
+        height: 400px;
+        display: block;
+        margin: auto;
+    }
+
+    h3{
+        font-size: 22px;
+        font-weight: 500;
+        color: $primary;
+        margin: 0 auto 30px auto;
+        max-width: 350px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .button{
+        display: block;
+        background-color: $primary;
+        color: white;
+        margin: 20px auto 0 auto;
+        max-width: 150px;
+        padding: 10px 25px;
+        text-decoration: none;
+        border: 1px solid $primary;
+        @include transitionAll();
+
+        &:hover{
+            background-color: $strong;
+        }
+    }
+
+    .attrib{
+        margin-top: 20px;
+        font-size: 12px;
+        display: block;
+        color: dimgray;
+    }
+
+    @media (max-width: 768px){
+        img{
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 489px){
+        img{
+            height: 200px;
+        }
+
+        h3{
+            font-size: 18px;
+        }
+    }
+}

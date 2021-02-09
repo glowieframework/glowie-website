@@ -6,7 +6,7 @@ You can handle parameters from any kind of request directly from a controller, w
 
 Every property returns an object with each property being a request key.
 
-_Example_\
+_Example_
 **form view**
 ```html
 <form method="post" action="form/send">

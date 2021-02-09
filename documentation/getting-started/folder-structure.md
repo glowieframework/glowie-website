@@ -6,32 +6,29 @@ Here you will understand what every folder means and how your application is org
 ### App folder
 The `app` folder has everything related to your application. The folders within this folder are:
 
-**assets**\
-All your application assets should be inside this folder. CSS and JS files, images, fonts and other public frontend files must be stored here.
+**config**
+Your application environment and routing configuration files (see [App configuration](docs/getting-started/app-configuration)).
 
-**config**\
-Your application environment and routing configuration files (see [[App configuration|App configuration]]).
-
-**controllers**\
+**controllers**
 Application controllers.
 
-**languages**\
+**languages**
 Application internationalization configs.
 
-**models**\
+**models**
 Application database models.
 
-**uploads**\
-Designated folder for storing uploaded files, if applicable.
+**public**
+Application public accessible folder. All your application assets and public frontend files must be stored here.
 
-**views**\
+**views**
 All your application views and templates.
 
 ### Library folder
 The `library` folder stores everything related to the system core of your application. The folders within this folder are:
 
-**core**\
+**core**
 Glowie core system. Do not edit anything in this folder!
 
-**plugins**\
-Application third-party plugins are stored here (see [[Plugins|Plugins]]).
+**plugins**
+Application third-party plugins are stored here (see [Plugins](docs/components/plugins)).

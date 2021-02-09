@@ -1,10 +1,12 @@
+# App configuration
+
 After installing Glowie into your server, you must configure your application before starting.
 
 ### Config environments
 Glowie allows you to have multiple configuration environments for different types of scenarios. This means you just need to edit a single file while switching from development to a production environment and vice-versa. You can also create as many environments as you want.
 
 ### Setting the active environment
-You can set the current active environment by editing `GLOWIE_ENV` setting in `app/.htaccess`.
+You can set the current active environment by editing `GLOWIE_ENV` setting in `app/public/.htaccess`.
 
 _Example_
 ```apache
@@ -19,8 +21,8 @@ Before starting, you must rename `app/config/Config.example.php` to `app/config/
 
 Available configurations are:
 
-**app_folder**\
-The folder (relative to the domain URL) where your app will run from. If your app runs in the root folder, leave this empty. If it runs in a subfolder, specify its path.
+**app_folder**
+The folder (relative to the domain URL) where your app will run from. If your app runs in the root folder, leave this empty. If it runs in a subfolder, specify its path with trailing slashes.
 
 _Example_
 ```php
@@ -28,23 +30,23 @@ _Example_
 'app_folder' => '/foo/'
 ```
 
-**timezone**\
-Timezone to use with PHP `date` functions. Must be a valid PHP timezone.
+**timezone**
+Timezone to use with PHP `date()` functions. Must be a valid PHP timezone.
 
 _Example_
 ```php
-'timezone' => 'America/Sao_Paulo';
+'timezone' => 'America/Sao_Paulo'
 ```
 
-**error_reporting**\
-The error reporting level for PHP.
+**error_reporting**
+The error reporting level for PHP exceptions.
 
 _Example_
 ```php
 'error_reporting' => E_ALL;
 ```
 
-**api_key**\
+**api_key**
 Key to use with encrypting functions. Be sure to use a strong key.
 
 _Example_
@@ -52,7 +54,7 @@ _Example_
 'api_key' => 'Rj1UQHJfajlLKGN1WjhQYXBcSy4='
 ```
 
-**api_token**\
+**api_token**
 Token to use with encrypting functions (along with API key). Be sure to use a strong key.
 
 _Example_
@@ -60,8 +62,8 @@ _Example_
 'api_token' => 'ckVdU3g3fkQmS0h0KyotTV1YdSs='
 ```
 
-**database**\
-Database connection settings (if applicable). Must be an associative array with the following properties:
+**database**
+Database connection settings (if applicable). Must be an associative **array** with the following properties:
 
 - **host** - Database host URL.
 - **username** - Username to use while connecting to the database.
@@ -77,5 +79,5 @@ _Example_
     'password' => '123',
     'db' => 'glowie',
     'port' => 3306
-];
+]
 ```

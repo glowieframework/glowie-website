@@ -4,7 +4,7 @@ Actions are methods from a controller that organizes the way every request is ha
 _Example_: You have `ProductsController`, a controller that is responsible for organizing a product catalog from an ecommerce website. Within this controller you need to have specific actions for each functionality needed, like `listProductsAction()`, `addProductAction()`, `editProductAction()` and `deleteProductAction()`.
 
 ### Creating actions
-In order to create an action inside a controller, you must create a new **public function** in the desired controller file stored into `app/controllers`. Function name must end with "Action".
+In order to create an action inside a controller, you must create a new **public function** in the desired controller file stored into `app/controllers`. Function name must end with "**Action**".
 
 _Example_
 ```php

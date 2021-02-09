@@ -1,4 +1,4 @@
-section.footer{
+footer{
     background-color: $primary;
     color: white;
     font-size: 14px;
@@ -6,12 +6,12 @@ section.footer{
 
     a{
         color: white;
-        text-decoration: none;
         border-bottom: 1px dotted white;
         @include transitionAll();
 
         &:hover{
             color: $soft;
+            text-decoration: none;
         }
     }
 

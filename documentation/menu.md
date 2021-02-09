@@ -1,8 +1,4 @@
-Welcome to Glowie Framework documentation.
-Here you will find everything about how to start using Glowie to create awesome applications and dynamic websites.
-
-Let's begin!
-
+﻿
 ### Getting started
 - [Requirements](docs/getting-started/requirements)
 - [Installation](docs/getting-started/installation)
@@ -26,9 +22,9 @@ Let's begin!
 - [Mastering Kraken](docs/forms-and-data/mastering-kraken)
 
 ### Extra
-- [Uploader](docs/extra/uploader)
-- [Babel](docs/extra/babel)
-- [Crawler](docs/extra/crawler)
+- [File uploads](docs/extra/file-uploads)
+- [Internationalization](docs/extra/internationalization)
+- [HTTP requests](docs/extra/http-requests)
 - [Util](docs/extra/util)
 - [Objectify](docs/extra/objectify)
 - [Plugins](docs/extra/plugins)

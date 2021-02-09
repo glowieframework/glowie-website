@@ -1,0 +1,189 @@
+section.index-banner{
+    background-color: $soft;
+    padding-bottom: 150px;
+    
+    img{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 36px;
+        color: $strong;
+    }
+
+    h5{
+        font-weight: 300;
+    }
+
+    .button{
+        display: inline-block;
+        background-color: $primary;
+        color: white;
+        margin-top: 20px;
+        padding: 10px 25px;
+        text-decoration: none;
+        border: 1px solid $primary;
+        @include transitionAll();
+
+        &:hover{
+            background-color: $strong;
+        }
+        
+        &.docs{
+            margin-left: 10px;
+            background-color: white;
+            color: $primary;
+
+            &:hover{
+                background-color: #f3f3f3;
+            }
+        }
+
+    }
+
+    .fa-ul{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        flex-wrap: wrap;
+
+        li{
+            width: 50%;
+            color: $strong;
+        }
+    }
+
+    @media (max-width: 375px){
+         .button{
+            width: 100%;
+            text-align: center;
+            max-width: 300px;
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
+    @media (max-width: 575px){
+        .fa-ul{
+            li{
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 991px){
+        padding: 30px 0;
+
+        h1{
+            font-size: 26px;
+        }
+
+        h5{
+            font-size: 16px;
+        }
+
+        .img-banner{
+            display: none;
+        }
+    }    
+}
+
+section.index-separator{
+    padding: 60px 0;
+
+    .button{
+        display: inline-block;
+        background-color: $primary;
+        color: white;
+        margin-top: 20px;
+        padding: 10px 25px;
+        text-decoration: none;
+        border: 1px solid $primary;
+        @include transitionAll();
+
+        &:hover{
+            background-color: $strong;
+        }
+        
+        &.docs{
+            margin-left: 10px;
+            background-color: white;
+            color: $primary;
+
+            &:hover{
+                background-color: #f3f3f3;
+            }
+        }
+    }
+
+    h1{
+        font-size: 36px;
+        text-align: center;
+    }
+
+    &.background{
+        background-color: $soft;
+
+        h1{
+            color: $strong;
+        }
+    }
+
+    h5{
+        color: dimgray;
+        font-weight: 300;
+        font-size: 18px;
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .card{
+        @include transitionAll();
+        cursor: pointer;
+        &:hover{
+            border-color: #c27a93;
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
+        }
+    }
+
+    .card-body{
+        text-align: center;
+        padding: 30px 10px;
+        
+        i{
+            color: $strong;
+            font-size: 40px;
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 375px){
+         .button{
+            max-width: 300px;
+            display: block;
+            width: 100%;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
+    @media (max-width: 991px){
+        padding: 30px 0;
+
+        h1{
+            font-size: 26px;
+        }
+
+        h5{
+            font-size: 16px;
+        }
+
+        .card{
+            margin: 10px 0;
+        }
+    }
+}

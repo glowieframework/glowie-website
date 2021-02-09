@@ -8,13 +8,22 @@ $strong: #ec1c64;
     transition: .3s all ease;
 }
 
+body{
+    background-color: $primary;
+}
+
+main{
+    background-color: white;
+}
+
 *{
     font-family: 'Montserrat', sans-serif;
 }
 
 @import "header";
-@import "index-banner";
-@import "index-separator";
+@import "index";
 @import "mobile-menu";
 @import "footer";
 @import "docs";
+@import "downloads";
+@import "error";
