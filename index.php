@@ -1,7 +1,7 @@
 ﻿<?php $page = 'home'; ?>
 <html>
     <head>
-        <title>Glowie Framework</title>
+        <title>Glowie Framework | Powerful and lightweight PHP framework</title>
         <?php include 'includes/head.php';?>
     </head>
     <body>
