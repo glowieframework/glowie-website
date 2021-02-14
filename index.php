@@ -1,7 +1,11 @@
-﻿<?php $page = 'home'; ?>
+<?php 
+    $page = 'home';
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = dirname(__FILE__);
+?>
 <html>
     <head>
-        <title>Glowie Framework | Powerful and lightweight PHP framework</title>
+        <title>Glowie | Powerful and lightweight PHP framework</title>
         <?php include 'includes/head.php';?>
     </head>
     <body>
@@ -16,7 +20,7 @@
                             websites the easiest way</h5>
                             <ul class="fa-ul">
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Fast and easy to setup</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>No command line</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>On-the-fly updates</li>
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Tiny blueprint</li>
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Flexible and scalable</li>
                             </ul>

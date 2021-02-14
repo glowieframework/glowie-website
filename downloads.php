@@ -1,7 +1,11 @@
-﻿<?php $page = 'downloads'; ?>
+<?php 
+    $page = 'downloads';
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = dirname(__FILE__);
+?>
 <html>
     <head>
-        <title>Downloads | Glowie Framework</title>
+        <title>Downloads | Glowie</title>
         <?php include 'includes/head.php';?>
     </head>
     <body>
@@ -13,8 +17,8 @@
                     <div class="row">
                         <div class="col-12 col-md-6 align-items-stretch">
                             <div class="box">
-                                <h3>Glowie Framework <strong>(Stable)</strong></h3>
-                                Stable version is comming soon.<br><br>
+                                <h3>Glowie <strong>(Stable)</strong></h3>
+                                Stable version is coming soon.<br><br>
                                 <a href="docs/getting-started/installation" class="link">&bull; Install guide</a><br>
                                 <a href="https://github.com/glowieframework/glowie/issues" target="_blank" class="link">&bull; Report bugs</a><br>
                                 <a class="download disabled">Coming soon</a>
@@ -22,11 +26,11 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="box">
-                                <h3>Glowie Framework <strong>(Alpha)</strong></h3>
-                                Current version <strong>v0.1-alpha</strong> for PHP <strong>7.4.9</strong> or higher.<br><br>
+                                <h3>Glowie <strong>(Development)</strong></h3>
+                                Current version <strong>dev-main</strong> for PHP <strong>7.4.9</strong> or higher.<br><br>
                                 <a href="docs/getting-started/installation" class="link">&bull; Install guide</a><br>
                                 <a href="https://github.com/glowieframework/glowie/issues" target="_blank" class="link">&bull; Report bugs</a><br>
-                                <a href="https://github.com/glowieframework/glowie/releases/tag/v0.1-alpha" target="_blank" class="download">Download</a>
+                                <a href="https://github.com/glowieframework/glowie/archive/main.zip" target="_blank" class="download">Download</a>
                             </div>
                         </div>
                     </div>
@@ -35,8 +39,8 @@
             <section class="downloads-changelog">
                 <div class="container">
                     <h1>Changelog</h1>
-                    <h4>v0.1-alpha</h4>
-                    &bull; Initial alpha release
+                    <h4>dev-main</h4>
+                    &bull; Initial development release
                 </div>
             </section>
         </main>

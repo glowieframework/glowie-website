@@ -1,5 +1,7 @@
 <?php
     $page = 'docs';
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = dirname(__FILE__);
     include 'includes/Parsedown.php';
     $Parsedown = new Parsedown();
     $Parsedown->setBreaksEnabled(true);
@@ -7,7 +9,7 @@
         $file = 'documentation/home.md';
     }else{
         $file = 'documentation/' . trim(strtolower($_GET['route'])) . '.md';
-        if(!file_exists($file)) header('Location: https://glowie.tk/docs');
+        if(!file_exists($file)) header('Location: https://glowie.tk/404');
     }
     $content = file_get_contents($file);
     $menu = file_get_contents('documentation/menu.md');
@@ -15,7 +17,7 @@
 ?>
 <html>
     <head>
-        <title><?=$title?> | Glowie Framework Documentation</title>
+        <title><?=$title?> | Glowie Documentation</title>
         <?php include 'includes/head.php';?>
     </head>
     <body>
@@ -26,11 +28,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-9">
-                            <?=str_replace(['<pre><code class="language-php">', '<pre><code class="language-html">'], ['<pre><code class="prettyprint language-php">', '<pre><code class="prettyprint language-php">'], $Parsedown->text($content)); ?>
+                            <?=str_replace(['<pre><code class="language-php">', '<pre><code class="language-html">'], ['<pre><code class="prettyprint language-php">', '<pre><code class="prettyprint language-html">'], $Parsedown->text($content)); ?>
                         </div>
                         <div class="col-12 col-lg-3">
                             <div class="menu">
-                                <?=str_replace('<p>﻿</p>', '', $Parsedown->text($menu)); ?>
+                                <?=$Parsedown->text($menu); ?>
                             </div>
                         </div>
                     </div>

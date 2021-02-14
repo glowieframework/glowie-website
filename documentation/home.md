@@ -1,8 +1,8 @@
 # Home
 
-Welcome to Glowie Framework documentation.
+Welcome to Glowie documentation.
 
-Here you will find everything about how to start using Glowie to create awesome applications and dynamic websites.
+Here you will find everything about how to start using this powerful framework to create awesome applications and dynamic websites.
 
 Let's begin!
 <br>

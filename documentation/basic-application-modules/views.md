@@ -40,12 +40,10 @@ $this->renderView('index', ['name' => 'Glowie']);
 
 **Note:** some parameter names are reserved and should not be used. Invalid names are: `view`, `template` and `params`. These variables are used internally inside `$this->renderView()` function scope, so do not use them or it will break your application!
 
-### Passing view parameters directly from the controller
-If you do not want to use the previous way, you can also pass parameters to the view by assuming them as properties of `$this->view` object.
+### Passing view parameters globally
+You can also pass parameters to the view by assuming them as properties of controller global `$this->view` object.
 
-From the view, you can retrieve this parameters from the same `$this->view` object.
-
-In this particular way, depending on the scope you used while setting the property, the parameter will be acessed from all rendered views from that moment.
+In this particular way, depending on the scope you used while setting the property, the parameter will be acessed from all rendered views from that moment in the current controller.
 
 _Example_
 **controller**
@@ -64,3 +62,6 @@ $this->renderView('about');
 <h2>Your name is <?php echo $this->view->name; ?>.</h2>
 <!-- This will print "Your name is Glowie." -->
 ```
+
+### Taking your views to a next level
+If you want to learn a new way to create dynamic, pretty and professional coded views, take a look at [Skeltch](docs/extra/skeltch), Glowie PHP views preprocessor.

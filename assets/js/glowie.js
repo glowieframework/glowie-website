@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('load', function(){
     document.querySelector('.preloader').classList.add('hide');
 });
 

@@ -35,3 +35,11 @@ Next step is create some actions for your controller, see [Actions](docs/basic-a
 `BaseController` is a default controller class located in the controllers folder (`app/controllers/Base.php`) who is extended by every other controller of your application.
 
 This means you can create any methods and properties in this controller and they can be reused from any other controller or view. This is useful when creating global functions or properties that need to be accessed from your whole application, removing the need of rewriting code.
+
+### Self properties
+In order to retrieve information about the current application state, use `$this->self` object. In this object you can find the following properties:
+
+- **controller** - The current active controller
+- **action** - The current active action
+- **route** - The current active route
+- **method** - The HTTP request method used to call the active route

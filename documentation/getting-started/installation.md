@@ -1,22 +1,25 @@
 # Installation
-You can download Glowie in our [downloads page](downloads).
 
-After downloading the latest release, you'll only need to extract the _zip_ file into your web server.
-That's all.
-
-Incredible and simple, isn't it?
-
-### Installing via Composer
-This method will be available soon.
-
-### Installing via GIT
-Optionally you can clone Glowie repository directly to your web server. We do not recommend doing this as it may have a lot of bugs and incomplete features. If you still want to, use:
+To install Glowie and start a fresh new project, use:
 
 ```
-git clone https://github.com/glowieframework/glowie.git
+composer create-project glowieframework/glowie=dev-main
+```
+
+That's all. Incredible and simple, isn't it?
+
+### Downloading package
+You can also download Glowie package in our [downloads page](downloads).
+
+After downloading the latest release, you need to extract the zip file into your web server, navigate to the application directory and then run:
+
+```
+composer install
 ```
 
 ### Updating from an earlier version
-In order to update Glowie to a newer version, [download](downloads) the desired package and replace the files inside `library` folder. None of your application settings will be affected, but you must read the **changelog** to check for any breaking changes in new major versions.
+Updating Glowie is as simple as writing a single line of code, literally. Just navigate to your application directory and run:
 
-If the update needs to be applied to files other than those inside `library` folder, the download page will tell you. Always read all information carefully.
+```
+composer update
+```

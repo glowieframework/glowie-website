@@ -1,6 +1,11 @@
-﻿<html>
+<?php 
+    $page = '404';
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = dirname(__FILE__);
+?>
+<html>
     <head>
-        <title>Page not found | Glowie Framework</title>
+        <title>Page not found | Glowie</title>
         <?php include 'includes/head.php';?>
     </head>
     <body>

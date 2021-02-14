@@ -1,6 +1,11 @@
-﻿<html>
+<?php 
+    $page = '403';
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = dirname(__FILE__);
+?>
+<html>
     <head>
-        <title>Access forbidden | Glowie Framework</title>
+        <title>Access forbidden | Glowie</title>
         <?php include 'includes/head.php';?>
     </head>
     <body>

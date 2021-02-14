@@ -1,4 +1,3 @@
-﻿
 ### Getting started
 - [Requirements](docs/getting-started/requirements)
 - [Installation](docs/getting-started/installation)
@@ -22,10 +21,9 @@
 - [Mastering Kraken](docs/forms-and-data/mastering-kraken)
 
 ### Extra
+- [Skeltch](docs/extra/skeltch)
 - [File uploads](docs/extra/file-uploads)
 - [Internationalization](docs/extra/internationalization)
 - [HTTP requests](docs/extra/http-requests)
 - [Util](docs/extra/util)
 - [Objectify](docs/extra/objectify)
-- [Plugins](docs/extra/plugins)
-- [Mail](docs/extra/mail)
