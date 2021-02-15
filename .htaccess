@@ -6,7 +6,6 @@ RewriteRule ^403$ 403.php [NC,L]
 RewriteRule ^404$ 404.php [NC,L]
 RewriteRule ^docs$ docs.php [NC,L]
 RewriteRule ^docs/(.*)$ docs.php?route=$1 [NC,L]
-RewriteRule ^downloads$ downloads.php [NC,L]
 
 ErrorDocument 403 https://glowie.tk/403
 ErrorDocument 404 https://glowie.tk/404

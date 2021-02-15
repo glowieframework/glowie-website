@@ -110,15 +110,27 @@ _Example_
 {@endempty}
 ```
 
-### Rendering views and templates
-The following snippets are shortcuts to `$this->renderView()` and `$this->renderTemplate()` functions. It uses the same parameters as described in [Views](docs/basic-application-modules/views) and [Templates](docs/basic-application-modules/templates).
+### Glowie shortcuts
+Skeltch also provides shortcuts to common Glowie functions used in views:
 
+`$this->renderView()` (see [Views](docs/basic-application-modules/views))
 ```php
 {@view('index', ['name' => 'Glowie'], true)}
 ```
 
+`$this->renderTemplate()` (see [Templates](docs/basic-application-modules/templates))
 ```php
 {@template('default', 'index', ['name' => 'Glowie'], true)}
+```
+
+`echo Babel:get()` (see [Internationalization](docs/extra/internationalization))
+```php
+{@babel('message', 'en')}
+```
+
+`echo Util::baseUrl()` (see [Util](docs/extra/util))
+```php
+{@base('/')}
 ```
 
 ### Comments

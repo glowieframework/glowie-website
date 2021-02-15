@@ -14,10 +14,7 @@
                             <a href="./" class="nav-link <?= $page == 'home' ? 'active' : '' ?>">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="downloads" class="nav-link <?= $page == 'downloads' ? 'active' : '' ?>">Downloads</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="docs" class="nav-link <?= $page == 'docs' ? 'active' : '' ?>">Docs</a>
+                            <a href="docs" class="nav-link <?= $page == 'docs' ? 'active' : '' ?>">Documentation</a>
                         </li>
                         <li class="nav-item">
                             <a href="https://github.com/glowieframework" class="nav-link">GitHub</a>
@@ -42,10 +39,7 @@
         <a href="./" class="<?= $page == 'home' ? 'active' : '' ?>">Home</a>
     </span>
     <span class="nav-link">
-        <a href="downloads" class="<?= $page == 'downloads' ? 'active' : '' ?>">Downloads</a>
-    </span>
-    <span class="nav-link">
-        <a href="docs" class="<?= $page == 'docs' ? 'active' : '' ?>">Docs</a>
+        <a href="docs" class="<?= $page == 'docs' ? 'active' : '' ?>">Documentation</a>
     </span>
     <span class="nav-link">
         <a href="https://github.com/glowieframework">GitHub</a>

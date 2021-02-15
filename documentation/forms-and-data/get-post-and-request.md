@@ -1,8 +1,9 @@
+# GET, POST and REQUEST
 You can handle parameters from any kind of request directly from a controller, with zero complications, using the following properties:
 
 - `$this->get` - GET parameters.
 - `$this->post` - POST parameters.
-- `$this->request` - REQUEST parameters (both GET and POST).
+- `$this->request` - REQUEST parameters (all methods).
 
 Every property returns an object with each property being a request key.
 

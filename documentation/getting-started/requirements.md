@@ -10,4 +10,4 @@ If you are planning to work with databases, you will also need:
 - MySQL **5.6.17** or higher
 
 ### Testing locally
-We recommend using [XAMPP](https://apachefriends.org) (multiplatform) or [WampServer 3](https://wampserver.com/en) (Windows) to run Glowie locally on your computer.
+We recommend using [XAMPP](https://apachefriends.org) (multiplatform) or [WampServer 3](http://wampserver.com/en) (Windows) to run Glowie locally on your computer.

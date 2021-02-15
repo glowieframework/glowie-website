@@ -27,7 +27,15 @@ The folder (relative to the domain URL) where your app will run from. If your ap
 _Example_
 ```php
 # myappurl.com/foo
-'app_folder' => '/foo/'
+'app_folder' => '/foo/',
+```
+
+**cache**
+Enable caching for some Glowie features. This is highly recommended in a production environment.
+
+_Example_
+```php
+'cache' => true,
 ```
 
 **timezone**
@@ -35,7 +43,7 @@ Timezone to use with PHP `date()` functions. Must be a valid PHP timezone.
 
 _Example_
 ```php
-'timezone' => 'America/Sao_Paulo'
+'timezone' => 'America/Sao_Paulo',
 ```
 
 **error_reporting**
@@ -43,7 +51,7 @@ The error reporting level for PHP exceptions.
 
 _Example_
 ```php
-'error_reporting' => E_ALL;
+'error_reporting' => E_ALL,
 ```
 
 **api_key**
@@ -51,7 +59,7 @@ Key to use with encrypting functions. Be sure to use a strong key.
 
 _Example_
 ```php
-'api_key' => 'Rj1UQHJfajlLKGN1WjhQYXBcSy4='
+'api_key' => 'Rj1UQHJfajlLKGN1WjhQYXBcSy4=',
 ```
 
 **api_token**
@@ -59,7 +67,7 @@ Token to use with encrypting functions (along with API key). Be sure to use a st
 
 _Example_
 ```php
-'api_token' => 'ckVdU3g3fkQmS0h0KyotTV1YdSs='
+'api_token' => 'ckVdU3g3fkQmS0h0KyotTV1YdSs=',
 ```
 
 **database**

@@ -1,11 +1,10 @@
 # Data validation
-
-Forms and data validation can be achieved easily using Glowie `Validator` class.
+Forms and data validation can be achieved easily using Glowie `Validator` module.
 
 From your controller, create a new instance of `Validator` using:
 
 ```php
-$validator = new Validator();
+$validator = new Glowie\Validator();
 ```
 
 ### Validation rules
@@ -94,17 +93,9 @@ Optionally you can also set a `bail` option as the third parameter. If this opti
 
 _Example_
 ```php
-$validator = new Validator();
 $data = 'myemail@hotmail.com';
 $rules = ['required', 'string', 'email'];
 $isValid = $validator->validate($data, $rules); # returns true
-```
-
-```php
-$validator = new Validator();
-$data = 'test';
-$rules = ['required', 'string', 'email'];
-$isValid = $validator->validate($data, $rules); # returns false
 ```
 
 ### Validating multiple elements
@@ -118,7 +109,6 @@ Besides that, you can also optionally set a `bailAll` option as the fouth parame
 
 _Example_
 ```php
-$validator = new Validator();
 $data = ['myemail@hotmail.com', 'test'];
 $rules = ['required', 'string', 'email'];
 $isValid = $validator->validateMultiple($data, $rules); # returns false
@@ -133,7 +123,6 @@ You can optionally set a `bail` and `bailAll` option as the third and fourth par
 
 _Example_
 ```php
-$validator = new Validator();
 $data = [
     'name' => 'Glowie',
     'address' => ''
@@ -146,4 +135,30 @@ $isValid = $validator->validateFields($data, $rules); # returns false
 ```
 
 ### Retrieving validation errors
-_Documentation under construction..._
+After running a validation, all validation failures can be retrieved through `$validator->getErrors()`. This method will return an associative array of fields or elements (with each field/element being a key) and an array of invalid fields.
+
+You can use this method to handle specific errors or show messages to the user based in a specific invalid field or element.
+
+_Example_
+```php
+$data = [
+    'name' => 'Glowie',
+    'email' => ''
+];
+$rules = [
+    'name' => ['required'],
+    'email' => ['required', 'email']
+];
+$isValid = $validator->validateFields($data, $rules); # returns false
+$errors = $validator->getErrors();
+
+/*
+    returns:
+    [
+        'email' => [
+            'required' => 'INVALID',
+            'email' => 'INVALID'
+        ]
+    ]
+*/
+```

@@ -24,7 +24,7 @@
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Tiny blueprint</li>
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Flexible and scalable</li>
                             </ul>
-                            <a class="button" href="downloads">Get Started</a>
+                            <a class="button" href="docs/getting-started/installation">Get Started</a>
                             <a class="button docs" href="docs">Documentation</a>
                         </div>
                         <div class="col-12 col-lg-6 img-banner">
@@ -100,8 +100,8 @@
                         <div class="col-sm-12 col-md-6 col-lg-3">
                             <div class="card">
                                 <div class="card-body">
-                                    <i class="fas fa-cogs"></i>
-                                    Plugin ready
+                                    <i class="fas fa-code"></i>
+                                    View preprocessor
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                 <div class="container text-center">
                     <h1>Ready to create something awesome?</h1>
                     <h5>You are a few steps from the best programming experience you'll ever have.</h5>
-                    <a class="button" href="downloads">Get Started</a>
+                    <a class="button" href="docs/getting-started/installation">Get Started</a>
                     <a class="button docs" href="docs">Documentation</a>
                 </div>
             </section>

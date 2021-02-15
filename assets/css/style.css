@@ -153,6 +153,10 @@ section.index-banner .button {
 
 section.index-banner .button:hover {
   background-color: #ec1c64;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
+          box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
 }
 
 section.index-banner .button.docs {
@@ -232,6 +236,10 @@ section.index-separator .button {
 
 section.index-separator .button:hover {
   background-color: #ec1c64;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
+          box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
 }
 
 section.index-separator .button.docs {
@@ -477,115 +485,6 @@ section.docs pre * {
   }
   section.docs h1 {
     font-size: 26px;
-  }
-}
-
-section.downloads {
-  background-color: #fcecf3;
-  padding-bottom: 50px;
-}
-
-section.downloads h1 {
-  font-size: 36px;
-  color: #ec1c64;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-section.downloads .box {
-  background-color: white;
-  border: 1px solid #ed578b;
-  padding: 30px;
-  height: 100%;
-  font-size: 14px;
-}
-
-section.downloads .box .link {
-  color: #ec1c64;
-}
-
-section.downloads .box .download {
-  display: inline-block;
-  background-color: #ed578b;
-  color: white;
-  margin-top: 20px;
-  padding: 10px 25px;
-  text-decoration: none;
-  border: 1px solid #ed578b;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
-}
-
-section.downloads .box .download.disabled {
-  background-color: white;
-  color: #ed578b;
-  cursor: pointer;
-}
-
-section.downloads .box .download.disabled:hover {
-  background-color: #f3f3f3;
-}
-
-section.downloads .box .download:hover {
-  background-color: #ec1c64;
-}
-
-section.downloads .box h3 {
-  font-size: 24px;
-  color: #ed578b;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  section.downloads .box {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-
-@media (max-width: 991px) {
-  section.downloads {
-    padding: 30px 0;
-  }
-  section.downloads h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  section.downloads .box {
-    margin: 10px auto;
-    max-width: 450px;
-  }
-  section.downloads .box h3 {
-    font-size: 20px;
-  }
-}
-
-section.downloads-changelog {
-  padding: 50px 0;
-}
-
-section.downloads-changelog h1 {
-  font-size: 36px;
-  color: #ec1c64;
-  margin-bottom: 20px;
-}
-
-section.downloads-changelog h4 {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-@media (max-width: 991px) {
-  section.downloads-changelog {
-    font-size: 14px;
-    padding: 40px 15px;
-  }
-  section.downloads-changelog h1 {
-    font-size: 24px;
-  }
-  section.downloads-changelog h4 {
-    font-size: 18px;
   }
 }
 

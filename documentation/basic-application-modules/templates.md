@@ -9,7 +9,7 @@ You can also store templates inside subfolders for better organization. Just rem
 ### Rendering templates
 To render a template from a controller, simply use the function `$this->renderTemplate()` along with the template filename (**without** the extension).
 
-Optionally, you can set a view to render dynamically inside this template, you just need to pass the view filename as the second parameter of this function (works the same way as `$this->renderView()`).
+Optionally, you can set a view to render dynamically inside this template, you just need to pass the view filename as the second parameter of this function (works the same way as described in [Views](docs/basic-application-modules/views)).
 
 _Example_
 ```php
@@ -38,7 +38,7 @@ $this->renderTemplate('default', 'index');
     </head>
     <body>
         <?php echo $this->content; ?>
-        <!-- Prints "<h2>Hello world!</h2>" -->
+        <!-- Prints "<h2>Hello world!</h2>" (w/o quotes) -->
     </body>
 </html>
 ```
@@ -64,11 +64,11 @@ $this->renderTemplate('default', 'index', ['name' => 'Glowie']);
 <html>
     <head>
         <title>Hello, <?php echo $name; ?>!</title>
-        <!-- Prints "Hello, Glowie!" -->
+        <!-- Prints "Hello, Glowie!" (w/o quotes) -->
     </head>
     <body>
         <?php echo $this->content; ?>
-        <!-- Prints "<h2>Hello, Glowie!</h2>" -->
+        <!-- Prints "<h2>Hello, Glowie!</h2>" (w/o quotes) -->
     </body>
 </html>
 ```

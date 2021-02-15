@@ -11,7 +11,7 @@ All your aplication views must be stored into `app/views` folder. View files mus
 You can also store views inside subfolders for better organization. Just remember to include the folder name as well when referring a view file.
 
 ### Rendering a view file
-To render a view from a controller or from another view, simply use the function `$this->renderView()` along with the view filename (**without** the extension).
+To render a view from a controller or from inside another view, simply use the function `$this->renderView()` along with the view filename (**without** the extension).
 
 **Note:** while using `$this->renderView()` from another view, it will include the file exactly where the code was executed.
 
@@ -35,10 +35,10 @@ $this->renderView('index', ['name' => 'Glowie']);
 **index.phtml**
 ```html
 <h2>Hello, <?php echo $name; ?>!</h2>
-<!-- This will print "Hello, Glowie!" -->
+<!-- This will print "Hello, Glowie!" (w/o quotes) -->
 ```
 
-**Note:** some parameter names are reserved and should not be used. Invalid names are: `view`, `template` and `params`. These variables are used internally inside `$this->renderView()` function scope, so do not use them or it will break your application!
+**Note:** some parameter names are reserved and should not be used. Invalid names are: `view`, `template`, `params` and `skeltch`. These variables are used internally inside `$this->renderView()` function scope, so do not use them or it will break your application!
 
 ### Passing view parameters globally
 You can also pass parameters to the view by assuming them as properties of controller global `$this->view` object.
@@ -55,12 +55,12 @@ $this->renderView('about');
 **index.phtml**
 ```html
 <h2>Hello, <?php echo $this->view->name; ?>!</h2>
-<!-- This will print "Hello, Glowie!" -->
+<!-- This will print "Hello, Glowie!" (w/o quotes) -->
 ```
 **about.phtml**
 ```html
 <h2>Your name is <?php echo $this->view->name; ?>.</h2>
-<!-- This will print "Your name is Glowie." -->
+<!-- This will print "Your name is Glowie." (w/o quotes) -->
 ```
 
 ### Taking your views to a next level
