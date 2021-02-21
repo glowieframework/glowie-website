@@ -46,7 +46,7 @@ $this->renderTemplate('default', 'index');
 ### Passing parameters to a template
 The same way as in a view, you can pass parameters to a template as the third parameter of `$this->renderTemplate()` function (see [Views](docs/basic-application-modules/views)).
 
-**Note:** this parameters can be accessed both from the template itself or from the dynamic rendered view inside the template.
+**Note:** this parameters can be accessed from both the template itself and from the dynamic rendered view inside the template.
 
 _Example_
 **controller**
@@ -56,14 +56,14 @@ $this->renderTemplate('default', 'index', ['name' => 'Glowie']);
 
 **index view**
 ```html
-<h2>Hello, <?php echo $name; ?>!</h2>
+<h2>Hello, <?php echo $this->name; ?>!</h2>
 ```
 
 **default template**
 ```html
 <html>
     <head>
-        <title>Hello, <?php echo $name; ?>!</title>
+        <title>Hello, <?php echo $this->name; ?>!</title>
         <!-- Prints "Hello, Glowie!" (w/o quotes) -->
     </head>
     <body>

@@ -25,7 +25,7 @@ You can pass any parameter to a view while rendering it. To do that, use `$this-
 
 This is useful to render views with dynamic content that relies on this variables (see the example below).
 
-View parameters will be exposed to the view as real variables. So, to retrieve a parameter from within a view, simply use `$param_name`.
+View parameters will be set as properties of the view object. So, to retrieve a parameter from within a view, simply use `$this->param_name`.
 
 _Example_
 **controller**
@@ -34,11 +34,11 @@ $this->renderView('index', ['name' => 'Glowie']);
 ```
 **index.phtml**
 ```html
-<h2>Hello, <?php echo $name; ?>!</h2>
+<h2>Hello, <?php echo $this->name; ?>!</h2>
 <!-- This will print "Hello, Glowie!" (w/o quotes) -->
 ```
 
-**Note:** some parameter names are reserved and should not be used. Invalid names are: `view`, `template`, `params` and `skeltch`. These variables are used internally inside `$this->renderView()` function scope, so do not use them or it will break your application!
+**Note:** some parameter names are reserved to core view properties and should not be used. Invalid names are: `content`, `controller` and `path`.
 
 ### Passing view parameters globally
 You can also pass parameters to the view by assuming them as properties of controller global `$this->view` object.
@@ -54,12 +54,12 @@ $this->renderView('about');
 ```
 **index.phtml**
 ```html
-<h2>Hello, <?php echo $this->view->name; ?>!</h2>
+<h2>Hello, <?php echo $this->name; ?>!</h2>
 <!-- This will print "Hello, Glowie!" (w/o quotes) -->
 ```
 **about.phtml**
 ```html
-<h2>Your name is <?php echo $this->view->name; ?>.</h2>
+<h2>Your name is <?php echo $this->name; ?>.</h2>
 <!-- This will print "Your name is Glowie." (w/o quotes) -->
 ```
 

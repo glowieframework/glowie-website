@@ -17,7 +17,7 @@ $this->renderView('index', ['name' => 'Glowie'], true);
 ```
 **index view**
 ```html
-<h2>Hello, {{$name}}</h2>
+<h2>Hello, {{$this->name}}</h2>
 <!-- This will print "Hello, Glowie" (w/o quotes) -->
 ```
 
@@ -27,8 +27,18 @@ All content passed within this shortcut will be treated inside `htmlspecialchars
 
 _Example_
 ```html
-<h2>Hello, {{!!$name}}</h2>
+<h2>Hello, {{!!$this->name}}</h2>
 ```
+
+### Bypassing Skeltch compiling
+While working with some frontend frameworks that also uses the curly braces syntax you may run into conflicts with Skeltch compiler. For dealing with this kind of conflict, simply put an `@` before the expression and it will be ignored by Skeltch.
+
+_Example_
+```html
+Hello, @{{$var}}
+```
+
+In this case, Skeltch will remove the `@` symbol, but the rest of the expression will remain untouched for your frontend framework parser.
 
 ### Conditionals
 Conditionals in Skeltch views are written in the following way:
@@ -144,7 +154,7 @@ _Example_
 ### Raw PHP code
 If you want to write raw PHP code in your Skeltch view, put your code between one pair of curly braces, starting with a percent sign. 
 
-**Note:** you must use semicolons when working with this kind of raw code.
+**Note:** you must use semicolons when working with this kind of code.
 
 _Example_
 ```php
