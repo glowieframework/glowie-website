@@ -1,4 +1,4 @@
-<base href="<?= dirname(__FILE__) == $_SERVER['DOCUMENT_ROOT'] ? '/' : '/glowie-website/'; ?>">
+<base href="<?= $_SERVER['HTTP_HOST'] == 'localhost' ? '/glowie-website/' : '/'; ?>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css?revision=020721">
