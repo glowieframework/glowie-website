@@ -4,7 +4,6 @@ a.mobile-menu-button{
     top: 30px;
     cursor: pointer;
     right: 20px;
-    background-color: $primary;
     border: 1px solid white;
     color: white;
     padding: 10px 15px;
@@ -17,7 +16,7 @@ a.mobile-menu-button{
 }
 
 section.mobile-menu{
-    background-color: #ed578b;
+    background: $gradient;
     max-height: 0;
     overflow: hidden;
     @include transitionAll();

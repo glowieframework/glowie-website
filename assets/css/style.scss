@@ -3,6 +3,7 @@
 $primary: #ed578b;
 $soft: #fcecf3;
 $strong: #ec1c64;
+$gradient: linear-gradient(90deg, rgba(237,87,139,1) 0%, rgba(237,87,106,1) 100%);
 
 @mixin transitionAll(){
     transition: .3s all ease;
@@ -18,6 +19,16 @@ main{
 
 *{
     font-family: 'Montserrat', sans-serif;
+}
+
+::-moz-selection {
+    color: white;
+    background: $primary;
+}
+
+::selection {
+    color: white;
+    background: $primary;
 }
 
 @import "header";

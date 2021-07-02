@@ -1,8 +1,4 @@
-<?php 
-    $page = '403';
-    $root = $_SERVER['DOCUMENT_ROOT'];
-    $filePath = dirname(__FILE__);
-?>
+<?php $page = '403'; ?>
 <html>
     <head>
         <title>Access forbidden | Glowie</title>

@@ -4,8 +4,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^403$ 403.php [NC,L]
 RewriteRule ^404$ 404.php [NC,L]
+RewriteRule ^docs/([a-z0-9\-.]*)/(.*)$ docs.php?version=$1&route=$2 [NC,L]
+RewriteRule ^docs/([a-z0-9\-.]*)$ docs.php?version=$1 [NC,L]
 RewriteRule ^docs$ docs.php [NC,L]
-RewriteRule ^docs/(.*)$ docs.php?route=$1 [NC,L]
 
 ErrorDocument 403 https://glowie.tk/403
 ErrorDocument 404 https://glowie.tk/404

@@ -12,6 +12,25 @@ section.docs-header{
         text-decoration: none;
     }
 
+    .version{
+        background-color: white;
+        font-size: 13px;
+        display: block;
+        width: fit-content;
+        padding: 2px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .dropdown-menu.show{
+        top: auto;
+        left: auto;
+    }
+
+    .dropdown-item{
+        font-size: 13px;
+    }
+
     @media (max-width: 991px){
         padding: 30px 0;
 

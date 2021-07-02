@@ -1,5 +1,5 @@
 header{
-    background-color: $primary;
+    background: $gradient;
     position: relative;
     min-height: 200px;
 
@@ -55,6 +55,11 @@ header{
         .logo{
             filter: grayscale(1) brightness(100);
             height: 50px;
+            @include transitionAll();
+
+            &:hover{
+                transform: translateX(5px);
+            }
         }
     }
 

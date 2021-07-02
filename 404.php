@@ -1,8 +1,4 @@
-<?php 
-    $page = '404';
-    $root = $_SERVER['DOCUMENT_ROOT'];
-    $filePath = dirname(__FILE__);
-?>
+<?php $page = '404'; ?>
 <html>
     <head>
         <title>Page not found | Glowie</title>

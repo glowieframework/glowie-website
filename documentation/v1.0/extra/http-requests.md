@@ -1,12 +1,14 @@
 # HTTP requests
 An HTTP request is a way to "communicate" your application with external sources on the web. Using requests you can call APIs, retrieve data from another websites, among other functionalities.
 
-You can make HTTP requests in a very simple and intuitive way using Glowie `Crawler` module.
+You can make HTTP requests in a very simple and intuitive way using Glowie `Crawler` class.
 
-From your controller, create a new instance of `Crawler` using:
+From your controller, create a new instance of `Glowie\Core\Crawler` using:
 
 ```php
-$crawler = new Glowie\Crawler();
+use Glowie\Core\Crawler;
+
+$crawler = new Crawler();
 ```
 
 ### Making a request
