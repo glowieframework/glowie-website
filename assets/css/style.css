@@ -488,6 +488,12 @@ section.docs .menu h3 {
   font-size: 14px;
   margin-top: 10px;
 }
+section.docs img {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 500px;
+}
 section.docs a {
   color: #ed578b;
 }

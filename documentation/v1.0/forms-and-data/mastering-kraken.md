@@ -29,6 +29,28 @@ $db = new Kraken('users', [
 ### Changing the default table and database connection
 If you want to change the default table or database connection without creating a new Kraken instance, use `$db->setTable()` and `$db->setDatabase()` functions. The parameters within this functions are exactly the same for the constructor.
 
+You can use the methods `$db->getTable()` and `$db->getDatabase()` to retrieve this settings.
+
+### Setting the database charset
+By default, Kraken uses the `utf8` character set to decode data from your database. If you want to use a different setting, use `$db->setCharset()` method, passing the charset name as the first parameter. It must be a supported character set from your MySQL server.
+
+_Example_
+```php
+$db->setCharset('latin1');
+```
+
+You can use the method `$db->getCharset()` to retrieve the current active charset.
+
+### Escaping data
+When working with any kind of user-input data, it's highly recommended to escape the data to avoid SQL injection attacks. Every Kraken default method will already escape the data for you, **excepts for raw methods**. In this case, you must use `$db->escape()` method, passing the desired data as the first parameter. This method will return the escaped data as a string.
+
+_Example_
+```php
+$db->escape($this->post->email); // returns the "email" input properly escaped
+```
+
+In order to ignore the default escaping of data, use the static `Kraken::raw()` method.
+
 ### Selecting data
 In order to prepare a SELECT query, use `$db->select()` function. In this function you can pass a single field name or an array of fields to use in your query. You can also use a raw SELECT statement.
 
@@ -48,7 +70,3 @@ _Example_
 ```php
 $result = $db->select()->fetchAll();
 ```
-
-<hr>
-Documentation under development...
-<hr>

@@ -129,8 +129,8 @@ _Example_
 - User types in `myappurl.com/products/list/123/abc`. Glowie will call `Products` controller with `list()` action and the remaining parameters will be stored inside `$this->params` as an URI segment (split by each slash).
 
 ```php
-echo $this->params->segment1; # returns 123
-echo $this->params->segment2; # returns abc
+echo $this->params->param1; # returns 123
+echo $this->params->param2; # returns abc
 ```
 
 If a corresponding controller or action is not found, Glowie will return a 404 Not Found error.
