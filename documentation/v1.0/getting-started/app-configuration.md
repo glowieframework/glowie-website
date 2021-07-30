@@ -23,15 +23,23 @@ Before starting, you must rename `app/config/Config.example.php` to `app/config/
 Available configurations are:
 
 **cache**
-Enable caching for some Glowie features. This is highly recommended in a production environment.
+Enables caching for some Glowie features. This is highly recommended in a production environment.
 
 _Example_
 ```php
 'cache' => true,
 ```
 
+**skeltch**
+Enables [Skeltch](docs/##VERSION##/extra/skeltch) templating engine to compile your application views.
+
+_Example_
+```php
+'skeltch' => true,
+```
+
 **timezone**
-Timezone to use with PHP date functions. Must be a valid PHP timezone.
+Default timezone to use with PHP date functions. Must be a valid [PHP timezone](https://php.net/manual/en/timezones.php).
 
 _Example_
 ```php
@@ -47,27 +55,27 @@ _Example_
 ```
 
 **error_log**
-Enable or disable error logging for your application.
+Enables or disables error logging for your application.
 
 _Example_
 ```php
 'error_log' => true,
 ```
 
-**api_key**
+**hash_key**
 Key to use with encrypting functions. Be sure to use a strong key.
 
 _Example_
 ```php
-'api_key' => 'f08e8ba131c7abab97dba275fab5a85e',
+'hash_key' => 'f08e8ba131c7abab97dba275fab5a85e',
 ```
 
-**api_token**
-Token to use with encrypting functions (along with API key). Be sure to use a strong key.
+**hash_token**
+Token to use with encrypting functions (along with your hash key). Be sure to use a strong key.
 
 _Example_
 ```php
-'api_token' => 'd147723d9e91340d9dd28fbd5a0b6651',
+'hash_token' => 'd147723d9e91340d9dd28fbd5a0b6651',
 ```
 
 **database**

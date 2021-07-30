@@ -5,7 +5,7 @@ _Example:_ A user logs in into your application using its email and password. Us
 
 Usually, the session data is stored until the user closes the web browser. For storing data locally for longer times, use [Cookies](docs/##VERSION##/forms-and-data/cookies).
 
-Session data in Glowie can be managed using `Glowie\Core\Session` class. You don't need to instantiate this class in a controller or middleware, simply use `$this->session` property.
+Session data in Glowie can be managed using `Glowie\Core\Http\Session` class. You don't need to instantiate this class in a controller or middleware to work with it, simply use `$this->session` property to directly access the `Session` object.
 
 **Note:** Session data persists through all instances for the whole application.
 
@@ -72,3 +72,19 @@ unset($this->session->name);
 ```
 
 To delete all data from an session at once, use `$this->session->flush()`.
+
+### Session flash data
+If you want to, you can store temporary data in the session in order to use it just a single time in the next request. This is called **flash data**.
+
+In order to store session flash data, use `$this->session->setFlash()` along with the key for the data you are storing as the first paramenter, and its value as the second.
+
+To retrieve session flash data, use `$this->session->getFlash()` along with the key for the data you are getting. If the key you provide does not exist, this function returns `null`.
+
+As soon as the data is retrieved once, it is deleted from the session.
+
+_Example_
+```php
+$this->session->setFlash('name', 'Glowie'); # Stores "Glowie" value into "name" key (w/o quotes)
+$name = $this->session->getFlash('name'); # Returns "Glowie" (w/o quotes)
+$name2 = $this->session->getFlash('name'); # Returns null, flash data was already deleted
+```

@@ -30,13 +30,15 @@
     require_once 'includes/Parsedown.php';
     $Parsedown = new Parsedown();
     $Parsedown->setBreaksEnabled(true);
-    $content = str_replace(['<pre><code class="language-php">', '<pre><code class="language-html">', '##VERSION##'], ['<pre><code class="prettyprint language-php">', '<pre><code class="prettyprint language-html">', $version], $Parsedown->text($content));
+    $content = str_replace('##VERSION##', $version, $Parsedown->text($content));
     $menu = str_replace('##VERSION##', $version, $Parsedown->text($menu));
 ?>
 <html>
     <head>
         <title><?=$title?> | Glowie Documentation</title>
         <?php include 'includes/head.php';?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/github.min.css">
     </head>
     <body>
         <?php include 'includes/header.php';?>
@@ -57,7 +59,7 @@
                 </div>
             </section>
         </main>
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
         <?php include 'includes/footer.php'; ?>
     </body>
 </html>

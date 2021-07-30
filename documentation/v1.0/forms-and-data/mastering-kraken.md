@@ -2,11 +2,11 @@
 Kraken is Glowie's powerful query builder and database toolkit. It's time to you to master this incredible component and start working with databases in a way you've never done before.
 
 ### Connecting to a database
-To start working with Kraken, you must create an instance of `Glowie\Core\Kraken` class. Withing Kraken constructor, you can pass the table name you want to use as default for your queries (see [Models](docs/##VERSION##/forms-and-data/models)).
+To start working with Kraken, you must create an instance of `Glowie\Core\Database\Kraken` class. Withing Kraken constructor, you can pass the table name you want to use as default for your queries (see [Models](docs/##VERSION##/forms-and-data/models)).
 
 _Example_
 ```php
-use Glowie\Core\Kraken;
+use Glowie\Core\Database\Kraken;
 
 $db = new Kraken('glowie'); // Sets "glowie" table as default
 ```
@@ -15,7 +15,7 @@ The second parameter passed in this constructor is the database connection you w
 
 _Example_
 ```php
-use Glowie\Core\Kraken;
+use Glowie\Core\Database\Kraken;
 
 $db = new Kraken('users', [
     'host' => 'localhost',
@@ -27,16 +27,16 @@ $db = new Kraken('users', [
 ```
 
 ### Changing the default table and database connection
-If you want to change the default table or database connection without creating a new Kraken instance, use `$db->setTable()` and `$db->setDatabase()` functions. The parameters within this functions are exactly the same for the constructor.
+If you want to change the default table or database connection without creating a new Kraken instance, use `$db->table()` and `$db->database()` functions. The parameters within this functions are exactly the same for the constructor.
 
 You can use the methods `$db->getTable()` and `$db->getDatabase()` to retrieve this settings.
 
 ### Setting the database charset
-By default, Kraken uses the `utf8` character set to decode data from your database. If you want to use a different setting, use `$db->setCharset()` method, passing the charset name as the first parameter. It must be a supported character set from your MySQL server.
+By default, Kraken uses the `utf8` character set to decode data from your database. If you want to use a different setting, use `$db->charset()` method, passing the charset name as the first parameter. It must be a supported character set from your MySQL server.
 
 _Example_
 ```php
-$db->setCharset('latin1');
+$db->charset('latin1');
 ```
 
 You can use the method `$db->getCharset()` to retrieve the current active charset.
@@ -60,7 +60,7 @@ _Example_
 ```php
 $db->select(); // Produces SELECT * FROM glowie
 $db->select(['id', 'name'])->from('users'); // Produces SELECT id, name FROM users
-$db->select('COUNT(ID)'); // Produces SELECT COUNT(ID) FROM glowie
+$db->select('COUNT(ID) AS total'); // Produces SELECT COUNT(ID) AS total FROM glowie
 ```
 
 ### Fetching SELECT data

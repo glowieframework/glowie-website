@@ -4,6 +4,12 @@ A controller is the heart of your application. It is responsible for handling us
 ### Creating controllers
 Creating a controller for your application is extremely easy. A controller is a simple PHP file with a controller class in `Glowie\Controllers` namespace stored in `app/controllers` folder.
 
+From [Firefly](docs/##VERSION##/extra/firefly) CLI you can use the following command to create a new controller:
+
+```plaintext
+php firefly create-controller --name=MyController
+```
+
 The controller file must have the **exact same name** as the controller class.
 
 This is the default snippet for a controller file:

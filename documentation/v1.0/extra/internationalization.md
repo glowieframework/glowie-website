@@ -4,6 +4,12 @@ Glowie provides a very simple, yet powerful module to work with multilanguage ap
 ### Creating a language file
 All your application language files should be stored in `app/languages`. Create a PHP file inside this folder with the name of the language you are using (example: `en.php`).
 
+From [Firefly](docs/##VERSION##/extra/firefly) CLI you can use the following command to create a new language file:
+
+```php
+php firefly create-language --id=en
+```
+
 Inside this file, you can setup the language strings by using the function `Babel::set()`. The first parameter is the language identifier you are setting, and the second an associative array of internationalization strings with its key and value.
 
 _Example_

@@ -1,10 +1,14 @@
 # Skeltch
 Skeltch is a templating engine for Glowie views. When working with Skeltch you can simplify the amount of PHP code in your views and make them a lot prettier and easier to understand.
 
-### Processing Skeltch views
-To start using Skeltch, from your controller or view pass a `true` option as the last parameter of `$this->renderView()` or `$this->renderLayout()` methods. This parameter will tell Glowie to compile your Skeltch view into plain PHP code before loading it.
+### Processing views with Skeltch
+In order to use Skeltch, in your [App configuration](docs/##VERSION##/getting-started/app-configuration) for the current environment, set the `skeltch` setting to `true`. This will enable Skeltch compiling for all your application views.
 
-**Note:** You must also pass this parameter in views rendered inside other views, even if the parent view was processed using Skeltch.
+_Example_
+**Config.php**
+```php
+'skeltch' => true,
+```
 
 ### Caching and performance
 If the `cache` option is enabled in your [App configuration](docs/##VERSION##/getting-started/app-configuration), Skeltch will only compile a view if it hasn't been compiled yet or if there are any modifications to the view file. This cached view will be stored at `app/storage/cache`. We highly recommend leaving caching on in a production environment, since it will boost your application performance significantly.
@@ -15,7 +19,7 @@ In order to display PHP variables in the view using Skeltch, put the variable be
 _Example_
 **controller**
 ```php
-$this->renderView('index', ['name' => 'Glowie'], true);
+$this->renderView('index', ['name' => 'Glowie']);
 ```
 **index view**
 ```html
@@ -57,33 +61,6 @@ Conditionals in Skeltch views are written in the following way:
 
 You can use any valid PHP logic between the parentheses.
 
-### Loops
-In order to work with loops in the view using Skeltch, use any of the following snippets:
-
-```php
-{for($i=0; $i < $count; $i++)}
-    <!-- Your code here -->
-{/for}
-```
-
-```php
-{foreach($variable as $key => $value)}
-    <!-- Your code here -->
-{/foreach}
-```
-
-You can use any valid PHP iteration logic between the parentheses.
-
-You can also use `break` and `continue` statements as:
-
-```php
-{continue}
-```
-
-```php
-{break}
-```
-
 ### Checkers
 You can check for variables using the shortcuts for the functions `empty()` and `isset()`:
 
@@ -124,17 +101,60 @@ _Example_
 {/empty}
 ```
 
+### Loops
+In order to work with loops in the view using Skeltch, use any of the following snippets:
+
+```php
+{for($i=0; $i < $count; $i++)}
+    <!-- Your code here -->
+{/for}
+```
+
+```php
+{foreach($variable as $key => $value)}
+    <!-- Your code here -->
+{/foreach}
+```
+
+```php
+{while($variable)}
+    <!-- Your code here -->
+{/while}
+```
+
+```php
+{switch($variable)}
+    {case('value')}
+    <!-- Your code here -->
+
+    {default}
+    <!-- Your code here -->
+{/switch}
+```
+
+You can use any valid PHP iteration logic between the parentheses.
+
+You can also use `break` and `continue` statements as:
+
+```php
+{continue}
+```
+
+```php
+{break}
+```
+
 ### Glowie shortcuts
 Skeltch also provides shortcuts to common Glowie functions used in views:
 
 `$this->renderView()` (see [Views](docs/##VERSION##/basic-application-modules/views))
 ```php
-{@view('index', ['name' => 'Glowie'], true)}
+{@view('index', ['name' => 'Glowie'])}
 ```
 
 `$this->renderLayout()` (see [Layouts](docs/##VERSION##/basic-application-modules/layouts))
 ```php
-{@layout('default', 'index', ['name' => 'Glowie'], true)}
+{@layout('default', 'index', ['name' => 'Glowie'])}
 ```
 
 `echo Babel:get()` (see [Internationalization](docs/##VERSION##/extra/internationalization))
@@ -144,7 +164,7 @@ Skeltch also provides shortcuts to common Glowie functions used in views:
 
 `echo Util::baseUrl()` (see [Util](docs/##VERSION##/extra/util))
 ```php
-{@base('/')}
+{@url('/')}
 ```
 
 `echo Util::route()` (see [Util](docs/##VERSION##/extra/util))
@@ -155,6 +175,11 @@ Skeltch also provides shortcuts to common Glowie functions used in views:
 `echo $this->getContent()` (see [Layouts](docs/##VERSION##/basic-application-modules/layouts))
 ```php
 {@content}
+```
+
+`echo Util::csrfToken()` (see [CSRF Protection](docs/##VERSION##/forms-and-data/csrf-protection))
+```php
+{@csrf}
 ```
 
 ### Comments

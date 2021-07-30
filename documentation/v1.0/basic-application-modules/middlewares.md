@@ -8,6 +8,12 @@ Basically, a middleware is an "extra layer" added between the route and the cont
 ### Creating a middleware
 A middleware is a simple PHP file with a middleware class in `Glowie\Middlewares` namespace stored in `app/middlewares` folder.
 
+From [Firefly](docs/##VERSION##/extra/firefly) CLI you can use the following command to create a new controller:
+
+```plaintext
+php firefly create-middleware --name=MyMiddleware
+```
+
 The middleware file have the **exact same name** as the middleware class.
 
 This is the default snippet for a middleware file:
@@ -16,7 +22,7 @@ This is the default snippet for a middleware file:
 <?php
     namespace Glowie\Middlewares;
 
-    use Glowie\Core\Middleware;
+    use Glowie\Core\Http\Middleware;
 
     class MyMiddleware extends Middleware{
 
@@ -56,6 +62,18 @@ use Glowie\Middlewares\Authenticate;
 Rails::addProtectedRoute('admin', Authenticate::class, Admin::class, 'index');
 ```
 
+If you want to assign multiple middlewares to a route, you can pass an array of middlewares as the second parameter of this method. Be aware that each middleware will be executed following the same order as in the array.
+
+_Example_
+```php
+use Glowie\Controllers\Login;
+use Glowie\Middlewares\Authenticate;
+use Glowie\Middlewares\ValidateCsrfToken;
+
+# myappurl.com/login
+Rails::addProtectedRoute('login', [ValidateCsrfToken::class, Authenticate::class], Login::class, 'index');
+```
+
 ### Middleware handler
 Every middleware class **must have** a public `handle()` method. This is the method where the middleware validation logics will run when the protected route is called.
 
@@ -66,13 +84,13 @@ _Example_
 <?php
     namespace Glowie\Middlewares;
 
-    use Glowie\Core\Middleware;
+    use Glowie\Core\Http\Middleware;
 
     class MyMiddleware extends Middleware{
 
        public function handle(){
            // Checks if the authorization header token is valid
-           if($this->server->get('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
+           if($this->request->getHeader('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
                return true; # Continues to the controller
            }else{
                return false; # Stops the execution
@@ -92,13 +110,13 @@ _Example_
 <?php
     namespace Glowie\Middlewares;
 
-    use Glowie\Core\Middleware;
+    use Glowie\Core\Http\Middleware;
 
     class MyMiddleware extends Middleware{
 
        public function handle(){
            // Checks if the authorization header token is valid
-           if($this->server->get('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
+           if($this->request->getHeader('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
                return true; # Continues to the controller
            }else{
                return false; # Stops the execution
@@ -107,7 +125,7 @@ _Example_
 
        public function success(){
            // Authorization token is valid, store it in the session
-           $this->session->token = $this->server->get('HTTP_AUTHORIZATION');
+           $this->session->token = $this->request->getHeader('HTTP_AUTHORIZATION');
 
            // After this, the route controller is triggered
        }
@@ -118,21 +136,20 @@ _Example_
 ```
 
 ### Middleware fail
-If the middleware handler method returns `false`, Glowie will stop the route execution and return a 403 Forbidden error. If you want to do something else if this happens, you can create an optional public `fail()` method in the middleware class and this method will be called instead.
+If the middleware handler method returns `false`, Glowie will stop the route execution and return a 403 Forbidden response error. If you want to do something else if this happens, you can create an optional public `fail()` method in the middleware class and this method will be called instead.
 
 _Example_
 ```php
 <?php
     namespace Glowie\Middlewares;
 
-    use Glowie\Core\Middleware;
-    use Util;
+    use Glowie\Core\Http\Middleware;
 
     class MyMiddleware extends Middleware{
 
        public function handle(){
            // Checks if the authorization header token is valid
-           if($this->server->get('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
+           if($this->request->getHeader('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
                return true; # Continues to the controller
            }else{
                return false; # Stops the execution
@@ -141,7 +158,7 @@ _Example_
 
        public function fail(){
            // Authorization token is not valid, redirect the user to the index page
-           Util::redirect('/');
+           $this->response->redirect('/');
        }
 
     }
@@ -159,7 +176,7 @@ _Example_
 <?php
     namespace Glowie\Middlewares;
 
-    use Glowie\Core\Middleware;
+    use Glowie\Core\Http\Middleware;
 
     class MyMiddleware extends Middleware{
 

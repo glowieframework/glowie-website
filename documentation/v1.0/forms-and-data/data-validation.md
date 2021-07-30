@@ -1,10 +1,10 @@
 # Data validation
 Forms and data validation can be achieved easily using Glowie `Validator` class.
 
-From your controller, create a new instance of `Glowie\Core\Validator` using:
+From your controller, create a new instance of `Glowie\Core\Tools\Validator` using:
 
 ```php
-use Glowie\Core\Validator;
+use Glowie\Core\Tools\Validator;
 
 $validator = new Validator();
 ```

@@ -4,6 +4,7 @@
 - [Basic MVC concepts](docs/##VERSION##/getting-started/basic-mvc-concepts)
 - [Folder structure](docs/##VERSION##/getting-started/folder-structure)
 - [App configuration](docs/##VERSION##/getting-started/app-configuration)
+- [Autoloading](docs/##VERSION##/getting-started/autoloading)
 
 ### Basic application modules
 - [Controllers](docs/##VERSION##/basic-application-modules/controllers)
@@ -12,13 +13,16 @@
 - [Views](docs/##VERSION##/basic-application-modules/views)
 - [Layouts](docs/##VERSION##/basic-application-modules/layouts)
 - [Middlewares](docs/##VERSION##/basic-application-modules/middlewares)
+- [Request](docs/##VERSION##/basic-application-modules/request)
+- [Response](docs/##VERSION##/basic-application-modules/response)
 
 ### Forms and data
 - [Element](docs/##VERSION##/forms-and-data/element)
-- [Request data](docs/##VERSION##/forms-and-data/request-data)
+- [Retrieving data](docs/##VERSION##/forms-and-data/retrieving-data)
 - [Data validation](docs/##VERSION##/forms-and-data/data-validation)
 - [Session](docs/##VERSION##/forms-and-data/session)
 - [Cookies](docs/##VERSION##/forms-and-data/cookies)
+- [CSRF Protection](docs/##VERSION##/forms-and-data/csrf-protection)
 - [Working with databases](docs/##VERSION##/forms-and-data/working-with-databases)
 - [Mastering Kraken](docs/##VERSION##/forms-and-data/mastering-kraken)
 - [Models](docs/##VERSION##/forms-and-data/models)
@@ -31,5 +35,6 @@
 - [Skeltch](docs/##VERSION##/extra/skeltch)
 - [File uploads](docs/##VERSION##/extra/file-uploads)
 - [HTTP requests](docs/##VERSION##/extra/http-requests)
+- [Migrations](docs/##VERSION##/extra/migrations)
 - [Mail](docs/##VERSION##/extra/mail)
 - [Util](docs/##VERSION##/extra/util)

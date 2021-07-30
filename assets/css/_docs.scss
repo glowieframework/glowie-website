@@ -81,12 +81,13 @@ section.docs{
     }
 
     pre{
-        background-color: #fafafa;
-        padding: 10px;
-        font-family: 'Lucida Console', monospace !important;
-        
+        .hljs{
+            background-color: #fafafa;
+        }
+
         *{
-            font-family: 'Lucida Console', monospace !important;
+            font-family: 'Lucida Console', monospace;
+            font-weight: inherit;
         }
     }
 

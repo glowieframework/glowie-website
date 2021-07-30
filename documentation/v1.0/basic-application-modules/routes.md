@@ -1,7 +1,7 @@
 # Routes
 A route defines how your application will handle what the user types into the URL and take the correct action from there.
 
-All your application route configuration is stored in `app/config/Routes.php` and handled by the `Glowie\Core\Rails` class.
+All your application route configuration is stored in `app/config/Routes.php` and handled by the `Glowie\Core\Http\Rails` class.
 
 ### Creating routes
 You can create a new route by using the static `Rails::addRoute()` method. The URI (what the user types into the URL - relative to the application folder) must be the first parameter, and the remaining parameters will be:
@@ -21,7 +21,7 @@ If no action is specified, `index` will be used by default.
 **Note:** If the specified `controller` or `action` is not found, Glowie will trigger an error.
 
 **methods**
-The HTTP request methods that this route accepts. Must be an **array** of allowed methods (`get`, `post`, `put`, `patch` or `delete`). If the route is requested with a method other than the specified ones, Glowie will return a 403 Forbidden error.
+The HTTP request methods that this route accepts. Must be an **array** of allowed methods (`get`, `post`, `put`, `patch` or `delete`). If the route is requested with a method other than the specified ones, Glowie will return a 405 Method Not Allowed error response.
 
 If no method is specified, all methods will be accepted by default.
 
@@ -45,6 +45,8 @@ Rails::addRoute('blog/new', Blog::class, 'new', ['post', 'patch'], 'blog-new');
 ```
 
 **Note:** routes are parsed from first to last order, so the first matching route will be triggered.
+
+**Important!** Route URIs and names are case-sensitive. This means route `blog` and `Blog` will be matched differently.
 
 ### Using dynamic route parameters
 If your route needs to get a dynamic parameter within a friendly URL (like an ID, name, category, etc.) you can bind this parameter into the route by using `:parameter_name`.
@@ -96,6 +98,9 @@ If you just want to simply redirect a route to an URL, you don't need to write a
 **target**
 The target URL to redirect to.
 
+**code**
+The HTTP status code to send with the redirect (defaults to 307 Temporary Redirect).
+
 **methods**
 An array of allowed HTTP request methods that will trigger this route. Same as in `Rails::addRoute()` methods setting (see above).
 
@@ -133,4 +138,4 @@ echo $this->params->param1; # returns 123
 echo $this->params->param2; # returns abc
 ```
 
-If a corresponding controller or action is not found, Glowie will return a 404 Not Found error.
+If a corresponding controller or action is not found, Glowie will return a 404 Not Found error response.

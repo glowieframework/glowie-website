@@ -508,13 +508,12 @@ section.docs h3 {
   font-size: 20px;
   margin-top: 30px;
 }
-section.docs pre {
+section.docs pre .hljs {
   background-color: #fafafa;
-  padding: 10px;
-  font-family: "Lucida Console", monospace !important;
 }
 section.docs pre * {
-  font-family: "Lucida Console", monospace !important;
+  font-family: "Lucida Console", monospace;
+  font-weight: inherit;
 }
 @media (max-width: 991px) {
   section.docs {

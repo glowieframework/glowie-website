@@ -3,7 +3,7 @@ A Glowie application is bundled with two main folders: `app` and `vendor` along 
 
 You only need to **point your server to this root directory** and Glowie will do the rest for you.
 
-Here you will understand what every folder means and how your application is organized.
+Here you will understand what every folder means and how your application is structured.
 
 ### App folder
 The `app` folder has everything related to your application. The folders within this folder are:
@@ -19,6 +19,9 @@ Application internationalization files.
 
 **middlewares**
 Application middlewares.
+
+**migrations**
+Application database migrations.
 
 **models**
 Application database models.

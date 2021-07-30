@@ -61,5 +61,7 @@ $this->renderView('about');
 <!-- This will print "Your name is Glowie." (w/o quotes) -->
 ```
 
+**Important!** Parameters passed through `$this->renderView()` method have higher privileges over the global ones. If you pass two parameters with the same name, the global parameter will be overwritten.
+
 ### Taking your views to a next level
 If you want to learn a new way to create dynamic, pretty and professional coded views, take a look at [Skeltch](docs/##VERSION##/extra/skeltch), Glowie built-in templating engine.

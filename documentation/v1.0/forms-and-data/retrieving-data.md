@@ -1,11 +1,10 @@
-# Request data
-In order to retrieve a request data from a controller or middleware, there are three properties that can be used:
+# Retrieving data
+In order to retrieve a request data from a controller or middleware, there are two main properties that can be used:
 
 - `$this->get` - Parameters passed to the request through the HTTP GET method.
 - `$this->post` - Parameters passed to the request through the HTTP POST method.
-- `$this->server` - Server and execution environment data such as headers, paths and script locations.
 
-Every property returns an [Element](docs/##VERSION##/forms-and-data/element) with the corresponding data.
+Both properties return an [Element](docs/##VERSION##/forms-and-data/element) with the corresponding data.
 
 _Example 1_
 **form view**
@@ -32,3 +31,5 @@ _Example 2_
 $query = $this->get->query; # returns "products" (w/o quotes)
 $page = $this->get->page; # returns "1" (w/o quotes)
 ```
+
+You can also use the methods from [Request](docs/##VERSION##/basic-application-modules/request) instance.
