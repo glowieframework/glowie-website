@@ -35,7 +35,7 @@ $this->renderView('index', ['name' => 'Glowie']);
 **index.phtml**
 ```html
 <h2>Hello, <?php echo $this->name; ?>!</h2>
-<!-- This will print "Hello, Glowie!" (w/o quotes) -->
+<!-- This will print "Hello, Glowie!" -->
 ```
 
 ### Passing view parameters globally
@@ -53,12 +53,12 @@ $this->renderView('about');
 **index.phtml**
 ```html
 <h2>Hello, <?php echo $this->name; ?>!</h2>
-<!-- This will print "Hello, Glowie!" (w/o quotes) -->
+<!-- This will print "Hello, Glowie!" -->
 ```
 **about.phtml**
 ```html
 <h2>Your name is <?php echo $this->name; ?>.</h2>
-<!-- This will print "Your name is Glowie." (w/o quotes) -->
+<!-- This will print "Your name is Glowie." -->
 ```
 
 **Important!** Parameters passed through `$this->renderView()` method have higher privileges over the global ones. If you pass two parameters with the same name, the global parameter will be overwritten.

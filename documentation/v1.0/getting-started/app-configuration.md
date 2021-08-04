@@ -62,20 +62,20 @@ _Example_
 'error_log' => true,
 ```
 
-**hash_key**
+**app_key**
 Key to use with encrypting functions. Be sure to use a strong key.
 
 _Example_
 ```php
-'hash_key' => 'f08e8ba131c7abab97dba275fab5a85e',
+'app_key' => 'f08e8ba131c7abab97dba275fab5a85e',
 ```
 
-**hash_token**
-Token to use with encrypting functions (along with your hash key). Be sure to use a strong key.
+**app_token**
+Token to use with encrypting functions (along with your app key). Be sure to use a strong key.
 
 _Example_
 ```php
-'hash_token' => 'd147723d9e91340d9dd28fbd5a0b6651',
+'app_token' => 'd147723d9e91340d9dd28fbd5a0b6651',
 ```
 
 **database**

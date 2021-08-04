@@ -35,7 +35,7 @@ If the key does not exists, this function returns `null`. If the language does n
 
 _Example_
 ```php
-$welcome = Babel::get('welcome', 'en'); # returns "Welcome to my application" (w/o quotes)
+$welcome = Babel::get('welcome', 'en'); # returns "Welcome to my application"
 ```
 
 ### Setting the active language

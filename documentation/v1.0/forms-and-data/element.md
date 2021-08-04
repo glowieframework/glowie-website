@@ -17,7 +17,7 @@ To store data in the Element, use `$element->set()`. The first parameter is the 
 
 _Example_
 ```php
-$element->set('name', 'Glowie'); # Stores "Glowie" value into "name" key (w/o quotes)
+$element->set('name', 'Glowie'); # Stores "Glowie" value into "name" key
 ```
 
 You can also use magic setters to store data as properties of the `Element` object.
@@ -28,11 +28,14 @@ $element->name = 'Glowie';
 ```
 
 ### Retrieving data
-To retrieve data from the Element, use `$element->get()` passing the key for the data you are getting. If the key you provide does not exist, this function returns `null`.
+To retrieve data from the Element, use `$element->get()` passing the key for the data you are getting.
+
+The second parameter is an optional default value. If the key you provide does not exist, this function returns the default value you've set.
 
 _Example_
 ```php
-$name = $element->get('name'); # Returns "Glowie" (w/o quotes)
+$name = $element->get('name'); # Returns "Glowie"
+$page = $element->get('page', 1); # Returns "1"
 ```
 
 The same way as in `$element->set()`, you can also use magic getters to retrieve data as properties from the `Element` object.
@@ -42,7 +45,10 @@ _Example_
 $name = $element->name;
 ```
 
+**Converting data**
 To retrieve the whole Element data as an associative array, use `$element->toArray()`.
+
+You can also convert the Element data to a JSON string with `$element->toJson()`.
 
 ### Checking for data
 If you want to check if some property is stored, use `$element->has()` along with the key you want to check.

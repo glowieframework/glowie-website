@@ -38,7 +38,7 @@ $this->renderLayout('default', 'index');
     </head>
     <body>
         <?php echo $this->getContent(); ?>
-        <!-- Prints "<h2>Hello world!</h2>" (w/o quotes) -->
+        <!-- Prints "<h2>Hello world!</h2>" -->
     </body>
 </html>
 ```
@@ -64,11 +64,11 @@ $this->renderLayout('default', 'index', ['name' => 'Glowie']);
 <html>
     <head>
         <title>Hello, <?php echo $this->name; ?>!</title>
-        <!-- Prints "Hello, Glowie!" (w/o quotes) -->
+        <!-- Prints "Hello, Glowie!" -->
     </head>
     <body>
         <?php echo $this->getContent(); ?>
-        <!-- Prints "<h2>Hello, Glowie!</h2>" (w/o quotes) -->
+        <!-- Prints "<h2>Hello, Glowie!</h2>" -->
     </body>
 </html>
 ```

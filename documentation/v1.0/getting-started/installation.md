@@ -16,4 +16,6 @@ Updating Glowie is as simple as installing it. Just navigate to your application
 composer update
 ```
 
-**Important!** Glowie follows [Semantic Versioning](https://semver.org) standards, so don't forget to read the changelog and be aware of all breaking changes before running any major updates.
+This will update Glowie core modules to the latest version available.
+
+**Important!** Glowie follows [Semantic Versioning](https://semver.org) standards, so don't forget to read the changelog and be aware of all breaking changes before running any updates.

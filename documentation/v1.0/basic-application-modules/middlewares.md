@@ -49,7 +49,7 @@ To create a protected route assigned to a middleware, in your route configuratio
 
 This is basically the same as `Rails::addRoute()` method, with a difference that the **second** parameter is the full class name for the application middleware that will protect this route.
 
-The middleware name must also include `Glowie\Middlewares` namespace. You can use `MiddlewareName::class` to get this property the correct way (see the example below).
+The middleware name must also include `Glowie\Middlewares` namespace. You can use `MiddlewareName::class` to get this property properly (see the example below).
 
 If no middleware is specified, `Glowie\Middlewares\Authenticate` will be used by default.
 
@@ -62,6 +62,7 @@ use Glowie\Middlewares\Authenticate;
 Rails::addProtectedRoute('admin', Authenticate::class, Admin::class, 'index');
 ```
 
+**Multiple middlewares**
 If you want to assign multiple middlewares to a route, you can pass an array of middlewares as the second parameter of this method. Be aware that each middleware will be executed following the same order as in the array.
 
 _Example_
@@ -89,8 +90,8 @@ _Example_
     class MyMiddleware extends Middleware{
 
        public function handle(){
-           // Checks if the authorization header token is valid
-           if($this->request->getHeader('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
+           // Checks if the "token" header token is valid
+           if($this->request->getHeader('token') == '1a79a4d60de6718e8e5b326e338ae533'){
                return true; # Continues to the controller
            }else{
                return false; # Stops the execution
@@ -115,8 +116,8 @@ _Example_
     class MyMiddleware extends Middleware{
 
        public function handle(){
-           // Checks if the authorization header token is valid
-           if($this->request->getHeader('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
+           // Checks if the "token" header token is valid
+           if($this->request->getHeader('token') == '1a79a4d60de6718e8e5b326e338ae533'){
                return true; # Continues to the controller
            }else{
                return false; # Stops the execution
@@ -124,8 +125,8 @@ _Example_
        }
 
        public function success(){
-           // Authorization token is valid, store it in the session
-           $this->session->token = $this->request->getHeader('HTTP_AUTHORIZATION');
+           // Header is valid, store it in the session
+           $this->session->token = $this->request->getHeader('token');
 
            // After this, the route controller is triggered
        }
@@ -148,8 +149,8 @@ _Example_
     class MyMiddleware extends Middleware{
 
        public function handle(){
-           // Checks if the authorization header token is valid
-           if($this->request->getHeader('HTTP_AUTHORIZATION') == '1a79a4d60de6718e8e5b326e338ae533'){
+           // Checks if the "token" header token is valid
+           if($this->request->getHeader('token') == '1a79a4d60de6718e8e5b326e338ae533'){
                return true; # Continues to the controller
            }else{
                return false; # Stops the execution
@@ -157,7 +158,7 @@ _Example_
        }
 
        public function fail(){
-           // Authorization token is not valid, redirect the user to the index page
+           // Header is not valid, redirect the user back to the index page
            $this->response->redirect('/');
        }
 
@@ -169,7 +170,9 @@ _Example_
 ### init()
 Every middleware can have an optional `init()` method. If this method exists, it will be called before the middleware handler.
 
-This way you create common functions that will be propagated to the whole middleware before anything happens, instead of using the middleware constructor for that.
+This way you create common functions that will be propagated to the whole middleware before anything happens.
+
+**Note:** You should not use the `__construct()` method in a middleware. Always use `init()` instead.
 
 _Example_
 ```php

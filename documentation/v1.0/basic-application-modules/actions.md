@@ -38,6 +38,8 @@ Every controller can have an optional `init()` method. If this method exists, it
 
 This way you create common functions that will be propagated to the whole controller before anything happens, instead of using the controller constructor for that.
 
+**Note:** You should not use the `__construct()` method in a controller. Always use `init()` instead.
+
 _Example_
 ```php
 <?php

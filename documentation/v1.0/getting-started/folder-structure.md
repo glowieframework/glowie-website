@@ -1,5 +1,5 @@
 # Folder structure
-A Glowie application is bundled with two main folders: `app` and `vendor` along with a main `.htaccess` Apache configuration file, the [Firefly](docs/##VERSION##/extra/firefly) script, a sample `.gitignore` file and Composer related files in the root directory. 
+A Glowie application is bundled with two main folders: `app` and `vendor` along with a main `.htaccess` Apache configuration file.
 
 You only need to **point your server to this root directory** and Glowie will do the rest for you.
 

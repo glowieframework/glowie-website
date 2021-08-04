@@ -14,7 +14,7 @@ To store data in the session, use `$this->session->set()`. The first parameter i
 
 _Example_
 ```php
-$this->session->set('name', 'Glowie'); # Stores "Glowie" value into "name" key (w/o quotes)
+$this->session->set('name', 'Glowie'); # Stores "Glowie" value into "name" key
 ```
 
 You can also use magic setters to store data as properties of the `Session` object.
@@ -25,11 +25,14 @@ $this->session->name = 'Glowie';
 ```
 
 ### Retrieving session data
-To retrieve data from the session, use `$this->session->get()` passing the key for the data you are getting. If the key you provide does not exist, this function returns `null`.
+To retrieve data from the session, use `$this->session->get()` passing the key for the data you are getting.
+
+The second parameter is an optional default value. If the key you provide does not exist, this function returns the default value you've set.
 
 _Example_
 ```php
-$name = $this->session->get('name'); # Returns "Glowie" (w/o quotes)
+$name = $this->session->get('name'); # Returns "Glowie"
+$page = $this->session->get('page', 1); # Returns "1"
 ```
 
 The same way as in `$this->session->set()`, you can also use magic getters to retrieve data as properties from the `Session` object.
@@ -39,7 +42,10 @@ _Example_
 $name = $this->session->name;
 ```
 
+**Converting data**
 To retrieve the whole session data as an associative array, use `$this->session->toArray()`.
+
+You can also convert the session data to a JSON string with `$this->session->toJson()`.
 
 ### Checking for session data
 If you want to check if some property is stored, use `$this->session->has()` along with the key you want to check.
@@ -78,13 +84,13 @@ If you want to, you can store temporary data in the session in order to use it j
 
 In order to store session flash data, use `$this->session->setFlash()` along with the key for the data you are storing as the first paramenter, and its value as the second.
 
-To retrieve session flash data, use `$this->session->getFlash()` along with the key for the data you are getting. If the key you provide does not exist, this function returns `null`.
+To retrieve session flash data, use `$this->session->getFlash()` along with the key for the data you are getting. The second parameter is an optional default value. If the key you provide does not exist, this function returns the default value you've set.
 
 As soon as the data is retrieved once, it is deleted from the session.
 
 _Example_
 ```php
-$this->session->setFlash('name', 'Glowie'); # Stores "Glowie" value into "name" key (w/o quotes)
-$name = $this->session->getFlash('name'); # Returns "Glowie" (w/o quotes)
-$name2 = $this->session->getFlash('name'); # Returns null, flash data was already deleted
+$this->session->setFlash('name', 'Glowie'); # Stores "Glowie" value into "name" key
+$name = $this->session->getFlash('name'); # Returns "Glowie"
+$name = $this->session->getFlash('name'); # Returns null, flash data was already deleted
 ```

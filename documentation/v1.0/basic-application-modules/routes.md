@@ -4,12 +4,12 @@ A route defines how your application will handle what the user types into the UR
 All your application route configuration is stored in `app/config/Routes.php` and handled by the `Glowie\Core\Http\Rails` class.
 
 ### Creating routes
-You can create a new route by using the static `Rails::addRoute()` method. The URI (what the user types into the URL - relative to the application folder) must be the first parameter, and the remaining parameters will be:
+You can create a new route in the route configuration file by using the static `Rails::addRoute()` method. The URI (what the user types into the URL - relative to the application folder) must be the first parameter, and the remaining parameters will be:
 
 **controller**
 The full class name for the application controller that this route will instantiate. Must be an existing controller in `app/controllers`.
 
-The controller name must also include `Glowie\Controllers` namespace. You can use `ControllerName::class` to get this property the correct way (see examples below).
+The controller name must also include `Glowie\Controllers` namespace. You can use `ControllerName::class` to get this property properly (see examples below).
 
 If no controller is specified, `Glowie\Controllers\Main` will be used by default.
 
@@ -21,7 +21,7 @@ If no action is specified, `index` will be used by default.
 **Note:** If the specified `controller` or `action` is not found, Glowie will trigger an error.
 
 **methods**
-The HTTP request methods that this route accepts. Must be an **array** of allowed methods (`get`, `post`, `put`, `patch` or `delete`). If the route is requested with a method other than the specified ones, Glowie will return a 405 Method Not Allowed error response.
+The HTTP request methods that this route accepts. Can be a single method or an array of allowed methods (`get`, `post`, `put`, `patch` or `delete`). If the route is requested with a method other than the specified ones, Glowie will return a 405 Method Not Allowed error response.
 
 If no method is specified, all methods will be accepted by default.
 
@@ -49,7 +49,7 @@ Rails::addRoute('blog/new', Blog::class, 'new', ['post', 'patch'], 'blog-new');
 **Important!** Route URIs and names are case-sensitive. This means route `blog` and `Blog` will be matched differently.
 
 ### Using dynamic route parameters
-If your route needs to get a dynamic parameter within a friendly URL (like an ID, name, category, etc.) you can bind this parameter into the route by using `:parameter_name`.
+If your route needs to get a dynamic parameter within a friendly URL (like an ID, name, slug, etc.) you can bind this parameter into the route by using `:parameter_name`.
 
 This means the route will accept **any value** (except slashes) in this segment.
 
@@ -102,7 +102,7 @@ The target URL to redirect to.
 The HTTP status code to send with the redirect (defaults to 307 Temporary Redirect).
 
 **methods**
-An array of allowed HTTP request methods that will trigger this route. Same as in `Rails::addRoute()` methods setting (see above).
+An single or an array of allowed HTTP request methods that will trigger this route. Same as in `Rails::addRoute()` methods setting (see above).
 
 **name**
 The route internal identifier. Same as in `Rails::addRoute()` methods setting (see above).

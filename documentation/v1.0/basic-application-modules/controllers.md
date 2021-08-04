@@ -42,3 +42,5 @@ Next step is create some actions for your controller, see [Actions](docs/##VERSI
 `BaseController` is a default controller class located in the controllers folder (`app/controllers/BaseController.php`) who is extended by every other controller of your application.
 
 This means you can create any methods and properties in this controller and they can be reused from any other controller. This is useful when creating global functions or properties that need to be accessed from your whole application, removing the need of rewriting code.
+
+`BaseController` also extends `Glowie\Core\Http\Controller` class, which is the core class for Glowie controllers.

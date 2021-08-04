@@ -24,7 +24,7 @@ $this->renderView('index', ['name' => 'Glowie']);
 **index view**
 ```html
 <h2>Hello, {{$this->name}}</h2>
-<!-- This will print "Hello, Glowie" (w/o quotes) -->
+<!-- This will print "Hello, Glowie" -->
 ```
 
 This snippet is a shortcut to PHP `echo()` function. This means you can use here any function that returns a printable string.
