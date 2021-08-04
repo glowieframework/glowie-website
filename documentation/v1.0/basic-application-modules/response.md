@@ -29,7 +29,7 @@ $this->response->setBody('Success!');
 ```
 
 **As JSON**
-If you want to send a JSON output, use `$this->response->setJson()` method. The first parameter must be an associative array or an [Element](docs/##VERSION##/forms-and-data/element) with the data to convert to JSON.
+If you want to send a JSON output, use `$this->response->setJson()` method. The first parameter must be an associative array or an [Element](docs/%%version%%/forms-and-data/element) with the data to convert to JSON.
 
 The remaining parameters are `flags` and `depth`, the same used in [json_encode()](https://www.php.net/manual/en/function.json-encode.php) method.
 
@@ -40,7 +40,7 @@ $this->response->setJson($data);
 ```
 
 **As XML**
-You can also send a XML output using `$this->response->setXML()` method. The first parameter must be an associative array or an [Element](docs/##VERSION##/forms-and-data/element) with the data to convert to XML. The second parameter is an optional XML root element.
+You can also send a XML output using `$this->response->setXML()` method. The first parameter must be an associative array or an [Element](docs/%%version%%/forms-and-data/element) with the data to convert to XML. The second parameter is an optional XML root element.
 
 _Example_
 ```php
@@ -83,7 +83,7 @@ $this->response->redirectBase('myfile.pdf');
 ### Redirecting to a route
 If you want to redirect to a specific route, use `$this->response->redirectRoute()` method.
 
-The first parameter is the name of the route you want to redirect to. Must be a valid and named route from your application (see [Routes](docs/##VERSION##/basic-application-modules/routes)).
+The first parameter is the name of the route you want to redirect to. Must be a valid and named route from your application (see [Routes](docs/%%version%%/basic-application-modules/routes)).
 
 The second parameter is an associative array of parameters to bind into the URL. If the route has dynamic parameters, you must pass all of them in this array. Remaining parameters will be appended to the URL query string.
 

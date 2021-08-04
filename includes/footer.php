@@ -10,4 +10,4 @@
         </div>
     </div>
 </footer>
-<script src="assets/js/main.js?revision=020721"></script>
+<script src="assets/js/main.js"></script>

@@ -2,7 +2,7 @@
 Kraken is Glowie's powerful query builder and database toolkit. It's time to you to master this incredible component and start working with databases in a way you've never done before.
 
 ### Connecting to a database
-To start working with Kraken, you must create an instance of `Glowie\Core\Database\Kraken` class. Withing Kraken constructor, you can pass the table name you want to use as default for your queries (see [Models](docs/##VERSION##/forms-and-data/models)).
+To start working with Kraken, you must create an instance of `Glowie\Core\Database\Kraken` class. Withing Kraken constructor, you can pass the table name you want to use as default for your queries (see [Models](docs/%%version%%/forms-and-data/models)).
 
 _Example_
 ```php
@@ -11,7 +11,7 @@ use Glowie\Core\Database\Kraken;
 $db = new Kraken('glowie'); // Sets "glowie" table as default
 ```
 
-The second parameter passed in this constructor is the database connection you want to use. If you leave this empty, Glowie will connect to your application globally defined database (the one you've set in `app/config/Config.php`). If you want to connect to a different database, pass an array with the connection settings as the second parameter. The array must follow the same structure as in `Config.php` database setting (see [App configuration](docs/##VERSION##/getting-started/app-configuration)).
+The second parameter passed in this constructor is the database connection you want to use. If you leave this empty, Glowie will connect to your application globally defined database (the one you've set in `app/config/Config.php`). If you want to connect to a different database, pass an array with the connection settings as the second parameter. The array must follow the same structure as in `Config.php` database setting (see [App configuration](docs/%%version%%/getting-started/app-configuration)).
 
 _Example_
 ```php
@@ -64,7 +64,7 @@ $db->select('COUNT(ID) AS total'); // Produces SELECT COUNT(ID) AS total FROM gl
 ```
 
 ### Fetching SELECT data
-In order to fetch data from a SELECT query, use `$db->fetchAll()`. This function returns an array with each row from the query result as an [Element](docs/##VERSION##/forms-and-data/element). You can also use `$db->fetchRow()` to get only the first resulting row from the query.
+In order to fetch data from a SELECT query, use `$db->fetchAll()`. This function returns an array with each row from the query result as an [Element](docs/%%version%%/forms-and-data/element). You can also use `$db->fetchRow()` to get only the first resulting row from the query.
 
 _Example_
 ```php

@@ -31,7 +31,7 @@ _Example_
 ```
 
 **skeltch**
-Enables [Skeltch](docs/##VERSION##/extra/skeltch) templating engine to compile your application views.
+Enables [Skeltch](docs/%%version%%/extra/skeltch) templating engine to compile your application views.
 
 _Example_
 ```php

@@ -20,6 +20,10 @@ section.docs-header{
         padding: 2px 5px;
         border-radius: 5px;
         cursor: pointer;
+
+        span{
+            font-size: 11px;
+        }
     }
 
     .dropdown-menu.show{
@@ -29,6 +33,10 @@ section.docs-header{
 
     .dropdown-item{
         font-size: 13px;
+
+        span{
+            font-size: 11px;
+        }
     }
 
     @media (max-width: 991px){
@@ -73,7 +81,7 @@ section.docs{
         color: $primary;
         margin-bottom: 30px;
     }
-    
+
     h3{
         font-weight: 600;
         font-size: 20px;
@@ -86,7 +94,7 @@ section.docs{
         }
 
         *{
-            font-family: 'Lucida Console', monospace;
+            font-family: 'Roboto Mono', monospace;
             font-weight: inherit;
         }
     }

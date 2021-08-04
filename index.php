@@ -1,7 +1,4 @@
-<?php 
-    $page = 'home'; 
-    $lastVersion = 'v1.0';
-?>
+<?php $page = 'home'; ?>
 <html>
     <head>
         <title>Glowie | Powerful and lightweight PHP framework</title>
@@ -23,11 +20,12 @@
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Tiny blueprint</li>
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Flexible and scalable</li>
                             </ul>
-                            <a class="button" href="docs/<?=$lastVersion ?>/getting-started/installation">Get Started</a>
+                            <pre>composer create-project glowieframework/glowie</pre>
+                            <a class="button" href="docs/latest/getting-started/installation">Get Started</a>
                             <a class="button docs" href="docs">Documentation</a>
                         </div>
                         <div class="col-12 col-lg-6 img-banner">
-                            <img src="assets/images/banner.png?updateVersion=2405" class="bg">
+                            <img src="assets/images/banner.png" class="bg">
                             <img src="assets/images/anim1.png" class="anim1">
                             <img src="assets/images/anim2.png" class="anim2">
                             <img src="assets/images/anim3.png" class="anim3">
@@ -44,7 +42,7 @@
                     Glowie is packed with only what you need for your application to run smoothly.</h5>
                     <div class="row mt-3 mt-lg-5">
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/basic-application-modules/routes">
+                            <a href="docs/latest/basic-application-modules/routes">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-route"></i>
@@ -54,7 +52,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/forms-and-data/working-with-databases">
+                            <a href="docs/latest/forms-and-data/working-with-databases">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-database"></i>
@@ -64,7 +62,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/forms-and-data/data-validation">
+                            <a href="docs/latest/forms-and-data/data-validation">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-check-circle"></i>
@@ -74,7 +72,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/extra/file-uploads">
+                            <a href="docs/latest/extra/file-uploads">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-cloud-upload-alt"></i>
@@ -86,7 +84,7 @@
                     </div>
                     <div class="row mt-lg-4">
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/basic-application-modules/middlewares">
+                            <a href="docs/latest/basic-application-modules/middlewares">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-lock"></i>
@@ -96,7 +94,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/extra/mail">
+                            <a href="docs/latest/extra/mail">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-envelope"></i>
@@ -106,7 +104,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/getting-started/app-configuration">
+                            <a href="docs/latest/getting-started/app-configuration">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-project-diagram"></i>
@@ -116,7 +114,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/extra/firefly">
+                            <a href="docs/latest/extra/firefly">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-terminal"></i>
@@ -128,7 +126,7 @@
                     </div>
                     <div class="row mt-lg-4">
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/extra/http-requests">
+                            <a href="docs/latest/extra/http-requests">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-globe-americas"></i>
@@ -138,7 +136,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/extra/internationalization">
+                            <a href="docs/latest/extra/internationalization">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-language"></i>
@@ -148,7 +146,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/forms-and-data/session">
+                            <a href="docs/latest/forms-and-data/session">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-users"></i>
@@ -158,7 +156,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/<?=$lastVersion ?>/extra/skeltch">
+                            <a href="docs/latest/extra/skeltch">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-code"></i>
@@ -174,7 +172,7 @@
                 <div class="container text-center">
                     <h1>Ready to create something awesome?</h1>
                     <h5>You are a few steps from the best programming experience you'll ever have.</h5>
-                    <a class="button" href="docs/<?=$lastVersion ?>/getting-started/installation">Get Started</a>
+                    <a class="button" href="docs/latest/getting-started/installation">Get Started</a>
                     <a class="button docs" href="docs">Documentation</a>
                 </div>
             </section>

@@ -9,7 +9,7 @@ You can also store layouts inside subfolders for better organization. Just remem
 ### Rendering layouts
 To render a layout from a controller, simply use the function `$this->renderLayout()` along with the layout filename (extension is optional).
 
-Optionally, you can set a view to render dynamically inside this layout, you just need to pass the view filename as the second parameter of this function (works the same way as described in [Views](docs/##VERSION##/basic-application-modules/views)).
+Optionally, you can set a view to render dynamically inside this layout, you just need to pass the view filename as the second parameter of this function (works the same way as described in [Views](docs/%%version%%/basic-application-modules/views)).
 
 _Example_
 ```php
@@ -44,7 +44,7 @@ $this->renderLayout('default', 'index');
 ```
 
 ### Passing parameters to a layout
-The same way as in a view, you can pass parameters to a layout as the third parameter of `$this->renderLayout()` function (see [Views](docs/##VERSION##/basic-application-modules/views)).
+The same way as in a view, you can pass parameters to a layout as the third parameter of `$this->renderLayout()` function (see [Views](docs/%%version%%/basic-application-modules/views)).
 
 **Note:** this parameters can be accessed from both the layout itself and from the dynamic rendered view inside the layout.
 
@@ -73,4 +73,4 @@ $this->renderLayout('default', 'index', ['name' => 'Glowie']);
 </html>
 ```
 
-You can also pass parameters to the layout file by using `$this->view` object (see [Views](docs/##VERSION##/basic-application-modules/views)).
+You can also pass parameters to the layout file by using `$this->view` object (see [Views](docs/%%version%%/basic-application-modules/views)).

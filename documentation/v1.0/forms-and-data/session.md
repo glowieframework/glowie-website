@@ -3,7 +3,7 @@ A session is a way to store data temporarily in the web browser and then retriev
 
 _Example:_ A user logs in into your application using its email and password. Using sessions you can store this information and automatically validate the login in each page without prompting the user again for the login data.
 
-Usually, the session data is stored until the user closes the web browser. For storing data locally for longer times, use [Cookies](docs/##VERSION##/forms-and-data/cookies).
+Usually, the session data is stored until the user closes the web browser. For storing data locally for longer times, use [Cookies](docs/%%version%%/forms-and-data/cookies).
 
 Session data in Glowie can be managed using `Glowie\Core\Http\Session` class. You don't need to instantiate this class in a controller or middleware to work with it, simply use `$this->session` property to directly access the `Session` object.
 

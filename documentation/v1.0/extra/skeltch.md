@@ -2,7 +2,7 @@
 Skeltch is a templating engine for Glowie views. When working with Skeltch you can simplify the amount of PHP code in your views and make them a lot prettier and easier to understand.
 
 ### Processing views with Skeltch
-In order to use Skeltch, in your [App configuration](docs/##VERSION##/getting-started/app-configuration) for the current environment, set the `skeltch` setting to `true`. This will enable Skeltch compiling for all your application views.
+In order to use Skeltch, in your [App configuration](docs/%%version%%/getting-started/app-configuration) for the current environment, set the `skeltch` setting to `true`. This will enable Skeltch compiling for all your application views.
 
 _Example_
 **Config.php**
@@ -11,7 +11,7 @@ _Example_
 ```
 
 ### Caching and performance
-If the `cache` option is enabled in your [App configuration](docs/##VERSION##/getting-started/app-configuration), Skeltch will only compile a view if it hasn't been compiled yet or if there are any modifications to the view file. This cached view will be stored at `app/storage/cache`. We highly recommend leaving caching on in a production environment, since it will boost your application performance significantly.
+If the `cache` option is enabled in your [App configuration](docs/%%version%%/getting-started/app-configuration), Skeltch will only compile a view if it hasn't been compiled yet or if there are any modifications to the view file. This cached view will be stored at `app/storage/cache`. We highly recommend leaving caching on in a production environment, since it will boost your application performance significantly.
 
 ### Variables
 In order to display PHP variables in the view using Skeltch, put the variable between two pairs of curly braces.
@@ -147,37 +147,37 @@ You can also use `break` and `continue` statements as:
 ### Glowie shortcuts
 Skeltch also provides shortcuts to common Glowie functions used in views:
 
-`$this->renderView()` (see [Views](docs/##VERSION##/basic-application-modules/views))
+`$this->renderView()` (see [Views](docs/%%version%%/basic-application-modules/views))
 ```php
 {@view('index', ['name' => 'Glowie'])}
 ```
 
-`$this->renderLayout()` (see [Layouts](docs/##VERSION##/basic-application-modules/layouts))
+`$this->renderLayout()` (see [Layouts](docs/%%version%%/basic-application-modules/layouts))
 ```php
 {@layout('default', 'index', ['name' => 'Glowie'])}
 ```
 
-`echo Babel:get()` (see [Internationalization](docs/##VERSION##/extra/internationalization))
+`echo Babel:get()` (see [Internationalization](docs/%%version%%/extra/internationalization))
 ```php
 {@babel('message', 'en')}
 ```
 
-`echo Util::baseUrl()` (see [Util](docs/##VERSION##/extra/util))
+`echo Util::baseUrl()` (see [Util](docs/%%version%%/extra/util))
 ```php
 {@url('/')}
 ```
 
-`echo Util::route()` (see [Util](docs/##VERSION##/extra/util))
+`echo Util::route()` (see [Util](docs/%%version%%/extra/util))
 ```php
 {@route('products', ['id' => 1])}
 ```
 
-`echo $this->getContent()` (see [Layouts](docs/##VERSION##/basic-application-modules/layouts))
+`echo $this->getContent()` (see [Layouts](docs/%%version%%/basic-application-modules/layouts))
 ```php
 {@content}
 ```
 
-`echo Util::csrfToken()` (see [CSRF Protection](docs/##VERSION##/forms-and-data/csrf-protection))
+`echo Util::csrfToken()` (see [CSRF Protection](docs/%%version%%/forms-and-data/csrf-protection))
 ```php
 {@csrf}
 ```
@@ -191,7 +191,7 @@ _Example_
 ```
 
 ### Raw PHP code
-If you want to write raw PHP code in your Skeltch view, put your code between one pair of curly braces, starting and ending with a percent sign. 
+If you want to write raw PHP code in your Skeltch view, put your code between one pair of curly braces, starting and ending with a percent sign.
 
 **Note:** you must use semicolons when working with this kind of code.
 

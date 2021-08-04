@@ -64,7 +64,7 @@ Validates if an item is a float.
 Validates if a path is an existing file.
 
 **upload**
-Validates if an item is a valid uploaded file through HTTP POST (see [File uploads](docs/##VERSION##/extra/file-uploads)).
+Validates if an item is a valid uploaded file through HTTP POST (see [File uploads](docs/%%version%%/extra/file-uploads)).
 
 **directory**
 Validates if a path is an existing directory.

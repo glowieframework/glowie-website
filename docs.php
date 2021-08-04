@@ -1,15 +1,18 @@
 <?php
     $page = 'docs';
-    $lastVersion = 'v1.0';
 
-    // Get current docs version from URL
-    if(empty($_GET['version'])){
-        $version = $lastVersion;
-    }else{
+    // Gets the version list and latest version
+    $versionList = glob('documentation/*', GLOB_ONLYDIR);
+    $lastVersion = str_replace('documentation/', '', end($versionList));
+
+    // Gets the URL version
+    if(!empty($_GET['version']) && $_GET['version'] != 'latest'){
         $version = trim(strtolower($_GET['version']));
+    }else{
+        $version = $lastVersion;
     }
 
-    // Get docs route
+    // Gets the URL route
     if(empty($_GET['route'])){
         $file = "documentation/{$version}/home.md";
     }else{
@@ -17,21 +20,18 @@
         $file = "documentation/{$version}/{$file}.md";
     }
 
-    // Get documentation content
+    // Gets docs content
     if(!file_exists($file)) header('Location: https://glowie.tk/404');
     $content = file_get_contents($file);
-    $menu = file_get_contents("documentation/{$version}/menu.md");
+    $menu = file_get_contents("documentation/{$version}/_menu.md");
     $title = str_replace('# ', '', strtok($content, "\n"));
 
-    // Get version list
-    $versionList = glob('documentation/*', GLOB_ONLYDIR);
-
-    // Parse content
+    // Parses the content
     require_once 'includes/Parsedown.php';
-    $Parsedown = new Parsedown();
-    $Parsedown->setBreaksEnabled(true);
-    $content = str_replace('##VERSION##', $version, $Parsedown->text($content));
-    $menu = str_replace('##VERSION##', $version, $Parsedown->text($menu));
+    $parser = new Parsedown();
+    $parser->setBreaksEnabled(true);
+    $content = str_replace('%%version%%', $version, $parser->text($content));
+    $menu = str_replace('%%version%%', $version, $parser->text($menu));
 ?>
 <html>
     <head>
@@ -47,10 +47,10 @@
             <section class="docs">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-9">
+                        <div class="col-12 col-lg-8 col-xl-9">
                             <?=$content; ?>
                         </div>
-                        <div class="col-12 col-lg-3">
+                        <div class="col-12 col-lg-4 col-xl-3">
                             <div class="menu">
                                 <?=$menu; ?>
                             </div>

@@ -4,7 +4,7 @@ In order to retrieve a request data from a controller or middleware, there are t
 - `$this->get` - Parameters passed to the request through the `GET` method.
 - `$this->post` - Parameters passed to the request through the `POST` method.
 
-Both properties return an [Element](docs/##VERSION##/forms-and-data/element) with the corresponding data.
+Both properties return an [Element](docs/%%version%%/forms-and-data/element) with the corresponding data.
 
 _Example 1_
 **form view**
@@ -32,4 +32,4 @@ $query = $this->get->query; # returns "products"
 $page = $this->get->page; # returns "1"
 ```
 
-You can also use the methods from [Request](docs/##VERSION##/basic-application-modules/request) instance to retrieve request data.
+You can also use the methods from [Request](docs/%%version%%/basic-application-modules/request) instance to retrieve request data.

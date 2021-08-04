@@ -8,7 +8,7 @@ Basically, a middleware is an "extra layer" added between the route and the cont
 ### Creating a middleware
 A middleware is a simple PHP file with a middleware class in `Glowie\Middlewares` namespace stored in `app/middlewares` folder.
 
-From [Firefly](docs/##VERSION##/extra/firefly) CLI you can use the following command to create a new controller:
+From [Firefly](docs/%%version%%/extra/firefly) CLI you can use the following command to create a new controller:
 
 ```plaintext
 php firefly create-middleware --name=MyMiddleware
@@ -45,7 +45,7 @@ And for convention, every word in a middleware name must be capitalized.
 _Example:_ for creating a `Hello world` middleware, the name must be `HelloWorld`.
 
 ### Assigning a route to a middleware
-To create a protected route assigned to a middleware, in your route configuration file (see [Routes](docs/##VERSION##/basic-application-modules/routes)), use the static `Rails::addProtectedRoute()` method. 
+To create a protected route assigned to a middleware, in your route configuration file (see [Routes](docs/%%version%%/basic-application-modules/routes)), use the static `Rails::addProtectedRoute()` method.
 
 This is basically the same as `Rails::addRoute()` method, with a difference that the **second** parameter is the full class name for the application middleware that will protect this route.
 

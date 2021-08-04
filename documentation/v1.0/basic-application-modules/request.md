@@ -10,7 +10,7 @@ In order to retrieve details about a request your application received, you can 
 
 - `$this->request->getURL()` - Returns the full requested URL. This means, the entire URL (including query string parameters) the user typed to access your application.
 
-- `$this->request->getURI()` - Returns the clean requested URI. This means, only the URI (see [Routes](docs/##VERSION##/basic-application-modules/routes)) the user typed. This does not includes the hostname or query string parameters.
+- `$this->request->getURI()` - Returns the clean requested URI. This means, only the URI (see [Routes](docs/%%version%%/basic-application-modules/routes)) the user typed. This does not includes the hostname or query string parameters.
 
 - `$this->request->getIPAddress()` - Returns the IP address used in the request, if available. If the IP address is not available, this method returns `0.0.0.0`.
 
@@ -38,10 +38,10 @@ $page = $this->request->getVar('page') # returns "1"
 In order to get the raw request body as a string, use `$this->request->getBody()`.
 
 **JSON data**
-If the request data was sent as a JSON string, you can also use `$this->request->getJson()` to get an [Element](docs/##VERSION##/forms-and-data/element) with the request data.
+If the request data was sent as a JSON string, you can also use `$this->request->getJson()` to get an [Element](docs/%%version%%/forms-and-data/element) with the request data.
 
 **Shortcuts**
-See [Retrieving data](docs/##VERSION##/forms-and-data/retrieving-data) for a list of shortcuts to retrieve request data.
+See [Retrieving data](docs/%%version%%/forms-and-data/retrieving-data) for a list of shortcuts to retrieve request data.
 
 ### Working with request headers
 Headers are piece of information that each request carries with it. In order to retrieve a specific request header value, use the `$this->request->getHeader()` method.
@@ -58,6 +58,6 @@ There are a few shortcuts to the most commonly used headers:
 
 - `$this->request->getContentType()` - Returns the `Content-Type` header value or `null` if not available.
 
-- `$this->request->getAuthorization()` - Returns an [Element](docs/##VERSION##/forms-and-data/element) with the username and password passed through a basic `Authorization` header. If the header is not present or the Authorization is invalid, this method returns `null`.
+- `$this->request->getAuthorization()` - Returns an [Element](docs/%%version%%/forms-and-data/element) with the username and password passed through a basic `Authorization` header. If the header is not present or the Authorization is invalid, this method returns `null`.
 
 - `$this->request->getPreviousUrl()` - Returns the previous URL where the user was refered from. Note that this information relies in the `Referer` header. Be aware that this header cannot be always available.
