@@ -31,7 +31,7 @@ $this->response->setBody('Success!');
 **As JSON**
 If you want to send a JSON output, use `$this->response->setJson()` method. The first parameter must be an associative array or an [Element](docs/%%version%%/forms-and-data/element) with the data to convert to JSON.
 
-The remaining parameters are `flags` and `depth`, the same used in [json_encode()](https://www.php.net/manual/en/function.json-encode.php) method.
+The remaining parameters are `flags` and `depth`, the same used in [json_encode()](https://php.net/manual/en/function.json-encode.php) method.
 
 _Example_
 ```php

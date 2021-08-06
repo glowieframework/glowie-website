@@ -70,3 +70,5 @@ _Example_
 ```php
 $result = $db->select()->fetchAll();
 ```
+-----
+_Documentation under development..._

@@ -54,11 +54,14 @@ section.index-banner{
     }
 
     pre{
-        margin: 9px 0px;
+        margin: 20px 0px 10px 0;
         background-color: #fafafa;
         font-family: "Roboto Mono", monospace;
         padding: 10px 25px;
-        display: inline-block;
+        display: block;
+        width: -moz-fit-content;
+        width: fit-content;
+        max-width: 100%;
     }
 
     h1{
@@ -134,6 +137,11 @@ section.index-banner{
 
     @media (max-width: 991px){
         padding: 30px 0;
+        
+        pre{
+            padding: 10px;
+            margin: 10px 0 5px 0;
+        }
 
         h1{
             font-size: 26px;

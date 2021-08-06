@@ -1,5 +1,5 @@
 # Installation
-To install Glowie and start a fresh new project, use:
+To install Glowie and start a fresh new project, from your console use:
 
 ```plaintext
 composer create-project glowieframework/glowie myproject
