@@ -1,4 +1,4 @@
-﻿section.error{
+﻿section.error {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,13 +9,13 @@
     text-align: center;
     padding: 20px;
 
-    img{
+    img {
         height: 400px;
         display: block;
         margin: auto;
     }
 
-    h3{
+    h3 {
         font-size: 22px;
         font-weight: 500;
         color: $primary;
@@ -25,7 +25,7 @@
         margin-top: 30px;
     }
 
-    .button{
+    .button {
         display: block;
         background-color: $primary;
         color: white;
@@ -36,30 +36,30 @@
         border: 1px solid $primary;
         @include transitionAll();
 
-        &:hover{
+        &:hover {
             background-color: $strong;
         }
     }
 
-    .attrib{
+    .attrib {
         margin-top: 20px;
         font-size: 12px;
         display: block;
         color: dimgray;
     }
 
-    @media (max-width: 768px){
-        img{
+    @media (max-width: 768px) {
+        img {
             height: 300px;
         }
     }
 
-    @media (max-width: 489px){
-        img{
+    @media (max-width: 489px) {
+        img {
             height: 200px;
         }
 
-        h3{
+        h3 {
             font-size: 18px;
         }
     }

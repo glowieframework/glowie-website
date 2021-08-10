@@ -5,7 +5,6 @@ From your controller, create a new instance of `Glowie\Core\Tools\Validator` usi
 
 ```php
 use Glowie\Core\Tools\Validator;
-
 $validator = new Validator();
 ```
 
@@ -144,15 +143,17 @@ $data = [
     'name' => 'Glowie',
     'address' => ''
 ];
+
 $rules = [
     'name' => ['required', 'string'],
     'address' => ['required']
 ];
+
 $isValid = $validator->validateFields($data, $rules); # returns false
 ```
 
 ### Retrieving validation errors
-After running a validation, all validation failures can be retrieved through `$validator->getErrors()`. This method will return an associative array of fields or items (with each field/item being a key) and an array of invalid fields.
+After running a validation, all validation failures can be retrieved through `$validator->getErrors()`. This method will return an associative array of fields or items (with each field/item being a key) and an array of invalid fields assuming a `true` value to each failure.
 
 You can use this method to handle specific errors or show messages to the user based in a specific invalid field or item.
 
@@ -162,10 +163,12 @@ $data = [
     'name' => 'Glowie',
     'email' => ''
 ];
+
 $rules = [
     'name' => ['required'],
     'email' => ['required', 'email']
 ];
+
 $isValid = $validator->validateFields($data, $rules); # returns false
 $errors = $validator->getErrors();
 
@@ -188,10 +191,12 @@ $data = [
     'name' => 'Glowie',
     'email' => ''
 ];
+
 $rules = [
     'name' => ['required'],
     'email' => ['required', 'email']
 ];
+
 $isValid = $validator->validateFields($data, $rules); # returns false
 $errors = $validator->getErrors('name'); # returns []
 ```

@@ -287,7 +287,10 @@ section.index-banner .fa-ul li {
   }
 }
 @media (max-width: 1199px) {
-  section.index-banner .img-banner .anim1, section.index-banner .img-banner .anim2, section.index-banner .img-banner .anim3, section.index-banner .img-banner .anim4 {
+  section.index-banner .img-banner .anim1,
+section.index-banner .img-banner .anim2,
+section.index-banner .img-banner .anim3,
+section.index-banner .img-banner .anim4 {
     transform: scale(0.8);
   }
 }
@@ -530,7 +533,21 @@ section.docs h3 {
   margin-top: 30px;
 }
 section.docs pre .hljs {
+  position: relative;
+  overflow-x: overlay;
   background-color: #fafafa;
+}
+section.docs pre .hljs::-webkit-scrollbar {
+  height: 7px;
+}
+section.docs pre .hljs::-webkit-scrollbar-track {
+  background: transparent;
+}
+section.docs pre .hljs::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+section.docs pre .hljs:hover::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
 }
 section.docs pre * {
   font-family: "Roboto Mono", monospace;

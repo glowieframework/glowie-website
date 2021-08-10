@@ -7,7 +7,7 @@ In order to retrieve a request data from a controller or middleware, there are t
 Both properties return an [Element](docs/%%version%%/forms-and-data/element) with the corresponding data.
 
 _Example 1_
-**form view**
+**view**
 ```html
 <form method="post" action="send">
     <input type="text" name="user" value="glowie">
@@ -16,7 +16,7 @@ _Example 1_
 </form>
 ```
 
-**FormController**
+**controller**
 ```php
 public function send(){
     $user = $this->post->user; # returns "glowie"
@@ -25,7 +25,6 @@ public function send(){
 ```
 
 _Example 2_
-**controller**
 ```php
 # user types in myappurl.com/search?query=products&page=1
 $query = $this->get->query; # returns "products"

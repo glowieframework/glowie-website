@@ -1,21 +1,21 @@
-footer{
+footer {
     background: $gradient;
     color: white;
     font-size: 14px;
     padding: 20px 0;
 
-    a{
+    a {
         color: white;
         border-bottom: 1px dotted white;
         @include transitionAll();
 
-        &:hover{
+        &:hover {
             color: $soft;
             text-decoration: none;
         }
     }
 
-    i{
+    i {
         color: $soft;
     }
 }

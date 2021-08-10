@@ -1,18 +1,18 @@
-section.docs-header{
+section.docs-header {
     background-color: $soft;
     padding-bottom: 50px;
 
-    h1{
+    h1 {
         font-size: 36px;
         color: $strong;
     }
 
-    a{
+    a {
         color: $strong;
         text-decoration: none;
     }
 
-    .version{
+    .version {
         background-color: white;
         font-size: 13px;
         display: block;
@@ -21,92 +21,112 @@ section.docs-header{
         border-radius: 5px;
         cursor: pointer;
 
-        span{
+        span {
             font-size: 11px;
         }
     }
 
-    .dropdown-menu.show{
+    .dropdown-menu.show {
         top: auto;
         left: auto;
     }
 
-    .dropdown-item{
+    .dropdown-item {
         font-size: 13px;
 
-        span{
+        span {
             font-size: 11px;
         }
     }
 
-    @media (max-width: 991px){
+    @media (max-width: 991px) {
         padding: 30px 0;
 
-        h1{
+        h1 {
             font-size: 30px;
         }
     }
 }
 
-section.docs{
+section.docs {
     padding: 30px 0;
 
-    .menu{
+    .menu {
         background-color: #fafafa;
         border: 1px solid gainsboro;
         border-radius: 10px;
         padding: 20px;
         font-size: 14px;
 
-        h3{
+        h3 {
             font-size: 14px;
             margin-top: 10px;
         }
     }
 
-    img{
+    img {
         display: block;
         margin: 10px auto;
         width: 100%;
         max-width: 500px;
     }
 
-    a{
+    a {
         color: $primary;
     }
 
-    h1{
+    h1 {
         font-weight: 500;
         font-size: 32px;
         color: $primary;
         margin-bottom: 30px;
     }
 
-    h3{
+    h3 {
         font-weight: 600;
         font-size: 20px;
         margin-top: 30px;
     }
 
-    pre{
-        .hljs{
+    pre {
+        .hljs {
+            position: relative;
+            overflow-x: overlay;
             background-color: #fafafa;
+
+            &::-webkit-scrollbar {
+                height: 7px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: transparent;
+            }
+
+            &:hover {
+                &::-webkit-scrollbar-thumb {
+                    background: #bbbbbb;
+                }
+            }
         }
 
-        *{
+        * {
             font-family: 'Roboto Mono', monospace;
             font-weight: inherit;
         }
     }
 
-    @media (max-width: 991px){
+    @media (max-width: 991px) {
         font-size: 16px;
 
-        pre{
+        pre {
             overflow-x: auto;
         }
 
-        h1{
+        h1 {
             font-size: 26px;
         }
     }

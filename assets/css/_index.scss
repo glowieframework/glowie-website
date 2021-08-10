@@ -1,50 +1,58 @@
-section.index-banner{
+section.index-banner {
     background-color: $soft;
     padding-bottom: 80px;
 
-    .img-banner{
-        .bg{
+    .img-banner {
+        .bg {
             width: 100%;
             position: relative;
         }
 
-        .anim1{
+        .anim1 {
             position: absolute;
             top: 10px;
             left: 0;
             animation: anim1 1s linear alternate infinite;
 
-            @keyframes anim1{
-                from{top: 0px}
-                to{top: 10px}
+            @keyframes anim1 {
+                from {
+                    top: 0px;
+                }
+                to {
+                    top: 10px;
+                }
             }
         }
 
-        .anim2{
+        .anim2 {
             position: absolute;
             top: -20px;
             left: 120px;
         }
 
-        .anim3{
+        .anim3 {
             position: absolute;
             top: -10px;
             right: 120px;
         }
 
-        .anim4{
+        .anim4 {
             position: absolute;
             top: 50px;
             right: 0;
             animation: anim4 1s linear alternate infinite;
 
-            @keyframes anim4{
-                from{right: 0px}
-                to{right: 10px}
+            @keyframes anim4 {
+                from {
+                    right: 0px;
+                }
+                to {
+                    right: 10px;
+                }
             }
         }
 
-        .attrib{
+        .attrib {
             margin-top: 20px;
             font-size: 12px;
             display: block;
@@ -53,10 +61,10 @@ section.index-banner{
         }
     }
 
-    pre{
+    pre {
         margin: 20px 0px 10px 0;
         background-color: #fafafa;
-        font-family: "Roboto Mono", monospace;
+        font-family: 'Roboto Mono', monospace;
         padding: 10px 25px;
         display: block;
         width: -moz-fit-content;
@@ -64,24 +72,29 @@ section.index-banner{
         max-width: 100%;
     }
 
-    h1{
+    h1 {
         font-size: 36px;
         color: $strong;
         border-right: 5px solid $primary;
         display: inline;
         animation: blink 1s step-end infinite;
 
-        @keyframes blink{
-            from, to {border-color: transparent}
-            50% {border-color: $primary;}
+        @keyframes blink {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: $primary;
+            }
         }
     }
 
-    h5{
+    h5 {
         font-weight: 300;
     }
 
-    .button{
+    .button {
         display: inline-block;
         background: $gradient;
         color: white;
@@ -91,33 +104,32 @@ section.index-banner{
         border: 1px solid $primary;
         @include transitionAll();
 
-        &:hover{
+        &:hover {
             transform: translateY(-2px);
             box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
         }
 
-        &.docs{
+        &.docs {
             margin-left: 10px;
             background: white;
             color: $primary;
         }
-
     }
 
-    .fa-ul{
+    .fa-ul {
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
         flex-wrap: wrap;
 
-        li{
+        li {
             width: 50%;
             color: $strong;
         }
     }
 
-    @media (max-width: 375px){
-         .button{
+    @media (max-width: 375px) {
+        .button {
             width: 100%;
             text-align: center;
             max-width: 300px;
@@ -127,48 +139,51 @@ section.index-banner{
         }
     }
 
-    @media (max-width: 575px){
-        .fa-ul{
-            li{
+    @media (max-width: 575px) {
+        .fa-ul {
+            li {
                 width: 100%;
             }
         }
     }
 
-    @media (max-width: 991px){
+    @media (max-width: 991px) {
         padding: 30px 0;
-        
-        pre{
+
+        pre {
             padding: 10px;
             margin: 10px 0 5px 0;
         }
 
-        h1{
+        h1 {
             font-size: 26px;
         }
 
-        h5{
+        h5 {
             font-size: 16px;
         }
 
-        .img-banner{
+        .img-banner {
             display: none;
         }
     }
 
-    @media (max-width: 1199px){
-        .img-banner{
-            .anim1, .anim2, .anim3, .anim4{
+    @media (max-width: 1199px) {
+        .img-banner {
+            .anim1,
+            .anim2,
+            .anim3,
+            .anim4 {
                 transform: scale(0.8);
             }
         }
     }
 }
 
-section.index-separator{
+section.index-separator {
     padding: 60px 0;
 
-    .button{
+    .button {
         display: inline-block;
         background: $gradient;
         color: white;
@@ -178,32 +193,32 @@ section.index-separator{
         border: 1px solid $primary;
         @include transitionAll();
 
-        &:hover{
+        &:hover {
             transform: translateY(-2px);
             box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
         }
 
-        &.docs{
+        &.docs {
             margin-left: 10px;
             background: white;
             color: $primary;
         }
     }
 
-    h1{
+    h1 {
         font-size: 36px;
         text-align: center;
     }
 
-    &.background{
+    &.background {
         background-color: $soft;
 
-        h1{
+        h1 {
             color: $strong;
         }
     }
 
-    h5{
+    h5 {
         color: dimgray;
         font-weight: 300;
         font-size: 18px;
@@ -212,26 +227,26 @@ section.index-separator{
         text-align: center;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: black;
     }
 
-    .card{
+    .card {
         @include transitionAll();
         cursor: pointer;
-        &:hover{
+        &:hover {
             border-color: #c27a93;
             transform: translateY(-2px);
             box-shadow: 2px 2px 10px rgba(236, 28, 100, 0.2);
         }
     }
 
-    .card-body{
+    .card-body {
         text-align: center;
         padding: 30px 10px;
 
-        i{
+        i {
             color: $strong;
             font-size: 40px;
             display: block;
@@ -239,8 +254,8 @@ section.index-separator{
         }
     }
 
-    @media (max-width: 375px){
-         .button{
+    @media (max-width: 375px) {
+        .button {
             max-width: 300px;
             display: block;
             width: 100%;
@@ -249,18 +264,18 @@ section.index-separator{
         }
     }
 
-    @media (max-width: 991px){
+    @media (max-width: 991px) {
         padding: 30px 0;
 
-        h1{
+        h1 {
             font-size: 26px;
         }
 
-        h5{
+        h5 {
             font-size: 16px;
         }
 
-        .card{
+        .card {
             margin: 10px 0;
         }
     }

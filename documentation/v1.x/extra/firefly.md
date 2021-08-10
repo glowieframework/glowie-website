@@ -22,7 +22,7 @@ To use an argument, write two hyphens (`--`) followed by the argument name, an e
 
 **Important!** You cannot use spaces in arguments names or values.
 
-You can use multiple arguments splitting them by spaces.
+You can use multiple arguments separating them by spaces.
 
 _Example_
 ```plaintext

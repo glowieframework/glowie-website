@@ -3,21 +3,21 @@
 $primary: #ed578b;
 $soft: #fcecf3;
 $strong: #ec1c64;
-$gradient: linear-gradient(90deg, rgba(237,87,139,1) 0%, rgba(237,87,106,1) 100%);
+$gradient: linear-gradient(90deg, rgba(237, 87, 139, 1) 0%, rgba(237, 87, 106, 1) 100%);
 
-@mixin transitionAll(){
-    transition: .3s all ease;
+@mixin transitionAll() {
+    transition: 0.3s all ease;
 }
 
-body{
+body {
     background-color: $primary;
 }
 
-main{
+main {
     background-color: white;
 }
 
-*{
+* {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -31,9 +31,9 @@ main{
     background: $primary;
 }
 
-@import "header";
-@import "index";
-@import "mobile-menu";
-@import "footer";
-@import "docs";
-@import "error";
+@import 'header';
+@import 'index';
+@import 'mobile-menu';
+@import 'footer';
+@import 'docs';
+@import 'error';

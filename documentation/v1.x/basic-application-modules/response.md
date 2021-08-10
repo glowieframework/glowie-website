@@ -88,7 +88,7 @@ The first parameter is the name of the route you want to redirect to. Must be a 
 The second parameter is an associative array of parameters to bind into the URL. If the route has dynamic parameters, you must pass all of them in this array. Remaining parameters will be appended to the URL query string.
 
 _Example_
-**routes.php**
+**Routes.php**
 ```php
 use Glowie\Controllers\Products;
 Rails::addRoute('products/:category', Products::class, 'index', [], 'products');

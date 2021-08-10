@@ -1,4 +1,11 @@
 # Basic MVC concepts
+The **Model-View-Controller** (MVC) is an architectural pattern that separates an application into three main logical components: the model, the view, and the controller. Each of these components are built to handle specific development aspects of an application. MVC is one of the most frequently used industry-standard development pattern, and Glowie was built on top of it.
+
+- **The model** corresponds to all the data-related logic that the user works with (see [Models](docs/%%version%%/forms-and-data/models)).
+
+- **The view** is used for all the UI logic of the application. Basically, the display of your application data (see [Views](docs/%%version%%/basic-application-modules/views)).
+
+- **The controller** acts as a "glue" between your application model and views, besides handling user requests and processing business logic (see [Controllers](docs/%%version%%/basic-application-modules/controllers)).
 
 ### The application flow
 The following diagram illustrates the basics of a Glowie application flow.
