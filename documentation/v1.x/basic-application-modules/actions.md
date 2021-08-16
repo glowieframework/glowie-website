@@ -1,5 +1,5 @@
 # Actions
-Actions are methods from a controller that organizes the way every request is handled. An action is basically a function from a controller that does a specific job for a specific task.
+Actions are methods from a controller that organizes the way every request is handled. An action is basically a method from a controller that does a specific job for a specific task.
 
 _Example_: You have `ProductsController`, a controller that is responsible for organizing a product catalog from an ecommerce website. Within this controller you need to have specific actions for each functionality needed, like `listProducts()`, `addProduct()`, `editProduct()` and `deleteProduct()`.
 

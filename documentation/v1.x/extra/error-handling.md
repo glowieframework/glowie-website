@@ -3,8 +3,10 @@ In order to handle and display custom HTTP error pages, Glowie has the `Glowie\C
 
 This controller works as any other [Controller](docs/%%version%%/basic-application-modules/controllers) from your application, with the slight difference that it will be called automatically by the router when an HTTP error is raised.
 
+By default, Glowie will simply render the default error view located in `app/views/error` with the corresponding message from [Internationalization](docs/%%version%%/extra/internationalization), but you can customize this controller to do whatever you want.
+
 ### 403 Forbidden
-403 Forbidden errors are handled by the `forbidden()` action. You can use this method to perform anything you want when a Forbidden error is thrown. By default, Glowie will simply render the default error view located in `app/views/error` with the corresponding message from [Internationalization](docs/%%version%%/extra/internationalization).
+403 Forbidden errors are handled by the `forbidden()` action. This action is mainly triggered when a middleware handler fails.
 
 ```php
 public function forbidden(){
@@ -18,7 +20,7 @@ public function forbidden(){
 ```
 
 ### 404 Not Found
-404 Not Found errors are handled by the `notFound()` action.
+404 Not Found errors are handled by the `notFound()` action. This action is mainly triggered when a requested route is not found.
 
 ```php
 public function notFound(){
@@ -32,7 +34,7 @@ public function notFound(){
 ```
 
 ### 405 Method Not Allowed
-405 Method Not Allowed errors are handled by the `methodNotAllowed()` action.
+405 Method Not Allowed errors are handled by the `methodNotAllowed()` action. This action is mainly triggered when a route is requested using a method that does not match your route configuration.
 
 ```php
 public function methodNotAllowed(){

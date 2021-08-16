@@ -1,24 +1,9 @@
 # App configuration
 After installing Glowie into your server, you must configure your application before starting.
 
-### Config environments
-Glowie allows you to have multiple configuration environments for different types of scenarios. This means you just need to edit a single file while switching from development to a production environment and vice-versa. You can also create as many environments as you want.
+Rename `app/config/Config.example.php` to `app/config/Config.php`. This is the file where your application settings for the current environment are stored. Each environment should have its own config file, as some settings may change from one to another.
 
-### Setting the active environment
-You can set the current active environment by editing `GLOWIE_ENVIRONMENT` setting in `app/public/.htaccess`.
-
-_Example_
-```apache
-# production environment
-SetEnv GLOWIE_ENVIRONMENT production
-```
-
-**Note:** Some hosting providers may not correctly support `SetEnv`. If this is your case, comment this line in the `.htaccess` file and Glowie will automatically use the `production` environment.
-
-### Config file
-Before starting, you must rename `app/config/Config.example.php` to `app/config/Config.php`. This is the file where your application configs for all environments are stored.
-
-**Important!** This file contains sensitive data as database passwords and encryption tokens. You should not commit this file to your application source control.
+**Important!** This file contains sensitive data as database passwords and encryption keys. You should not commit this file to your application source control.
 
 Available configurations are:
 
@@ -79,13 +64,13 @@ _Example_
 ```
 
 **database**
-Global database connection settings (if applicable). Must be an associative **array** with the following properties:
+Global database connection settings (if applicable). Must be an associative array with the following properties:
 
 - **host** - Database hostname URL.
 - **username** - Username to use while connecting to the database.
 - **password** - Password to use while autenticating user to the database.
 - **db** - Database name to connect to.
-- **port** - Database connection port.
+- **port** - Database connection port. Defaults to `3306`.
 
 _Example_
 ```php

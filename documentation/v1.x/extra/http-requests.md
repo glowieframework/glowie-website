@@ -37,9 +37,9 @@ $crawler->addHeader('Content-Encoding', 'gzip');
 **Shortcuts**
 There are also a few shortcuts to the most commonly used headers:
 
-- `$this->response->setContentType()` - Sets the `Content-Type` header. The `Crawler` class has a few constants with the most common content types.
+- `$crawler->setContentType()` - Sets the `Content-Type` header. The `Crawler` class has a few constants with the most common content types.
 
-- `$this->response->setAuthorization()` - Sets a basic `Authorization` header. The first parameter is the username and the second is the password.
+- `$crawler->setAuthorization()` - Sets a basic `Authorization` header. The first parameter is the username and the second is the password.
 
 ### Setting the request timeout
 If you want to set the request timeout, use `$crawler->setTimeout()` method.
@@ -61,7 +61,7 @@ The URL you want to request.
 The HTTP method you want to use in the request. Default is `GET`.
 
 **data**
-Data to send in the request. Can be an associative array with the corresponding field names and values, JSON or plain text. **Content-Type** header must be needed depending on chosen data type.
+Data to send in the request. `Content-Type` header must be needed depending on chosen data type.
 
 _Example_
 ```php
@@ -84,7 +84,7 @@ $crawler->patch(); # PATCH request
 $crawler->delete(); # DELETE request
 ```
 
-The parameters for this functions are the same from `$crawler->request()`, except for `GET` method, who does not accept `data` parameter.
+The parameters for this functions are the same from `$crawler->request()`, except for `GET` method, who does not accept the `data` parameter.
 
 ### Getting the response
 If the HTTP request is done successfully (with a 200 response code), Crawler will return the response body as a string, otherwise it returns `false`.

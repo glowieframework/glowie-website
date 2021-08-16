@@ -21,7 +21,7 @@
                                 <li><span class="fa-li"><i class="fas fa-check"></i></span>Flexible and scalable</li>
                             </ul>
                             <pre>composer create-project glowieframework/glowie</pre>
-                            <a class="button" href="docs/latest/getting-started/installation">Get Started</a>
+                            <a class="button" href="docs/latest/getting-started/requirements">Get Started</a>
                             <a class="button docs" href="docs">Documentation</a>
                         </div>
                         <div class="col-12 col-lg-6 img-banner">
@@ -104,11 +104,11 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/latest/getting-started/app-configuration">
+                            <a href="docs/latest/extra/migrations">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-project-diagram"></i>
-                                        Multiple environments
+                                        Migrations
                                     </div>
                                 </div>
                             </a>
@@ -172,7 +172,7 @@
                 <div class="container text-center">
                     <h1>Ready to create something awesome?</h1>
                     <h5>You are a few steps from the best programming experience you'll ever have.</h5>
-                    <a class="button" href="docs/latest/getting-started/installation">Get Started</a>
+                    <a class="button" href="docs/latest/getting-started/requirements">Get Started</a>
                     <a class="button docs" href="docs">Documentation</a>
                 </div>
             </section>

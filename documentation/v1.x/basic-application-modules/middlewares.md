@@ -8,7 +8,7 @@ Basically, a middleware is an "extra layer" added between the route and the cont
 ### Creating a middleware
 A middleware is a simple PHP file with a middleware class in `Glowie\Middlewares` namespace stored in `app/middlewares` folder.
 
-From [Firefly](docs/%%version%%/extra/firefly) CLI you can use the following command to create a new controller:
+From [Firefly](docs/%%version%%/extra/firefly) CLI you can use the following command to create a new middleware:
 
 ```plaintext
 php firefly create-middleware --name=MyMiddleware

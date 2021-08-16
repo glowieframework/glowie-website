@@ -4,29 +4,21 @@ Firefly is Glowie's command line tool. This tool is suited to help you increase 
 To run Firefly, from your console navigate to the application root folder and run:
 
 ```plaintext
-php firefly
+php firefly help
 ```
 
-This command will give you a list of all available commands from Firefly. You can also use `php firefly help` for that.
-
-In order to see the current Firefly, Glowie and PHP CLI versions, use:
-
-```plaintext
-php firefly version
-```
+This will give you a list of all available commands from Firefly.
 
 ### Using commands and arguments
 When running a Firefly command, you must type in `php firefly` followed by the command you want to use. Each command can have optional arguments, that passes options to the command itself.
 
-To use an argument, write two hyphens (`--`) followed by the argument name, an equal sign and the value you want to pass.
+To use an argument, write two hyphens (`--`) followed by the argument name, an equal sign and the value you want to pass. You can use multiple arguments separating them by spaces.
 
-**Important!** You cannot use spaces in arguments names or values.
-
-You can use multiple arguments separating them by spaces.
+**Note:** You cannot use spaces inside argument names or values.
 
 _Example_
 ```plaintext
-php firefly test-database --env=development
+php firefly create-controller --name=MyController
 ```
 
 **Outside the command line**
@@ -37,7 +29,7 @@ The first parameter is the command you want to call, and the second (optional) i
 _Example_
 ```php
 use Glowie\Core\CLI\Firefly;
-Firefly::call('test-database', ['env' => 'development']);
+Firefly::call('create-controller', ['name' => 'MyController']);
 ```
 
 ### Local development server
@@ -77,12 +69,11 @@ php firefly clear-log
 
 Clears the `app/storage/error.log` file.
 
-### Testing a database connection
-If you want to test an environment database connection, use the command `php firefly test-database`. There is an optional `--env` argument, that is the config environment (see [App configuration](docs/%%version%%/getting-started/app-configuration)) that you want to use while testing. Defaults to `production`.
+### Testing the database connection
+If you want to test the database connection for the current environment, use:
 
-_Example_
 ```plaintext
-php firefly test-database --env=development
+php firefly test-database
 ```
 
 ### Creating controllers

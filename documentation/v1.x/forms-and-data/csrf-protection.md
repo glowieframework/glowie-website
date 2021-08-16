@@ -6,7 +6,7 @@ _Example:_ Your application has a route that changes a user's password. This rou
 Glowie has a built-in way to protect your application from untrusted sources and grant that all incoming requests are really comming from your own application.
 
 ### Protecting forms
-Whenever a user makes the first request to your application, Glowie will generate a unique token for the current session. So, anytime you define a `POST` form in your application, you must include this token as a hidden field named `_token` and the corresponding token as its value. To retrieve the current token, use the `Util::csrfToken()` method.
+Whenever a user makes the first request to your application, Glowie will generate a unique token for the current session. So, anytime you define a `POST` form in your application, you must include this token as a hidden field named `_token` and the corresponding token as its value. To retrieve the current token, use the static `Util::csrfToken()` method.
 
 _Example_
 **view**

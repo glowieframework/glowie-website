@@ -14,7 +14,7 @@ _Example_
 
         /**
          * Converts an array of items into HTML ul>li structure.
-        **/
+        */
         public function arrayToUl($array){
             $li = '';
 

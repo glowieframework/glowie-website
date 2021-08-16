@@ -1,7 +1,7 @@
 # Response
 A response tells your application what to send back to the user that made a request.
 
-In order to manage the response, Glowie has the `Glowie\Core\Http\Response` class. From a controller or middleware, you don't need to instantiate this class to work with it, simply use `$this->response` property to directly access the `Response` object.
+In order to manage the response, Glowie has the `Glowie\Core\Http\Response` class. From a controller or middleware, you don't need to instantiate this class to work with it, simply use `$this->response` property to directly access the `Response` object. If you want to retrieve the instance from other places, use the static `Rails::getResponse()` method.
 
 ### Setting the status code
 To set the HTTP status code for the response, use `$this->response->setStatusCode()` method.
@@ -12,6 +12,8 @@ The first parameter is the code to set, and the second an optional custom reason
 
 _Example_
 ```php
+use Glowie\Core\Http\Request;
+
 // Sets a 403 Forbidden error code
 $this->response->setStatusCode(Response::HTTP_FORBIDDEN);
 

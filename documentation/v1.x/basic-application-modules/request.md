@@ -3,7 +3,7 @@ Whenever one of your application URLs are called, a request is received. This re
 
 In order to manage and work with this requests, Glowie has the `Glowie\Core\Http\Request` class. This class has useful methods to help you handle every kind of request your application receives.
 
-From a controller or middleware, you don't need to instantiate this class to work with it, simply use `$this->request` property to directly access the `Request` object.
+From a controller or middleware, you don't need to instantiate this class to work with it, simply use `$this->request` property to directly access the `Request` object. If you want to retrieve the instance from other places, use the static `Rails::getRequest()` method.
 
 ### Retrieving request details
 In order to retrieve details about a request your application received, you can use the following functions:

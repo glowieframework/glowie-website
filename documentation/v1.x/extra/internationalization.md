@@ -10,7 +10,7 @@ From [Firefly](docs/%%version%%/extra/firefly) CLI you can use the following com
 php firefly create-language --id=en
 ```
 
-Inside this file, you can setup the language strings by using the function `Babel::set()`. The first parameter is the language identifier you are setting, and the second an associative array of internationalization strings with its key and value.
+Inside this file, you can setup the language strings by using the static `Babel::set()` method. The first parameter is the language identifier you are setting, and the second an associative array of internationalization strings with its key and value.
 
 _Example_
 ```php
@@ -20,7 +20,7 @@ Babel::set('en', [
 ]);
 ```
 
-**Note:** when using `Babel::set()` function, you replace the entire language configuration by the new array you've just set. If you want to add or change a single string dynamically without modifying the whole language setting, use `Babel::setString()` with the language identifier, string key and string value.
+**Note:** when using `Babel::set()` method, you replace the entire language configuration by the new array you've just set. If you want to add or change a single string dynamically without modifying the whole language setting, use `Babel::setString()` with the language identifier, string key and string value.
 
 _Example_
 ```php
