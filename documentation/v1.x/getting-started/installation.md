@@ -18,4 +18,6 @@ composer update
 
 This will update Glowie core modules to the latest version available.
 
-**Important!** Glowie follows [Semantic Versioning](https://semver.org) standards, so don't forget to read the changelog and be aware of all breaking changes before running any updates.
+Updates are usually released in an interval of 10-15 days. Security flaws and bug fixing updates are released as soon as they are resolved.
+
+**Important!** Glowie follows [Semantic Versioning](https://semver.org) standards, so don't forget to read the [releases changelog](https://github.com/glowieframework/glowie/releases) and be aware of all breaking changes before running any updates.

@@ -122,7 +122,13 @@ Auto routing comes disabled by default. In order to enable it, in the route conf
 Rails::setAutoRouting(true);
 ```
 
-In auto routing the routes will be parsed in the following way: `(controller)/(action)/(parameters...)`.
+In auto routing the routes will be parsed in the following way: `(controller)/(action)/(parameters...)`. Controller and action names will be resolved converting the URI to a valid `PascalCase` format. 
+
+_Example:_ `products-list-test` will be resolved to `ProductsListTest`.
+
+If no controller is specified, `Glowie\Controllers\Main` will be used by default.
+
+If no action is specified, `index` will be used by default.
 
 _Example_
 - User types in `myappurl.com`. Glowie will call `Main` controller with `index()` action.

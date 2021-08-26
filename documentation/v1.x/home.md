@@ -12,3 +12,5 @@ Let's begin!
 <hr>
 **Warning:** This documentation is currently a work in progress. Some contents may be missing!
 <hr>
+
+Want to help improve this documentation? [Contribute!](https://github.com/glowieframework/glowie-website/tree/main/documentation)

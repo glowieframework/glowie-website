@@ -3,7 +3,7 @@ When you have a PHP application with a large number of classes, dependencies and
 
 An autoloader will load automatically in runtime only those files that are being currently used. It will also increase your application performance by having predefined paths in where to look for files, and have a nice way to organize your application dependencies.
 
-Glowie uses the [Composer autoloader](https://getcomposer.org/doc/01-basic-usage.md#autoloading) following the [PSR-4 standards](https://www.php-fig.org/psr/psr-4).
+Glowie uses the [Composer autoloader](https://getcomposer.org/doc/01-basic-usage.md#autoloading) following the [PSR-4 standards](https://www.php-fig.org/psr/psr-4). If you need to set up a custom file for autoloading, use the `composer.json` file in the root directory.
 
 ### Namespaces
 Glowie has several predefined namespaces that will be processed by the autoloader. Namespaces are, by default, routed to the following folders:

@@ -47,6 +47,14 @@ _Example_
 'error_log' => true,
 ```
 
+**session_lifetime**
+Maximum amount of time (in seconds) for storing unused session files.
+
+_Example_
+```php
+'session_lifetime' => 120,
+```
+
 **app_key**
 Key to use with encrypting functions. Be sure to use a strong key.
 
@@ -70,14 +78,14 @@ Global database connection settings (if applicable). Must be an associative arra
 - **username** - Username to use while connecting to the database.
 - **password** - Password to use while autenticating user to the database.
 - **db** - Database name to connect to.
-- **port** - Database connection port. Defaults to `3306`.
+- **port** - Database connection port.
 
 _Example_
 ```php
 'database' => [
     'host' => 'localhost',
-    'username' => 'user',
-    'password' => '123',
+    'username' => 'root',
+    'password' => '',
     'db' => 'glowie',
     'port' => 3306
 ]
