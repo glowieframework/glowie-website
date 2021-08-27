@@ -26,6 +26,10 @@ This is the default snippet for a middleware file:
 
     class MyMiddleware extends Middleware{
 
+       /**
+        * The middleware handler.
+        * @return bool Should return true on success or false on fail.
+        */
        public function handle(){
            // This method is required
        }
@@ -89,6 +93,10 @@ _Example_
 
     class MyMiddleware extends Middleware{
 
+       /**
+        * The middleware handler.
+        * @return bool Should return true on success or false on fail.
+        */
        public function handle(){
            // Checks if the "token" header token is valid
            if($this->request->getHeader('token') == '1a79a4d60de6718e8e5b326e338ae533'){
@@ -115,6 +123,10 @@ _Example_
 
     class MyMiddleware extends Middleware{
 
+       /**
+        * The middleware handler.
+        * @return bool Should return true on success or false on fail.
+        */
        public function handle(){
            // Checks if the "token" header token is valid
            if($this->request->getHeader('token') == '1a79a4d60de6718e8e5b326e338ae533'){
@@ -124,6 +136,9 @@ _Example_
            }
        }
 
+       /**
+        * Called if the middleware handler returns true.
+        */
        public function success(){
            // Header is valid, store it in the session
            $this->session->token = $this->request->getHeader('token');
@@ -148,6 +163,10 @@ _Example_
 
     class MyMiddleware extends Middleware{
 
+       /**
+        * The middleware handler.
+        * @return bool Should return true on success or false on fail.
+        */
        public function handle(){
            // Checks if the "token" header token is valid
            if($this->request->getHeader('token') == '1a79a4d60de6718e8e5b326e338ae533'){
@@ -157,6 +176,9 @@ _Example_
            }
        }
 
+       /**
+        * Called if the middleware handler returns false.
+        */
        public function fail(){
            // Header is not valid, redirect the user back to the index page
            $this->response->redirect('/');
@@ -187,8 +209,13 @@ _Example_
            // init methods goes here
        }
 
+       /**
+        * The middleware handler.
+        * @return bool Should return true on success or false on fail.
+        */
        public function handle(){
            // init() will be called before this method is triggered
+           return true;
        }
 
     }

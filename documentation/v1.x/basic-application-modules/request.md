@@ -34,6 +34,8 @@ $query = $this->request->getVar('products'); # returns "products"
 $page = $this->request->getVar('page') # returns "1"
 ```
 
+To retrieve all the request data at once as an associative array, use `$this->request->getVars()`.
+
 **Raw data**
 In order to get the raw request body as a string, use `$this->request->getBody()`.
 
@@ -52,6 +54,8 @@ _Example_
 ```php
 $token = $this->request->getHeader('token');
 ```
+
+To retrieve all the request headers at once as an associative array, use `$this->request->getHeaders()`.
 
 **Shortcuts**
 There are a few shortcuts to the most commonly used headers:
