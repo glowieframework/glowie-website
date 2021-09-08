@@ -122,7 +122,7 @@ Auto routing comes disabled by default. In order to enable it, in the route conf
 Rails::setAutoRouting(true);
 ```
 
-In auto routing the routes will be parsed in the following way: `(controller)/(action)/(parameters...)`. Controller and action names will be resolved converting the URI to a valid `PascalCase` format. 
+In auto routing the routes will be parsed in the following way: `(controller)/(action)/(parameters...)`. Controller and action names will be resolved converting the URI to a valid **PascalCase** format. 
 
 _Example:_ `products-list-test` will be resolved to `ProductsListTest`.
 

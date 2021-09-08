@@ -3,8 +3,9 @@ In order to retrieve a request data from a controller or middleware, there are t
 
 - `$this->get` - Parameters passed to the request through the `GET` method.
 - `$this->post` - Parameters passed to the request through the `POST` method.
+- `$this->params` - Parameters passed in dynamic URLs (see [Routes](docs/%%version%%/basic-application-modules/routes)).
 
-Both properties return an [Element](docs/%%version%%/forms-and-data/element) with the corresponding data.
+All properties return an [Element](docs/%%version%%/forms-and-data/element) with the corresponding data.
 
 _Example 1_
 **view**

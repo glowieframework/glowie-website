@@ -14,7 +14,7 @@ From [Firefly](docs/%%version%%/extra/firefly) CLI you can use the following com
 php firefly create-middleware --name=MyMiddleware
 ```
 
-The middleware file have the **exact same name** as the middleware class.
+The middleware file must have the **exact same name** as the middleware class.
 
 This is the default snippet for a middleware file:
 
@@ -38,15 +38,6 @@ This is the default snippet for a middleware file:
 
 ?>
 ```
-
-**Note:** middleware names SHOULD NOT include:
-- accents
-- dashes
-- characters that are not letters, numbers or underscores
-
-And for convention, every word in a middleware name must be capitalized.
-
-_Example:_ for creating a `Hello world` middleware, the name must be `HelloWorld`.
 
 ### Assigning a route to a middleware
 To create a protected route assigned to a middleware, in your route configuration file (see [Routes](docs/%%version%%/basic-application-modules/routes)), use the static `Rails::addProtectedRoute()` method.

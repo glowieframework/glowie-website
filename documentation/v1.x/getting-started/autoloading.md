@@ -8,6 +8,8 @@ Glowie uses the [Composer autoloader](https://getcomposer.org/doc/01-basic-usage
 ### Namespaces
 Glowie has several predefined namespaces that will be processed by the autoloader. Namespaces are, by default, routed to the following folders:
 
+- `Glowie\Commands` namespace is stored into `app/commands` folder.
+
 - `Glowie\Controllers` namespace is stored into `app/controllers` folder.
 
 - `Glowie\Middlewares` namespace is stored into `app/middlewares` folder.
@@ -17,3 +19,5 @@ Glowie has several predefined namespaces that will be processed by the autoloade
 - `Glowie\Models` namespace is stored into `app/models` folder.
 
 - `Glowie\Helpers` namespace is stored into `app/views/helpers` folder.
+
+When autoloading classes, remember that class names and their namespaces must match the exact directory and filenames.

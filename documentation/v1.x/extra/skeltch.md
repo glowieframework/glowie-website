@@ -193,9 +193,7 @@ _Example_
 ### Raw PHP code
 If you want to write raw PHP code in your Skeltch view, put your code between one pair of curly braces, starting and ending with a percent sign.
 
-**Note:** you must use semicolons when working with this kind of code.
-
 _Example_
 ```php
-{% $variable = 'test'; %}
+{% $variable = 'test' %}
 ```

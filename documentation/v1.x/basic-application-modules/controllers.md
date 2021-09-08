@@ -27,15 +27,6 @@ This is the default snippet for a controller file:
 ?>
 ```
 
-**Note:** controller names SHOULD NOT include:
-- accents
-- dashes
-- characters that are not letters, numbers or underscores
-
-And for convention, every word in a controller name must be capitalized.
-
-_Example:_ for creating a `Hello world` controller, the name must be `HelloWorld`.
-
 Next step is create some actions for your controller, see [Actions](docs/%%version%%/basic-application-modules/actions) for more info.
 
 ### BaseController

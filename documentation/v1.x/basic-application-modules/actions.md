@@ -26,13 +26,6 @@ _Example_
 ?>
 ```
 
-**Note:** action names SHOULD NOT include:
-- accents
-- dashes
-- characters that are not letters, numbers or underscores
-
-And for convention, every word in an action name must be capitalized, except for the first word.
-
 ### init()
 Every controller can have an optional `init()` method. If this method exists, it will be called before any other actions from the same controller are instantiated. 
 

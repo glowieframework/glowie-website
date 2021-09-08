@@ -114,7 +114,7 @@ The `--name` argument is required, which is the name for your model.
 
 There are also the following optional arguments:
 
-- `--table` - The model table name. Defaults to the model name lowercased.
+- `--table` - The model table name. Defaults to the model name in snake case.
 - `--primary` - The table primary key name. Defaults to `id`.
 - `--timestamps` - Handle timestamp fields in the model. Defaults to `true`.
 - `--created` - Table created at field name. Defaults to `created_at`.
@@ -122,3 +122,138 @@ There are also the following optional arguments:
 
 ### Creating and running migrations
 See [Migrations](docs/%%version%%/extra/migrations) to understand how to work with migrations using Firefly.
+
+### Custom commands
+You can create your own commands to use in Firefly in order to work with Glowie modules to handle data or perform any other tasks from the CLI interface.
+
+**Creating the command**
+A custom command is a simple PHP file with a command class in `Glowie\Commands` namespace stored in `app/commands` folder.
+
+From Firefly itself you can use the following command to create a new custom command:
+
+```plaintext
+php firefly create-command --name=MyCommand
+```
+
+The command file must have the **exact same name** as the command class.
+
+This is the default snippet for a command file:
+
+```php
+<?php
+    namespace Glowie\Commands;
+
+    use Glowie\Core\CLI\Command;
+
+    class MyCommand extends Command{
+
+        /**
+         * The command script.
+         */
+        public function run(){
+            // This method is required
+        }
+
+    }
+
+?>
+```
+
+**The command script**
+Every command class **must have** a public `run()` method. This method will be what your command does when it runs.
+
+_Example_
+```php
+<?php
+    namespace Glowie\Commands;
+
+    use Glowie\Core\CLI\Command;
+
+    class MyCommand extends Command{
+
+        /**
+         * The command script.
+         */
+        public function run(){
+            $this->print('Hello world!');
+        }
+
+    }
+
+?>
+```
+
+**Running a custom command**
+To run a custom command, use `php firefly` followed by your command name.
+
+_Example_
+```plaintext
+php firefly my-command
+```
+
+Command names will be parsed to **PascalCase** in order to match the command class name. 
+
+_Example:_ `hello-world` command will match the `HelloWorld` class.
+
+**Printing data in the console**
+To print a message to the console from your command, use `$this->print()` method. 
+
+The first parameter is the text you want to print, and the second is an optional break option. If you pass `false` as the second parameter, the message will not have a line break at the end.
+
+_Example_
+```php
+$this->print('This is my message');
+```
+
+There are some aliases to this method that changes the color of the text that will be printed. Parameters are the same for all of them:
+
+- `$this->success()` - Prints a success text, in green.
+- `$this->fail()` - Prints a failure text, in red.
+- `$this->warning()` - Prints a warning text, in yellow.
+- `$this->info()` - Prints an info text, in blue.
+- `$this->error()` - Prints an error text, with red background and black text.
+
+If you want to print blank lines in the console, use `$this->line()` method, passing the number of lines you want to print as the first parameter. Defaults to a single line.
+
+_Example_
+```php
+$this->line(3); # Prints 3 blank lines in the console
+```
+
+**Working with user input**
+To ask the user for inputting a value, use `$this->input()` method.  The first parameter is an optional message to prompt to the user. The second is an optional default value for the input.
+
+This method returns the input value as a string, or the default one if the user leave it blank.
+
+_Example_
+```php
+$name = $this->input('What is your name?', 'Glowie');
+```
+
+**Working with arguments**
+To retrieve an argument value from your command, use `$this->getArg()` method. The first parameter is the argument name to get, and the second is an optional default value. If the argument was not passed, the default value will be returned.
+
+_Example_
+**CLI**
+```plaintext
+php firefly my-command --name=Glowie
+```
+
+**command script**
+```php
+$name = $this->getArg('name'); # returns "Glowie"
+```
+
+If you want to retrieve all arguments passed with your command, use `$this->getArgs()` method. This method will return an associative array with each key being the argument name.
+
+**Argument fallback**
+If you want to retrieve an argument value, but in case it was not passed and you want to ask the user for the value, use `$this->argOrInput()` method.
+
+The first parameter is the argument name to retrive. The second parameter is an optional message to prompt to the user. The third is an optional default value for the input.
+
+If the argument was not passed, the user will be prompted to input the value. If the user leave it blank, the default value will be returned.
+
+_Example_
+```php
+$name = $this->argOrInput('name', 'What is your name?');
+```

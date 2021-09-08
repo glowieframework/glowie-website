@@ -29,20 +29,11 @@ This is the default snippet for a model file:
 ?>
 ```
 
-**Note:** model names SHOULD NOT include:
-- accents
-- dashes
-- characters that are not letters, numbers or underscores
-
-And for convention, every word in a model name must be capitalized.
-
-_Example:_ for creating a `Hello world` model, the name must be `HelloWorld`.
-
 ### Model properties
 Each model can have its own properties that defines how your model will handle data.
 
 **Model table**
-The table property specifies which database table corresponds to your model. By default, a snake-case version of your model class name will be used.
+The table property specifies which database table corresponds to your model. By default, a **snake_case** version of your model class name will be used.
 
 _Example:_ `HelloWorld` model table by default will be `hello_world`.
 
@@ -257,20 +248,33 @@ $model = new Users();
 $users->drop(1); // Deletes first row with primary key = "1"
 ```
 
+### Advanced data handling
+Every model extends [Kraken](docs/%%version%%/forms-and-data/mastering-kraken) query builder. This means you can use Kraken's methods from the model instance to handle data in an advanced way. See Kraken documentation to learn more.
+
+_Example_
+```php
+use Glowie\Models\Users;
+$model = new Users();
+$user = $model->select('password')
+              ->where('email', 'test@lorem.com')
+              ->where('status', 1)
+              ->fetchRow();
+```
+
 ### Using the model entity data
-Besides using the model to interact with your database table, you can use the model instance as an entity that persists data to the database.
+Besides using the model methods to interact with your database table, you can use the model instance as an entity that persists data to the database.
 
 This means you can use the model as an object representing a row, and use its properties as values from this row.
 
 **Filling the model entity**
-After retrieving a row from the table, you can use the `$model->fill()` method to fill the model object itself with the values fetched from the database. This method receives an [Element](docs/%%version%%/forms-and-data/element) or an associative array relating the row fields and values.
+After retrieving a row from the table, you can use the `$model->fill()` method to fill the model object itself with the values fetched from the database. This method receives an [Element](docs/%%version%%/forms-and-data/element) or an associative array relating the row fields and values to fill the entity data.
 
 _Example_
 ```php
 use Glowie\Models\Users;
 $model = new Users();
 $userRow = $model->find(1); // Returns first row with primary key = "1"
-$user->fill($userRow); // Fills the model entity with the row data
+$model->fill($userRow); // Fills the model entity with the row data
 ```
 
 **Interacting with the model entity**
@@ -278,18 +282,21 @@ After filling the model entity, you are now able to interact with the row data a
 
 _Example_
 ```php
-$name = $user->name; // Returns the row "name" field value
-$email = $user->email; // Returns the row "email" field value
+$name = $model->name; // Returns the row "name" field value
+$email = $model->email; // Returns the row "email" field value
 ```
 
-You can also use the methods `get()`, `set()`, `has()` or any other methods as described in [Element](docs/%%version%%/forms-and-data/element), directly from the model instance.
+You can also use the methods `$model->get()`, `$model->set()`, `$model->has()` or any other methods as described in [Element](docs/%%version%%/forms-and-data/element), directly from the model instance.
 
-If you make any changes to the model entity properties and want to save them into the table, use the `$model->save()` method. This method will use the `updateOrCreate()` logic (see above), but the data will be retrieved from the model entity.
+**Saving model entity data**
+If you make any changes to the model entity properties and want to save them into the table, use the `$model->save()` method. This method will use the `updateOrCreate()` logic (see above), but the data will be retrieved from the model entity properties.
+
+**Note:** If you want to update an existing row, do not forget to include the primary key in the data, if not previously filled by the `$model->fill()` method.
 
 _Example_
 ```php
-$user->name = 'Gabriel'; // Stores "Gabriel" into field "name" in the model entity
-$user->save(); // Updates the row in the table with the new name
+$model->name = 'Gabriel'; // Stores "Gabriel" into field "name" in the model entity
+$model->save(); // Updates the row in the table with the new name
 ```
 
 You can also save entities that were not previously filled from the database. In this case, the row will be created with the new entity data.
@@ -302,6 +309,3 @@ $model->name = 'Test'; // Stores "Test" into field "name" in the model entity
 $model->email = 'test@lorem.com'; // Stores "test@lorem.com" into field "email" in the model entity
 $model->save(); // Creates the new row with the entity data
 ```
-
------
-_Documentation session under development..._ [Contribute!](https://github.com/glowieframework/glowie-website/tree/main/documentation)

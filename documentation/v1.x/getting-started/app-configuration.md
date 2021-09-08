@@ -90,3 +90,29 @@ _Example_
     'port' => 3306
 ]
 ```
+
+### Custom configuration variables
+If you want to work with aditional configuration variables, create a new key in the configuration array with the value you want.
+
+_Example_
+```php
+'my_config' => 'value'
+```
+
+To retrieve this configuration anywhere in your application, use the static `Config::get()` method, passing the key for the configuration you want to retrieve.
+
+_Example_
+```php
+use Glowie\Core\Config;
+$value = Config::get('my_config'); # returns "value"
+```
+
+You can also pass an optional default value as the second parameter, and this value will be returned if the key you provide does not exist in the current environment.
+
+If you want to check if a configuration exists, use the static `Config::has()` method, passing the key for the configuration you want to check.
+
+_Example_
+```php
+use Glowie\Core\Config;
+$exists = Config::has('my_config'); # returns true
+```

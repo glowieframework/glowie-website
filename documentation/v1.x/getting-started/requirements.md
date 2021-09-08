@@ -7,7 +7,7 @@ In order to run Glowie you will need a web server that meets the following requi
 
 If you are planning to work with databases, you will also need:
 
-- MySQL **5.7** or higher
+- MySQL server version **5.7** or higher
 - PHP extension `mysqli`
 
 ### Testing locally
