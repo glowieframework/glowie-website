@@ -10,7 +10,7 @@ use Glowie\Core\Tools\Crawler;
 $crawler = new Crawler();
 ```
 
-You can pass two optional parameters in the constructor: the first is an array of custom headers to send in the request. Must be an associative array with the key being the **name** of the header and the value the header **value** (can be a string or an array of strings).
+You can pass three optional parameters in the constructor: the first is an array of custom headers to send in the request. Must be an associative array with the key being the **name** of the header and the value the header **value** (can be a string or an array of strings).
 
 _Example_
 ```php
@@ -24,7 +24,20 @@ $headers = [
 $crawler = new Crawler($headers);
 ```
 
-The second parameter is the **timeout** setting. See below how it works.
+The second parameter is an array of custom cookies to send in the request. Must be an associative array with the key being the **name** of the header and the value the header **value**.
+
+_Example_
+```php
+use Glowie\Core\Tools\Crawler;
+
+$cookies = [
+    'mycookie' => '1234'
+]
+
+$crawler = new Crawler($headers, $cookies);
+```
+
+The third parameter is the **timeout** setting. See below how it works.
 
 ### Adding request headers
 If you want to add a header to the request, use the `$crawler->addHeader()` method. The first parameter is the header name, and the second the value you want to set.
@@ -40,6 +53,14 @@ There are also a few shortcuts to the most commonly used headers:
 - `$crawler->setContentType()` - Sets the `Content-Type` header. The `Crawler` class has a few constants with the most common content types.
 
 - `$crawler->setAuthorization()` - Sets a basic `Authorization` header. The first parameter is the username and the second is the password.
+
+### Adding request cookies
+If you want to pass custom cookies in the request, use the `$crawler->addCookie()` method. The first parameter is the cookie name, and the second the value you want to set.
+
+_Example_
+```php
+$crawler->addCookie('mycookie', '1234');
+```
 
 ### Setting the request timeout
 If you want to set the request timeout, use `$crawler->setTimeout()` method.
