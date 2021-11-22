@@ -46,3 +46,8 @@ public function methodNotAllowed(){
     ]);
 }
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/extra/cli"><- CLI</a>
+    <a href="docs/%%version%%/extra/internationalization">Internationalization -></a>
+</div>

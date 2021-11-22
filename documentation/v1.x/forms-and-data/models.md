@@ -1,10 +1,10 @@
 # Models
-A model is a way to interact with your database tables in an object-oriented way. Each model corresponds to a table from your database. Within the model you can find some methods to retrieve, update and delete data from the table very easily, surpassing the needs of relying on [Kraken](docs/%%version%%/forms-and-data/mastering-kraken) query builder all the time.
+A model is a way to interact with your database tables in an object-oriented way. Each model corresponds to a table from your database. Within the model you can find some methods to retrieve, update and delete data from the table very easily, surpassing the needs of relying on [Kraken](docs/%%version%%/forms-and-data/query-builder) query builder all the time.
 
 ### Creating models
 Creating a model for your application is extremely easy. A model is a simple PHP file with a model class in `Glowie\Models` namespace stored in `app/models` folder.
 
-From [Firefly](docs/%%version%%/extra/firefly) CLI you can use the following command to create a new model:
+From [Firefly](docs/%%version%%/extra/cli) CLI you can use the following command to create a new model:
 
 ```plaintext
 php firefly create-model --name=MyModel
@@ -249,7 +249,7 @@ $users->drop(1); // Deletes first row with primary key = "1"
 ```
 
 ### Advanced data handling
-Every model extends [Kraken](docs/%%version%%/forms-and-data/mastering-kraken) query builder. This means you can use Kraken's methods from the model instance to handle data in an advanced way. See Kraken documentation to learn more.
+Every model extends [Kraken](docs/%%version%%/forms-and-data/query-builder) query builder. This means you can use Kraken's methods from the model instance to handle data in an advanced way. See Kraken documentation to learn more.
 
 _Example_
 ```php
@@ -309,3 +309,8 @@ $model->name = 'Test'; // Stores "Test" into field "name" in the model entity
 $model->email = 'test@lorem.com'; // Stores "test@lorem.com" into field "email" in the model entity
 $model->save(); // Creates the new row with the entity data
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/forms-and-data/query-builder"><- Query Builder</a>
+    <a href="docs/%%version%%/extra/cli">CLI -></a>
+</div>

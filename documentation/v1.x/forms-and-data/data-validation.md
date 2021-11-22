@@ -200,3 +200,8 @@ $rules = [
 $isValid = $validator->validateFields($data, $rules); # returns false
 $errors = $validator->getErrors('name'); # returns []
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/forms-and-data/retrieving-data"><- Retrieving data</a>
+    <a href="docs/%%version%%/forms-and-data/session">Session -></a>
+</div>

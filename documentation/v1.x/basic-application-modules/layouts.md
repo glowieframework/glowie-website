@@ -74,3 +74,8 @@ $this->renderLayout('default', 'index', ['name' => 'Glowie']);
 ```
 
 You can also pass parameters to the layout file by using `$this->view` object (see [Views](docs/%%version%%/basic-application-modules/views)).
+
+<div class="links">
+    <a href="docs/%%version%%/basic-application-modules/views"><- Views</a>
+    <a href="docs/%%version%%/basic-application-modules/middlewares">Middlewares -></a>
+</div>

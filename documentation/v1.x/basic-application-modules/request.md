@@ -65,3 +65,8 @@ There are a few shortcuts to the most commonly used headers:
 - `$this->request->getAuthorization()` - Returns an [Element](docs/%%version%%/forms-and-data/element) with the username and password passed through a basic `Authorization` header. If the header is not present or the Authorization is invalid, this method returns `null`.
 
 - `$this->request->getPreviousUrl()` - Returns the previous URL where the user was refered from. Note that this information relies in the `Referer` header. Be aware that this header cannot be always available.
+
+<div class="links">
+    <a href="docs/%%version%%/basic-application-modules/middlewares"><- Middlewares</a>
+    <a href="docs/%%version%%/basic-application-modules/response">Response -></a>
+</div>

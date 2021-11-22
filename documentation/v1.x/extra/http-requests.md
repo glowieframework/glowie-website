@@ -66,7 +66,7 @@ Data to send in the request. `Content-Type` header must be needed depending on c
 _Example_
 ```php
 $data = [
-    'id' = 1, 
+    'id' = 1,
     'name' => 'Glowie'
 ];
 
@@ -88,3 +88,8 @@ The parameters for this functions are the same from `$crawler->request()`, excep
 
 ### Getting the response
 If the HTTP request is done successfully (with a 200 response code), Crawler will return the response body as a string, otherwise it returns `false`.
+
+<div class="links">
+    <a href="docs/%%version%%/extra/file-uploads"><- File uploads</a>
+    <a href="docs/%%version%%/extra/migrations">Migrations -></a>
+</div>

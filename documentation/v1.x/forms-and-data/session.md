@@ -94,3 +94,8 @@ $this->session->setFlash('name', 'Glowie'); # Stores "Glowie" value into "name" 
 $name = $this->session->getFlash('name'); # Returns "Glowie"
 $name = $this->session->getFlash('name'); # Returns null, flash data was already deleted
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/forms-and-data/data-validation"><- Data validation</a>
+    <a href="docs/%%version%%/forms-and-data/cookies">Cookies -></a>
+</div>

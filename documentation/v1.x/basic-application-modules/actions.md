@@ -27,11 +27,11 @@ _Example_
 ```
 
 ### init()
-Every controller can have an optional `init()` method. If this method exists, it will be called before any other actions from the same controller are instantiated. 
+Every controller can have an optional `init()` method. If this method exists, it will be called before any other actions from the same controller are instantiated.
 
 This way you create common functions that will be propagated to the whole controller before anything happens, instead of using the controller constructor for that.
 
-**Note:** You should not use the `__construct()` method in a controller. Always use `init()` instead.
+**Note:** You should not use the `__construct()` method in a controller. Always use `init()` instead. The constructor method is restricted to the core controller setup.
 
 _Example_
 ```php
@@ -54,3 +54,8 @@ _Example_
 ```
 
 **Important!** If you have a `init()` method in the `BaseController`, don't forget to call `parent::init()` inside all other controllers `init()` functions. This ensures that the function from `BaseController` will also be called.
+
+<div class="links">
+    <a href="docs/%%version%%/basic-application-modules/controllers"><- Controllers</a>
+    <a href="docs/%%version%%/basic-application-modules/routes">Routes -></a>
+</div>

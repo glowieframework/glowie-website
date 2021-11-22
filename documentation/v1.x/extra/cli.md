@@ -1,4 +1,4 @@
-# Firefly
+# CLI
 Firefly is Glowie's command line tool. This tool is suited to help you increase your workflow speed and have access to several Glowie utilities.
 
 To run Firefly, from your console navigate to the application root folder and run:
@@ -191,12 +191,12 @@ _Example_
 php firefly my-command
 ```
 
-Command names will be parsed to **PascalCase** in order to match the command class name. 
+Command names will be parsed to **PascalCase** in order to match the command class name.
 
 _Example:_ `hello-world` command will match the `HelloWorld` class.
 
 **Printing data in the console**
-To print a message to the console from your command, use `$this->print()` method. 
+To print a message to the console from your command, use `$this->print()` method.
 
 The first parameter is the text you want to print, and the second is an optional break option. If you pass `false` as the second parameter, the message will not have a line break at the end.
 
@@ -257,3 +257,8 @@ _Example_
 ```php
 $name = $this->argOrInput('name', 'What is your name?');
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/forms-and-data/models"><- Models</a>
+    <a href="docs/%%version%%/extra/error-handling">Error handling -></a>
+</div>

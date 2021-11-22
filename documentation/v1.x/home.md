@@ -1,7 +1,7 @@
 # Welcome to Glowie!
 Welcome to Glowie official documentation.
 
-Here you will find everything about how to start using this powerful framework to create awesome applications and dynamic websites.
+Here you will find everything about how to start using this powerful PHP framework to create awesome applications and dynamic websites.
 
 If you have any doubts or suggestions, check out our [discussions page at GitHub](https://github.com/glowieframework/glowie/discussions).
 
@@ -14,3 +14,8 @@ Let's begin!
 <hr>
 
 Want to help improve this documentation? [Contribute!](https://github.com/glowieframework/glowie-website/tree/main/documentation)
+
+<div class="links">
+    <div></div>
+    <a href="docs/%%version%%/getting-started/requirements">Requirements -></a>
+</div>

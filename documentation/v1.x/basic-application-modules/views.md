@@ -65,3 +65,8 @@ $this->renderView('about');
 
 ### Taking your views to a next level
 If you want to learn a new way to create dynamic, pretty and professional coded views, take a look at [Skeltch](docs/%%version%%/extra/skeltch), Glowie built-in templating engine.
+
+<div class="links">
+    <a href="docs/%%version%%/basic-application-modules/routes"><- Routes</a>
+    <a href="docs/%%version%%/basic-application-modules/layouts">Layouts -></a>
+</div>

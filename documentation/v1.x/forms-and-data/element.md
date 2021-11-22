@@ -81,3 +81,8 @@ unset($element->name);
 ```
 
 To delete all data from an Element at once, use `$element->flush()`.
+
+<div class="links">
+    <a href="docs/%%version%%/basic-application-modules/response"><- Response</a>
+    <a href="docs/%%version%%/forms-and-data/retrieving-data">Retrieving data -></a>
+</div>

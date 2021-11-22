@@ -51,6 +51,13 @@ section.docs-header {
 section.docs {
     padding: 30px 0;
 
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
     .menu {
         background-color: #fafafa;
         border: 1px solid gainsboro;

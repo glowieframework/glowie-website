@@ -33,3 +33,8 @@ $page = $this->get->page; # returns "1"
 ```
 
 You can also use the methods from [Request](docs/%%version%%/basic-application-modules/request) instance to retrieve request data.
+
+<div class="links">
+    <a href="docs/%%version%%/forms-and-data/element"><- Element</a>
+    <a href="docs/%%version%%/forms-and-data/data-validation">Data validation -></a>
+</div>

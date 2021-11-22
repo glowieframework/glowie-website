@@ -197,3 +197,8 @@ _Example_
 ```php
 {% $variable = 'test' %}
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/extra/view-helpers"><- View Helpers</a>
+    <a href="docs/%%version%%/extra/file-uploads">File uploads -></a>
+</div>

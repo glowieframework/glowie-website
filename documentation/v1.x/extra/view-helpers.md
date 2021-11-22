@@ -1,4 +1,4 @@
-# Helpers
+# View Helpers
 View Helpers are methods that can be called from within your application views or layouts. You can use helpers to create custom utility functions to use inside your views, like processing data before printing, filtering content, formatting strings, etc.
 
 Helpers methods are stored in `app/views/helpers/Helpers.php` file inside the `Glowie\Helpers\Helpers` class.
@@ -37,3 +37,8 @@ _Example_
     <?php echo $this->arrayToUl($this->items); ?>
 </div>
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/extra/internationalization"><- Internationalization</a>
+    <a href="docs/%%version%%/extra/skeltch">Skeltch -></a>
+</div>

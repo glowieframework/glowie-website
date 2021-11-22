@@ -1,4 +1,4 @@
-# Mastering Kraken
+# Query Builder
 Kraken is Glowie's powerful query builder and database ORM toolkit. It's time to you to master this incredible component and start working with databases in a way you've never done before.
 
 ### Connecting to a database
@@ -125,3 +125,8 @@ $db->where('id', 1)
 
 -----
 _Documentation session under development..._ [Contribute!](https://github.com/glowieframework/glowie-website/tree/main/documentation)
+
+<div class="links">
+    <a href="docs/%%version%%/forms-and-data/databases"><- Databases</a>
+    <a href="docs/%%version%%/forms-and-data/models">Models -></a>
+</div>

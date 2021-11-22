@@ -4,7 +4,7 @@ A migration is a way to version control your application database. When working 
 ### Creating migrations
 A migration is a simple PHP file with a migration class in `Glowie\Migrations` namespace stored in `app/migrations` folder.
 
-From [Firefly](docs/%%version%%/extra/firefly) CLI you can use the following command to create a new migration:
+From [Firefly](docs/%%version%%/extra/cli) CLI you can use the following command to create a new migration:
 
 ```plaintext
 php firefly create-migration --name=MyMigration
@@ -15,7 +15,7 @@ Migrations run in numeric order, so it's important that your migration classes h
 
 _Example:_ `m2021_07_05_210000_MyMigration`
 
-When creating migrations from [Firefly](docs/%%version%%/extra/firefly) CLI, the timestamp is prepended automatically, so you don't need to write it.
+When creating migrations from [Firefly](docs/%%version%%/extra/cli) CLI, the timestamp is prepended automatically, so you don't need to write it.
 
 The migration file must also have the **exact same name** as the migration class.
 
@@ -61,7 +61,7 @@ Opposite to that, the migration class **must also have** a public `rollback()` m
 Returning `true` or `false` from this method is also optional, but we recommend to use it to tell if the migration was rolled back successfully or not.
 
 **Database instance**
-From your migration, you can use the property `$this->db` to directly access an instance of [Kraken](docs/%%version%%/forms-and-data/mastering-kraken) query builder and interact with your application database.
+From your migration, you can use the property `$this->db` to directly access an instance of [Kraken](docs/%%version%%/forms-and-data/query-builder) query builder and interact with your application database.
 
 _Example_
 ```php
@@ -100,13 +100,13 @@ _Example_
 ```
 
 ### Running migrations
-In order to run pending migrations from your application, from [Firefly](docs/%%version%%/extra/firefly) CLI use the following command:
+In order to run pending migrations from your application, from [Firefly](docs/%%version%%/extra/cli) CLI use the following command:
 
 ```plaintext
 php firefly migrate
 ```
 
-This will apply all migrations that were not applied yet, following the order from the oldest one to the latest one. 
+This will apply all migrations that were not applied yet, following the order from the oldest one to the latest one.
 
 If you want to specify how many migrations you want to apply, you can use the optional `--steps` argument.
 
@@ -119,7 +119,7 @@ php firefly migrate --steps=1
 To track which migrations were applied in your current database version, Glowie will create a table named `migrations` in your database. This table stores the name and date of every migration run. We do not recommend editing this table since it may cause errors while working with migrations.
 
 ### Rolling back migrations
-If you want to rollback what a migration did, from [Firefly](docs/%%version%%/extra/firefly) CLI use the following command:
+If you want to rollback what a migration did, from [Firefly](docs/%%version%%/extra/cli) CLI use the following command:
 
 ```plaintext
 php firefly rollback
@@ -138,3 +138,8 @@ To rollback all migrations, use `all` in the `--steps` argument.
 ```plaintext
 php firefly rollback --steps=all
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/extra/http-requests"><- HTTP requests</a>
+    <a href="docs/%%version%%/extra/sending-mail">Sending mail -></a>
+</div>

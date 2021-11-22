@@ -66,3 +66,8 @@ $.ajaxSetup({
     }
 });
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/forms-and-data/cookies"><- Cookies</a>
+    <a href="docs/%%version%%/forms-and-data/databases">Databases -></a>
+</div>

@@ -105,3 +105,8 @@ $this->response->redirectRoute('products', ['category' => 'computers', 'page' =>
 There is also an optional third parameter with the HTTP status code to pass with the redirect (default is 307).
 
 If the route name is not valid or has missing parameters, Glowie will trigger an error.
+
+<div class="links">
+    <a href="docs/%%version%%/basic-application-modules/request"><- Request</a>
+    <a href="docs/%%version%%/forms-and-data/element">Element -></a>
+</div>

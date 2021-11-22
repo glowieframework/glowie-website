@@ -1,7 +1,7 @@
 # App configuration
 After installing Glowie into your server, you must configure your application before starting.
 
-Rename `app/config/Config.example.php` to `app/config/Config.php`. This is the file where your application settings for the current environment are stored. Each environment should have its own config file, as some settings may change from one to another.
+Copy `app/config/Config.example.php` to `app/config/Config.php`. This is the file where your application settings for the current environment are stored. Each environment should have its own config file, as some settings may change from one to another.
 
 **Important!** This file contains sensitive data as database passwords and encryption keys. You should not commit this file to your application source control.
 
@@ -116,3 +116,8 @@ _Example_
 use Glowie\Core\Config;
 $exists = Config::has('my_config'); # returns true
 ```
+
+<div class="links">
+    <a href="docs/%%version%%/getting-started/folder-structure"><- Folder structure</a>
+    <a href="docs/%%version%%/getting-started/autoloading">Autoloading -></a>
+</div>

@@ -26,7 +26,7 @@ The HTTP request methods that this route accepts. Can be a single method or an a
 If no method is specified, all methods will be accepted by default.
 
 **name**
-This is the internal identifier to retrieve this route from your application. If no identifier is specified, the route URI will be used as the name.
+This is the name used to retrieve this route from your application. If no name is specified, the route URI will be used.
 
 _Example_
 ```php
@@ -122,7 +122,7 @@ Auto routing comes disabled by default. In order to enable it, in the route conf
 Rails::setAutoRouting(true);
 ```
 
-In auto routing the routes will be parsed in the following way: `(controller)/(action)/(parameters...)`. Controller and action names will be resolved converting the URI to a valid **PascalCase** format. 
+In auto routing the routes will be parsed in the following way: `(controller)/(action)/(parameters...)`. Controller and action names will be resolved converting the URI to a valid **PascalCase** format.
 
 _Example:_ `products-list-test` will be resolved to `ProductsListTest`.
 
@@ -145,3 +145,8 @@ echo $this->params->param2; # returns abc
 ```
 
 If a corresponding controller or action is not found, Glowie will return a 404 Not Found error response.
+
+<div class="links">
+    <a href="docs/%%version%%/basic-application-modules/actions"><- Actions</a>
+    <a href="docs/%%version%%/basic-application-modules/views">Views -></a>
+</div>
