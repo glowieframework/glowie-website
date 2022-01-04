@@ -60,7 +60,7 @@ _Example_
 ```
 
 **Model primary key**
-By default, Glowie assumes that your model table has a primary key named `id`. If you want to set a different column name for the primary key, use the protected `$_primary` property.
+By default, Glowie assumes that your model table has a primary key named `id`. If you want to set a different column name for the primary key, use the protected `$_primaryKey` property.
 
 _Example_
 ```php
@@ -75,7 +75,7 @@ _Example_
          * Table primary key name.
          * @var string
          */
-        protected $_primary = 'email';
+        protected $_primaryKey = 'email';
 
     }
 
@@ -83,7 +83,7 @@ _Example_
 ```
 
 **Model fields**
-The fields property specifies which columns from your table can be retrieved, inserted or updated through the model. By default, all fields from the table will be accepted. If you want to manually set this fields, use the protected `$_fields` property as an array of field names.
+The fields property specifies which columns from your table can be retrieved through the model. By default, all fields from the table will be accepted. If you want to manually set this fields, use the protected `$_fields` property as an array of field names.
 
 _Example_
 ```php
@@ -95,10 +95,33 @@ _Example_
     class MyModel extends Model{
 
         /**
-         * Table manageable fields.
+         * Table retrievable fields.
          * @var array
          */
         protected $_fields = ['name', 'email', 'password'];
+
+    }
+
+?>
+```
+
+**Model updatable fields**
+The updatable property specifies which columns from your table can be updated or inserted through the model. By default, all fields from the table will be accepted. If you want to manually set this fields, use the protected `$_updatable` property as an array of field names.
+
+_Example_
+```php
+<?php
+    namespace Glowie\Models;
+
+    use Glowie\Core\Database\Model;
+
+    class MyModel extends Model{
+
+        /**
+         * Table updatable fields.
+         * @var array
+         */
+        protected $_updatable = ['name', 'password'];
 
     }
 

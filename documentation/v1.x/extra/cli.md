@@ -48,6 +48,13 @@ To access your application, open http://localhost:8080 (or another host/port you
 
 Also remember that the local development server does not come with any database server, so you must run it at your own.
 
+### Interactive mode
+Firefly has a built-in REPL environment for testing and sandboxing PHP code in real time without the need to run a web server. To enter this mode, use:
+
+```plaintext
+php firefly sandbox
+```
+
 ### Clearing temporary files
 To clear your application temporary files, use one of the following commands:
 
@@ -89,10 +96,10 @@ The `--name` argument is required, which is the name for your controller.
 In order to create a new language file for your application, use:
 
 ```plaintext
-php firefly create-language --id=pt
+php firefly create-language --name=pt
 ```
 
-The `--id` argument is required, which is the identificator for your language.
+The `--name` argument is required, which is the name for your language.
 
 ### Creating middlewares
 In order to create a new middleware for your application, use:
@@ -256,6 +263,13 @@ If the argument was not passed, the user will be prompted to input the value. If
 _Example_
 ```php
 $name = $this->argOrInput('name', 'What is your name?');
+```
+
+If you want to retrieve an argument value or throw an exception if it was not provided, use the `$this->argOrFail()` method passing the argument name to check.
+
+_Example_
+```php
+$name = $this->argOrFail('name');
 ```
 
 <div class="links">

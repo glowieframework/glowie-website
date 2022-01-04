@@ -157,6 +157,11 @@ Skeltch also provides shortcuts to common Glowie functions used in views:
 {@layout('default', 'index', ['name' => 'Glowie'])}
 ```
 
+`echo $this->getContent()` (see [Layouts](docs/%%version%%/basic-application-modules/layouts))
+```php
+{@content}
+```
+
 `echo Babel:get()` (see [Internationalization](docs/%%version%%/extra/internationalization))
 ```php
 {@babel('message', 'en')}
@@ -172,9 +177,9 @@ Skeltch also provides shortcuts to common Glowie functions used in views:
 {@route('products', ['id' => 1])}
 ```
 
-`echo $this->getContent()` (see [Layouts](docs/%%version%%/basic-application-modules/layouts))
+`echo Util::asset()` (see [Util](docs/%%version%%/extra/util))
 ```php
-{@content}
+{@asset('style.css')}
 ```
 
 `echo Util::csrfToken()` (see [CSRF Protection](docs/%%version%%/forms-and-data/csrf-protection))

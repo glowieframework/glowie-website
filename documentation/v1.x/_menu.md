@@ -36,6 +36,7 @@
 - [File uploads](docs/%%version%%/extra/file-uploads)
 - [HTTP requests](docs/%%version%%/extra/http-requests)
 - [Migrations](docs/%%version%%/extra/migrations)
+- [Skeleton](docs/%%version%%/extra/skeleton)
 - [Sending mail](docs/%%version%%/extra/sending-mail)
 - [Util](docs/%%version%%/extra/util)
 - [Tests](docs/%%version%%/extra/tests)

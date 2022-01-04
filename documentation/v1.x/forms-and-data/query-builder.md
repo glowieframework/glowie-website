@@ -2,7 +2,7 @@
 Kraken is Glowie's powerful query builder and database ORM toolkit. It's time to you to master this incredible component and start working with databases in a way you've never done before.
 
 ### Connecting to a database
-To start working with Kraken, you must create an instance of `Glowie\Core\Database\Kraken` class. Within Kraken constructor, you can pass the table name you want to use as default for your queries (see [Models](docs/%%version%%/forms-and-data/models)).
+To start working with Kraken, you must create an instance of `Glowie\Core\Database\Kraken` class. Within Kraken constructor, you can optionally pass the table name you want to use as default for your queries (see also: [Models](docs/%%version%%/forms-and-data/models)).
 
 _Example_
 ```php
@@ -17,7 +17,7 @@ _Example_
 ```php
 use Glowie\Core\Database\Kraken;
 
-$db = new Kraken('users', [
+$db = new Kraken('glowie', [
     'host' => 'localhost',
     'username' => 'root',
     'password' => '',
@@ -75,7 +75,7 @@ To perform a SELECT DISTINCT query, use `$db->distinct()`.
 
 _Example_
 ```php
-$db->select()->distinct(); // Produces SELECT DISTINCT * FROM glowie
+$db->select('id')->distinct(); // Produces SELECT DISTINCT id FROM glowie
 ```
 
 ### Fetching SELECT data
@@ -92,13 +92,22 @@ If you pass a `true` option as the first parameter of these methods, the results
 In order to add a WHERE condition to your query, you can use the `$db->where()` method and its variations.
 
 **Basic chaining**
-Passing the column name as the first parameter and the value as the second will produce a basic equal comparison. If you want to use another operator, pass it as the second parameter and the value as the third. See the examples below:
+Passing the column name as the first parameter and the value as the second will produce a basic equal comparison. If you want to use another operator, pass it as the second parameter and the value as the third parameter.
 
 _Example_
 ```php
 $db->where('id', 1); // Produces WHERE id = "1"
 $db->where('status', '!=', 0); // Produces WHERE status != "0"
 $db->where('name', 'LIKE', '%gabriel%'); // Produces WHERE name LIKE "%gabriel%"
+```
+
+Subsequent WHERE calls will chain the conditions with AND parameters.
+
+_Example_
+```php
+$db->where('id', 1)
+    ->where('status', '!=', 0);
+// Produces WHERE id = "1" AND status != "0"
 ```
 
 You can also pass an array of multiple WHERE conditions as the first parameter only. Each condition must be another array with at least two parameters (the same used in `$db->where()` method).

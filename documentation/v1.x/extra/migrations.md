@@ -141,5 +141,5 @@ php firefly rollback --steps=all
 
 <div class="links">
     <a href="docs/%%version%%/extra/http-requests"><- HTTP requests</a>
-    <a href="docs/%%version%%/extra/sending-mail">Sending mail -></a>
+    <a href="docs/%%version%%/extra/skeleton">Skeleton -></a>
 </div>
