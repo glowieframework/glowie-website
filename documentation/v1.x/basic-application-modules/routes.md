@@ -16,7 +16,7 @@ If no controller is specified, `Glowie\Controllers\Main` will be used by default
 **action**
 The action that this route will instantiate. Must be a valid action from the specified controller.
 
-If no action is specified, `index` will be used by default.
+If no action is specified, a **camelCase** version of the route URI will be used.
 
 **Note:** If the specified `controller` or `action` is not found, Glowie will trigger an error.
 
@@ -39,8 +39,8 @@ Rails::addRoute('/', Main::class, 'index');
 # myappurl.com/blog
 Rails::addRoute('blog', Blog::class, 'index');
 
-# myappurl.com/blog/new (only POST or PATCH methods)
-Rails::addRoute('blog/new', Blog::class, 'new', ['post', 'patch'], 'blog-new');
+# myappurl.com/blog/new (only POST or PUT methods)
+Rails::addRoute('blog/new', Blog::class, 'new', ['post', 'put'], 'blog-new');
 
 ```
 
@@ -122,7 +122,7 @@ Auto routing comes disabled by default. In order to enable it, in the route conf
 Rails::setAutoRouting(true);
 ```
 
-In auto routing the routes will be parsed in the following way: `(controller)/(action)/(parameters...)`. Controller and action names will be resolved converting the URI to a valid **PascalCase** format.
+In auto routing the routes will be parsed in the following way: `[controller]/[action]/[parameters...]`. Controller and action names will be resolved converting the URI to **PascalCase** (controller) and **camelCase** (action) versions.
 
 _Example:_ `products-list-test` will be resolved to `ProductsListTest`.
 
@@ -137,7 +137,7 @@ _Example_
 
 - User types in `myappurl.com/about/contact`. Glowie will call `About` controller with `contact()` action.
 
-- User types in `myappurl.com/products/list/123/abc`. Glowie will call `Products` controller with `list()` action and the remaining parameters will be stored inside `$this->params` as an URI segment (split by each slash).
+- User types in `myappurl.com/products/list-products/123/abc`. Glowie will call `Products` controller with `listProducts()` action and the remaining parameters will be stored inside `$this->params` as an URI segment (split by each slash).
 
 ```php
 echo $this->params->param1; # returns 123

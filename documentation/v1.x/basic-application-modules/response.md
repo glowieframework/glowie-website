@@ -8,7 +8,7 @@ To set the HTTP status code for the response, use `$this->response->setStatusCod
 
 The first parameter is the code to set, and the second an optional custom reason phrase to send.
 
-`Response` class has a few constants with the most common status codes that can help you find faster the code you need.
+The `Response` class has a few constants with the most common status codes that can help you find faster the code you need.
 
 _Example_
 ```php
@@ -20,6 +20,8 @@ $this->response->setStatusCode(Response::HTTP_FORBIDDEN);
 // Sets a 403 Forbidden error code with custom message
 $this->response->setStatusCode(Response::HTTP_FORBIDDEN, 'You cannot see this now!');
 ```
+
+There is also the shortcut `$this->response->fail()` that sets a **500 Internal Server Error** response code.
 
 ### Setting the response body
 **As plain text**
@@ -67,8 +69,10 @@ There are also a few shortcuts to the most commonly used headers:
 
 - `$this->response->setAuthorization()` - Sets a basic `Authorization` header. The first parameter is the username and the second is the password.
 
+- `$this->response->setBearer()` - Sets a bearer `Authorization` header. The first parameter is the bearer token you want to set.
+
 ### Redirecting URLs
-In order to redirect your response to another URL, you can use the `$this->response->redirect()` method. The first parameter is the target URL to redirect to and the second an optional HTTP status code to pass with the redirect (default is 307).
+In order to redirect your response to another URL, you can use the `$this->response->redirect()` method. The first parameter is the target URL to redirect to and the second an optional HTTP status code to pass with the redirect (default is **307**).
 
 _Example_
 ```php
@@ -102,7 +106,7 @@ $this->response->redirectRoute('products', ['category' => 'computers', 'page' =>
 // Redirects to: myappurl.com/products/computers?page=1
 ```
 
-There is also an optional third parameter with the HTTP status code to pass with the redirect (default is 307).
+There is also an optional third parameter with the HTTP status code to pass with the redirect (default is **307**).
 
 If the route name is not valid or has missing parameters, Glowie will trigger an error.
 

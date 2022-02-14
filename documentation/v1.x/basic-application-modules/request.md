@@ -21,7 +21,7 @@ In order to retrieve details about a request your application received, you can 
 - `$this->request->isSecure()` - Returns `true` if the request was made using a secure HTTPS connection.
 
 ### Retrieving request data
-In order to retrieve data that was passed through the request, use the `$this->request->getVar()` method.
+In order to retrieve data that was passed through the request, use the `$this->request->get()` method.
 
 The first parameter is the variable key to get. The second is an optional default value. If the variable exists, its value will be returned. Otherwise, the default value will be returned.
 
@@ -30,20 +30,31 @@ This method can retrieve data passed from any kind of HTTP request method.
 _Example_
 ```php
 # user types in myappurl.com/search?query=products&page=1
-$query = $this->request->getVar('products'); # returns "products"
-$page = $this->request->getVar('page') # returns "1"
+$query = $this->request->get('query'); # returns "products"
+$page = $this->request->get('page'); # returns "1"
 ```
 
-To retrieve all the request data at once as an associative array, use `$this->request->getVars()`.
+You can also uso magic getters to retrieve data as properties from the `Request` object.
+
+_Example_
+```php
+$query = $this->request->query;
+$page = $this->request->page;
+```
+
+**Converting data**
+To retrieve all the request data at once as an associative array, use `$this->request->toArray()`.
+
+You can also convert the request data to a JSON string with `$this->request->toJson()`.
 
 **Raw data**
 In order to get the raw request body as a string, use `$this->request->getBody()`.
 
 **JSON data**
-If the request data was sent as a JSON string, you can also use `$this->request->getJson()` to get an [Element](docs/%%version%%/forms-and-data/element) with the request data.
+If the request data was sent as a JSON string, you can also use `$this->request->getJson()` to get an [Element](docs/%%version%%/forms-and-data/element) with the already parsed request data. If the data is not a valid JSON, `null` will be returned.
 
 **Shortcuts**
-See [Retrieving data](docs/%%version%%/forms-and-data/retrieving-data) for a list of shortcuts to retrieve request data.
+See [Retrieving data](docs/%%version%%/forms-and-data/retrieving-data) for a list of shortcuts to retrieve data from specific request methods.
 
 ### Working with request headers
 Headers are piece of information that each request carries with it. In order to retrieve a specific request header value, use the `$this->request->getHeader()` method.
@@ -62,7 +73,11 @@ There are a few shortcuts to the most commonly used headers:
 
 - `$this->request->getContentType()` - Returns the `Content-Type` header value or `null` if not available.
 
+- `$this->request->getAccept()` - Returns the `Accept` header value or `null` if not available.
+
 - `$this->request->getAuthorization()` - Returns an [Element](docs/%%version%%/forms-and-data/element) with the username and password passed through a basic `Authorization` header. If the header is not present or the Authorization is invalid, this method returns `null`.
+
+- `$this->request->getBearer()` - Returns a token passed through a bearer `Authorization` header. If the header is not present or the Authorization is invalid, this method returns `null`.
 
 - `$this->request->getPreviousUrl()` - Returns the previous URL where the user was refered from. Note that this information relies in the `Referer` header. Be aware that this header cannot be always available.
 

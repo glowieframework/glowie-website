@@ -1,5 +1,7 @@
 # Retrieving data
-In order to retrieve a request data from a controller or middleware, there are two main properties that can be used:
+**Note:** See [Request](docs/%%version%%/basic-application-modules/request) in order to learn how to properly retrieve data in a much better way.
+
+In order to retrieve a request data from a controller or middleware, there are three main properties that can be used:
 
 - `$this->get` - Parameters passed to the request through the `GET` method.
 - `$this->post` - Parameters passed to the request through the `POST` method.
@@ -31,8 +33,6 @@ _Example 2_
 $query = $this->get->query; # returns "products"
 $page = $this->get->page; # returns "1"
 ```
-
-You can also use the methods from [Request](docs/%%version%%/basic-application-modules/request) instance to retrieve request data.
 
 <div class="links">
     <a href="docs/%%version%%/forms-and-data/element"><- Element</a>

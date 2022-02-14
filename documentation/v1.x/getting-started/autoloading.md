@@ -18,6 +18,8 @@ Glowie has several predefined namespaces that will be processed by the autoloade
 
 - `Glowie\Models` namespace is stored into `app/models` folder.
 
+- `Glowie\Tests` namespace is stored into `app/tests` folder.
+
 - `Glowie\Helpers` namespace is stored into `app/views/helpers` folder.
 
 When autoloading classes, remember that class names and their namespaces must match the exact directory and filenames.

@@ -5,91 +5,73 @@ Copy `app/config/Config.example.php` to `app/config/Config.php`. This is the fil
 
 **Important!** This file contains sensitive data as database passwords and encryption keys. You should not commit this file to your application source control.
 
+The config file is a multi-dimensional array. Each "group" of settings must be another associative array with the key being the configuration name and the value the configuration itself. This configurations are retrieved using a dot notation search.
+
 Available configurations are:
 
-**cache**
-Enables caching for some Glowie features. This is highly recommended in a production environment.
+**maintenance.enabled**
+Enables the application [Maintenance mode](docs/%%version%%/extra/maintenance-mode).
 
-_Example_
-```php
-'cache' => true,
-```
+**maintenance.bypass_key**
+Key to bypass the maintenance mode and enter the application during downtime.
 
-**skeltch**
+**skeltch.enabled**
 Enables [Skeltch](docs/%%version%%/extra/skeltch) templating engine to compile your application views.
 
-_Example_
-```php
-'skeltch' => true,
-```
+**skeltch.cache**
+Enables views caching for Skeltch. This is highly recommended in a production environment.
 
-**timezone**
-Default timezone to use with PHP date functions. Must be a valid [PHP timezone](https://php.net/manual/en/timezones.php).
-
-_Example_
-```php
-'timezone' => 'America/Sao_Paulo',
-```
-
-**error_reporting**
+**error_reporting.level**
 The error reporting level for PHP exceptions.
 
-_Example_
-```php
-'error_reporting' => E_ALL,
-```
-
-**error_log**
+**error_reporting.logging**
 Enables or disables error logging for your application.
 
-_Example_
-```php
-'error_log' => true,
-```
-
-**session_lifetime**
+**session.lifetime**
 Maximum amount of time (in seconds) for storing unused session files.
 
-_Example_
-```php
-'session_lifetime' => 120,
-```
+**session.gc_cleaning**
+Number of requests when to run the garbage collector and delete unused session files.
 
-**app_key**
+**secret.app_key**
 Key to use with encrypting functions. Be sure to use a strong key.
 
-_Example_
-```php
-'app_key' => 'f08e8ba131c7abab97dba275fab5a85e',
-```
-
-**app_token**
+**secret.app_token**
 Token to use with encrypting functions (along with your app key). Be sure to use a strong key.
 
-_Example_
-```php
-'app_token' => 'd147723d9e91340d9dd28fbd5a0b6651',
-```
-
 **database**
-Global database connection settings (if applicable). Must be an associative array with the following properties:
+The database connection settings available for your application. Each database identifier must be a key, and the settings an associative array with the following properties:
 
 - **host** - Database hostname URL.
 - **username** - Username to use while connecting to the database.
 - **password** - Password to use while autenticating user to the database.
 - **db** - Database name to connect to.
 - **port** - Database connection port.
+- **charset** - Database charset.
 
 _Example_
 ```php
 'database' => [
-    'host' => 'localhost',
-    'username' => 'root',
-    'password' => '',
-    'db' => 'glowie',
-    'port' => 3306
+    'default' => [
+        'host' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'db' => 'glowie',
+        'port' => 3306,
+        'charset' => 'utf8'
+    ],
+
+    'external' => [
+        // ...
+    ]
 ]
 ```
+
+**migrations.table**
+Name of the table used for tracking current database migrations. See [Migrations](docs/%%version%%/extra/migrations).
+
+**other.timezone**
+Default timezone to use with PHP date functions. Must be a valid [PHP timezone](https://php.net/manual/en/timezones.php).
 
 ### Custom configuration variables
 If you want to work with aditional configuration variables, create a new key in the configuration array with the value you want.

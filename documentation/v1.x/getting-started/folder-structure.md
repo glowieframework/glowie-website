@@ -35,6 +35,9 @@ Application public accessible folder. All your application assets and public fro
 **storage**
 Application cache, logs and temporary files. This folder and its children **must have writing permissions**.
 
+**tests**
+Application unit tests.
+
 **views**
 All your application views, layouts and helpers.
 
