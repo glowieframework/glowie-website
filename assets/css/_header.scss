@@ -1,5 +1,5 @@
 header {
-    background: $gradient;
+    background: var(--color-gradient);
     position: relative;
     min-height: 200px;
 
@@ -14,7 +14,7 @@ header {
         transform: rotate(180deg);
 
         .shape-fill {
-            fill: $soft;
+            fill: var(--color-soft);
         }
 
         svg {
@@ -96,7 +96,7 @@ section.preloader {
     align-items: center;
     display: flex;
     justify-content: center;
-    color: $primary;
+    color: var(--color-primary);
     background-color: white;
     opacity: 1;
     pointer-events: all;

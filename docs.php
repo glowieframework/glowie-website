@@ -38,7 +38,8 @@
         <title><?=$title?> | Glowie Documentation</title>
         <?php include 'includes/head.php';?>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/github.min.css" id="hljs-light">
+        <link rel="stylesheet" disabled href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/github-dark.min.css" id="hljs-dark">
     </head>
     <body>
         <?php include 'includes/header.php';?>

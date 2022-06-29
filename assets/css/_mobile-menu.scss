@@ -16,7 +16,7 @@ a.mobile-menu-button {
 }
 
 section.mobile-menu {
-    background: $gradient;
+    background: var(--color-gradient);
     max-height: 0;
     overflow: hidden;
     @include transitionAll();

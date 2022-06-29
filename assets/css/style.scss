@@ -1,20 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-$primary: #ed578b;
-$soft: #fcecf3;
-$strong: #ec1c64;
-$gradient: linear-gradient(90deg, rgba(237, 87, 139, 1) 0%, rgba(237, 87, 106, 1) 100%);
+:root {
+    --color-primary: #ed578b;
+    --color-soft: #fcecf3;
+    --color-strong: #ec1c64;
+    --color-gradient: linear-gradient(90deg, rgba(237, 87, 139, 1) 0%, rgba(237, 87, 106, 1) 100%);
+
+    @media (prefers-color-scheme: dark) {
+        --color-soft: #263238;
+        --color-strong: white;
+        --color-gradient: linear-gradient(90deg, #212121 0, #303030 100%);
+    }
+}
 
 @mixin transitionAll() {
     transition: 0.3s all ease;
 }
 
 body {
-    background-color: $primary;
+    background-color: var(--color-primary);
+
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
 }
 
 main {
     background-color: white;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #37474f;
+    }
 }
 
 * {
@@ -23,12 +39,12 @@ main {
 
 ::-moz-selection {
     color: white;
-    background: $primary;
+    background: var(--color-primary);
 }
 
 ::selection {
     color: white;
-    background: $primary;
+    background: var(--color-primary);
 }
 
 @import 'header';

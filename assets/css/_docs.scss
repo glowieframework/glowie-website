@@ -1,14 +1,14 @@
 section.docs-header {
-    background-color: $soft;
+    background-color: var(--color-soft);
     padding-bottom: 50px;
 
     h1 {
         font-size: 36px;
-        color: $strong;
+        color: var(--color-strong);
     }
 
     a {
-        color: $strong;
+        color: var(--color-strong);
         text-decoration: none;
     }
 
@@ -20,6 +20,10 @@ section.docs-header {
         padding: 2px 5px;
         border-radius: 5px;
         cursor: pointer;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #202936;
+        }
 
         span {
             font-size: 11px;
@@ -51,7 +55,7 @@ section.docs-header {
 section.docs {
     padding: 30px 0;
 
-    .links{
+    .links {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -64,6 +68,11 @@ section.docs {
         border-radius: 10px;
         padding: 20px;
         font-size: 14px;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #202936;
+            border-color: #0a1524;
+        }
 
         h3 {
             font-size: 14px;
@@ -79,13 +88,13 @@ section.docs {
     }
 
     a {
-        color: $primary;
+        color: var(--color-primary);
     }
 
     h1 {
         font-weight: 500;
         font-size: 32px;
-        color: $primary;
+        color: var(--color-primary);
         margin-bottom: 30px;
     }
 
@@ -117,6 +126,10 @@ section.docs {
                 &::-webkit-scrollbar-thumb {
                     background: #bbbbbb;
                 }
+            }
+
+            @media (prefers-color-scheme: dark) {
+                background-color: #202936;
             }
         }
 

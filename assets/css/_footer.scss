@@ -1,5 +1,5 @@
 footer {
-    background: $gradient;
+    background: var(--color-gradient);
     color: white;
     font-size: 14px;
     padding: 20px 0;
@@ -10,12 +10,12 @@ footer {
         @include transitionAll();
 
         &:hover {
-            color: $soft;
+            color: var(--color-soft);
             text-decoration: none;
         }
     }
 
     i {
-        color: $soft;
+        color: var(--color-soft);
     }
 }

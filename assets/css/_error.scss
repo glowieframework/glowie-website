@@ -4,7 +4,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    background-color: $soft;
+    background-color: var(--color-soft);
     color: white;
     text-align: center;
     padding: 20px;
@@ -18,7 +18,7 @@
     h3 {
         font-size: 22px;
         font-weight: 500;
-        color: $primary;
+        color: var(--color-primary);
         margin: 0 auto 30px auto;
         max-width: 350px;
         text-align: center;
@@ -27,17 +27,17 @@
 
     .button {
         display: block;
-        background-color: $primary;
+        background-color: var(--color-primary);
         color: white;
         margin: 20px auto 0 auto;
         max-width: 150px;
         padding: 10px 25px;
         text-decoration: none;
-        border: 1px solid $primary;
+        border: 1px solid var(--color-primary);
         @include transitionAll();
 
         &:hover {
-            background-color: $strong;
+            background-color: var(--color-strong);
         }
     }
 
