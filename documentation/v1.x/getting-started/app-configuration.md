@@ -1,9 +1,19 @@
 # App configuration
 After installing Glowie into your server, you must configure your application before starting.
 
-Copy `app/config/Config.example.php` to `app/config/Config.php`. This is the file where your application settings for the current environment are stored. Each environment should have its own config file, as some settings may change from one to another.
+### Environment config
+In the root folder of your project, you need to copy `.env.example` to `.env`. This is the file where your application settings for the current environment are stored. Each environment should have its own `.env` file, as some settings may change from one to another.
 
-**Important!** This file contains sensitive data as database passwords and encryption keys. You should not commit this file to your application source control.
+**Important!** This is the **only** file where you should store all your application sensitive data, like database passwords and encryption keys. You should not commit this file to your application source control.
+
+From [Firefly](docs/%%version%%/extra/cli) CLI you can use the following command to make this initial setup automatically:
+
+```plaintext
+php firefly init
+```
+
+### Config file
+Your application general configuration file is stored in `app/config/Config.php`. These configurations are shared between all environments.
 
 The config file is a multi-dimensional array. Each "group" of settings must be another associative array with the key being the configuration name and the value the configuration itself. This configurations are retrieved using a dot notation search.
 

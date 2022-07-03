@@ -70,6 +70,11 @@ section.index-banner {
         width: -moz-fit-content;
         width: fit-content;
         max-width: 100%;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #37474f;
+            color: white;
+        }
     }
 
     h1 {
@@ -239,6 +244,13 @@ section.index-separator {
     .card {
         @include transitionAll();
         cursor: pointer;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: #3e545e;
+            border-color: #26374c;
+            color: white;
+        }
+
         &:hover {
             border-color: #c27a93;
             transform: translateY(-2px);

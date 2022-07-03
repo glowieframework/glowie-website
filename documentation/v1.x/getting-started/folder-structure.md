@@ -1,5 +1,5 @@
 # Folder structure
-A Glowie application is bundled with two main folders: `app` and `vendor` along with a main `.htaccess` Apache configuration file.
+A Glowie application is bundled with two main folders: `app` and `vendor` along with some server configuration files in the root folder.
 
 You only need to **point your server to this root directory** and Glowie will do the rest for you.
 
@@ -12,7 +12,7 @@ The `app` folder has everything related to your application. The folders within 
 Application CLI commands.
 
 **config**
-Your application environment and routing configuration files.
+Your application configuration and routing files.
 
 **controllers**
 Application controllers.

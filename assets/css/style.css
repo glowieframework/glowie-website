@@ -118,27 +118,6 @@ header section.menu .logo:hover {
   }
 }
 
-section.preloader {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  color: var(--color-primary);
-  background-color: white;
-  opacity: 1;
-  pointer-events: all;
-  transition: 0.3s all ease;
-}
-section.preloader.hide {
-  opacity: 0;
-  pointer-events: none;
-}
-
 section.index-banner {
   background-color: var(--color-soft);
   padding-bottom: 80px;
@@ -220,6 +199,12 @@ section.index-banner pre {
   width: -webkit-fit-content;
   width: fit-content;
   max-width: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  section.index-banner pre {
+    background-color: #37474f;
+    color: white;
+  }
 }
 section.index-banner h1 {
   font-size: 36px;
@@ -372,6 +357,13 @@ section.index-separator .card {
   transition: 0.3s all ease;
   cursor: pointer;
 }
+@media (prefers-color-scheme: dark) {
+  section.index-separator .card {
+    background-color: #3e545e;
+    border-color: #26374c;
+    color: white;
+  }
+}
 section.index-separator .card:hover {
   border-color: #c27a93;
   transform: translateY(-2px);
@@ -485,6 +477,11 @@ footer a:hover {
 }
 footer i {
   color: var(--color-soft);
+}
+@media (prefers-color-scheme: dark) {
+  footer i {
+    color: white;
+  }
 }
 
 section.docs-header {
@@ -678,4 +675,30 @@ section.error .attrib {
   section.error h3 {
     font-size: 18px;
   }
+}
+
+section.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: var(--color-primary);
+  background-color: white;
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s all ease;
+}
+@media (prefers-color-scheme: dark) {
+  section.preloader {
+    background-color: #37474f;
+  }
+}
+section.preloader.hide {
+  opacity: 0;
+  pointer-events: none;
 }

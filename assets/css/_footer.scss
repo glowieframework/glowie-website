@@ -17,5 +17,9 @@ footer {
 
     i {
         color: var(--color-soft);
+
+        @media (prefers-color-scheme: dark) {
+            color: white;
+        }
     }
 }

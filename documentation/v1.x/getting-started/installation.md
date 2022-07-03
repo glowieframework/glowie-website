@@ -2,10 +2,10 @@
 To install Glowie and start a fresh new project, from your console use:
 
 ```plaintext
-composer create-project glowieframework/glowie myproject
+composer create-project glowieframework/glowie myapp
 ```
 
-This will create a new Glowie application inside `myproject` folder.
+This will create a new Glowie application inside `myapp` folder.
 
 That's all. Incredible and simple, isn't it?
 
@@ -17,8 +17,6 @@ composer update
 ```
 
 This will update Glowie core modules to the latest version available.
-
-Updates are usually released in an interval of 10-15 days. Security flaws and bug fixing updates are released as soon as they are resolved.
 
 **Important!** Glowie follows [Semantic Versioning](https://semver.org) standards, so don't forget to read the [releases changelog](https://github.com/glowieframework/glowie/releases) and be aware of all breaking changes before running any updates.
 

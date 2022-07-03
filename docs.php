@@ -51,7 +51,7 @@
                         <div class="col-12 col-lg-8 col-xl-9">
                             <?=$content; ?>
                         </div>
-                        <div class="col-12 col-lg-4 col-xl-3">
+                        <div class="col-12 col-lg-4 col-xl-3 mt-4 mt-lg-0">
                             <div class="menu">
                                 <?=$menu; ?>
                             </div>

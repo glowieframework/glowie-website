@@ -13,7 +13,7 @@ If you are planning to work with databases, you will also need:
 ### Testing locally
 If you want to test Glowie locally on your machine, we recommend using an Apache local web server like [XAMPP](https://apachefriends.org) or [Laragon](https://laragon.org).
 
-Glowie is also bundled with a local PHP development server in [Firefly CLI](docs/%%version%%/extra/cli).
+Glowie is also bundled with a local PHP development server in [Firefly CLI](docs/%%version%%/extra/cli), but it **does not** includes a database server. It should not be used in production.
 
 <div class="links">
     <a href="docs/%%version%%"><- Welcome</a>
