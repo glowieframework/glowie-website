@@ -12,6 +12,15 @@ header {
         width: 100%;
     }
 
+    pre {
+        margin: 0;
+        margin-top: 5px;
+        background-color: #f39c12;
+        color: white;
+        display: inline-block;
+        padding: 5px 15px;
+    }
+
     h3 {
         font-size: 24px;
         font-weight: 600;
@@ -20,10 +29,19 @@ header {
 }
 
 main {
+    a {
+        color: #512da8;
+    }
+
     h2 {
         font-size: 24px;
         font-weight: 600;
         margin-top: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
     }
 
     pre {

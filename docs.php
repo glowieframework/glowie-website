@@ -27,11 +27,10 @@
     $title = str_replace('# ', '', strtok($content, "\n"));
 
     // Parses the content
-    require_once 'includes/Parsedown.php';
-    $parser = new Parsedown();
-    $parser->setBreaksEnabled(true);
-    $content = str_replace('%%version%%', $version, $parser->text($content));
-    $menu = str_replace('%%version%%', $version, $parser->text($menu));
+    require_once 'includes/lib/ParsedownBootstrapper.php';
+    $parser = new ParsedownBootstrapper();
+    $content = str_replace('%%version%%', $version, $parser->body($content));
+    $menu = str_replace('%%version%%', $version, $parser->body($menu));
 ?>
 <html>
     <head>
