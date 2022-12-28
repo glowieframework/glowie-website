@@ -29,6 +29,7 @@
 
 ### Extra
 - [CLI](docs/%%version%%/extra/cli)
+- [Authentication](docs/%%version%%/extra/authentication)
 - [Error handling](docs/%%version%%/extra/error-handling)
 - [Internationalization](docs/%%version%%/extra/internationalization)
 - [View Helpers](docs/%%version%%/extra/view-helpers)
@@ -39,4 +40,3 @@
 - [Skeleton](docs/%%version%%/extra/skeleton)
 - [Sending mail](docs/%%version%%/extra/sending-mail)
 - [Util](docs/%%version%%/extra/util)
-- [Tests](docs/%%version%%/extra/tests)

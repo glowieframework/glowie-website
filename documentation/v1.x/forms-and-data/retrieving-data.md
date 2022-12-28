@@ -34,6 +34,15 @@ $query = $this->get->query; # returns "products"
 $page = $this->get->page; # returns "1"
 ```
 
+You can combine any of the [Element](docs/%%version%%/forms-and-data/element) methods to check for data, get default values or more.
+
+_Example_
+```php
+# user types in myappurl.com/search?query=products
+$page = $this->get->get('page', 1); # returns "1" as the default value
+$isSearching = $this->get->has('query'); # returns true
+```
+
 <div class="links">
     <a href="docs/%%version%%/forms-and-data/element"><- Element</a>
     <a href="docs/%%version%%/forms-and-data/data-validation">Data validation -></a>

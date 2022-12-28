@@ -16,7 +16,7 @@ If no controller is specified, `Glowie\Controllers\Main` will be used by default
 **action**
 The action that this route will instantiate. Must be a valid action from the specified controller.
 
-If no action is specified, a **camelCase** version of the route URI will be used.
+If no action is specified, a **camelCase** version of the route name will be used.
 
 **Note:** If the specified `controller` or `action` is not found, Glowie will trigger an error.
 
@@ -26,7 +26,7 @@ The HTTP request methods that this route accepts. Can be a single method or an a
 If no method is specified, all methods will be accepted by default.
 
 **name**
-This is the name used to retrieve this route from your application. If no name is specified, the route URI will be used.
+This is the name used to retrieve this route from your application. If no name is specified, a **kebab-case** version of the route URI will be used.
 
 _Example_
 ```php
@@ -111,6 +111,20 @@ _Example_
 ```php
 # myappurl.com/blog
 Rails::addRedirect('blog', 'https://myappblog.wordpress.com');
+```
+
+### Mapping multiple routes
+If you want to map multiple routes to a method at once, use the `Rails::mapRoutes()` method. It must receive an associative array as the first parameter, with the key being the route URI, and the value an array with the route **controller**, **action** and **name**. The second parameter is a single method or array of accepted methods.
+
+_Example_
+```php
+use Glowie\Controllers\Blog;
+
+Rails::mapRoutes([
+    'blog/new' => [Blog::class, 'new', 'blog-new'],
+    'blog/edit' => [Blog::class, 'edit', 'blog-edit'],
+    'blog/delete' => [Blog::class, 'delete', 'blog-delete']
+], ['post', 'put']);
 ```
 
 ### Auto routing

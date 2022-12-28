@@ -33,7 +33,7 @@ Validates if a string corresponds to a valid URL address.
 Validates if a string only has alphabetic characters. Valid ranges are `[a-zA-Z]`.
 
 **numeric**
-Validates if an item is a number or a numeric string. Valid ranges are `[0-9]`.
+Validates if an item is a number or a numeric string.
 
 **alphanumeric**
 Validates if a string only has alphanumeric characters. Valid ranges are `[a-zA-Z0-9]`.
@@ -46,6 +46,9 @@ Validates if a string matches a regex pattern.
 
 **array**
 Validates if an item is an array.
+
+**assoc**
+Validates if an item is an associative array.
 
 **date**
 Validates if a string is a valid date format.
@@ -68,6 +71,9 @@ Validates if an item is a valid uploaded file through HTTP POST (see [File uploa
 **directory**
 Validates if a path is an existing directory.
 
+**mime**`:types`
+Validates if a file matches a list of mime types. You can use multiple mimes separating them with commas.
+
 **writable**
 Validates if a path is a writable directory or file.
 
@@ -76,6 +82,15 @@ Validates if an item is an object.
 
 **boolean**
 Validates if an item is a boolean.
+
+**true**
+Validates if an item is a truthy value.
+
+**false**
+Validates if an item is a falsy value.
+
+**json**
+Validates if an item is a valid JSON string.
 
 **value**`:value`
 Validates if an item has the exact specified value.
@@ -91,6 +106,9 @@ Validates if a string ends with a specified string.
 
 **startswith**`:value`
 Validates if a string starts with a specified string.
+
+**custom**`:name`
+Validates an item using a custom validation rule (see below).
 
 ### Valiation rules parameters
 While using rules that accepts parameters (like `min`, `max`, `value`, `startswith`, etc.) you should set the validation rule along with `:` followed by the value you want.
@@ -153,7 +171,7 @@ $isValid = $validator->validateFields($data, $rules); # returns false
 ```
 
 ### Retrieving validation errors
-After running a validation, all validation failures can be retrieved through `$validator->getErrors()`. This method will return an associative array of fields or items (with each field/item being a key) and an array of invalid fields assuming a `true` value to each failure.
+After running a validation, all validation failures can be retrieved through `$validator->getErrors()`. This method will return an associative array of fields or items (with each field/item being a key) and an array of failing rule names.
 
 You can use this method to handle specific errors or show messages to the user based in a specific invalid field or item.
 
@@ -175,10 +193,7 @@ $errors = $validator->getErrors();
 /*
     returns:
     [
-        'email' => [
-            'required' => true,
-            'email' => true
-        ]
+        'email' => ['required', 'email']
     ]
 */
 ```
@@ -199,6 +214,38 @@ $rules = [
 
 $isValid = $validator->validateFields($data, $rules); # returns false
 $errors = $validator->getErrors('name'); # returns []
+```
+
+You can also check for an specific item and rule by using the `$validator->hasError()` method. The first parameter is the item/field to check, and the second the rule you want to check. You can leave empty to check for all rules of that item.
+
+_Example_
+```php
+$data = [
+    'name' => 'Glowie',
+    'email' => ''
+];
+
+$rules = [
+    'name' => ['required'],
+    'email' => ['required', 'email']
+];
+
+$isValid = $validator->validateFields($data, $rules); # returns false
+$hasError = $validator->hasError('email', 'required'); # returns true
+```
+
+### Setting custom rules
+You can create a custom validation rule by using the static `Validator::setCustomRule()` method. The rule will be persisted through all Validator instances and can be reused anywhere.
+
+The first parameter is the custom rule name, and the second must be a `Closure` function that receives the data as the first parameter and returns a boolean if valid.
+
+_Example_
+```php
+Validator::setCustomRule('even', function($data){
+    return $data % 2 == 0;
+});
+
+$isValid = $validator->validate(8, ['custom:even']); # returns true
 ```
 
 <div class="links">

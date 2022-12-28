@@ -59,6 +59,29 @@ _Example_
 ?>
 ```
 
+**Model database**
+If you want to connect your model to another database of your application, pass its identifier (from your database settings in `app/config/Config.php`) in the protected `$_database` property.
+
+_Example_
+```php
+<?php
+    namespace Glowie\Models;
+
+    use Glowie\Core\Database\Model;
+
+    class MyModel extends Model{
+
+        /**
+         * Model database connection name (from your app configuration).
+         * @var string
+         */
+        protected $_database = 'external';
+
+    }
+
+?>
+```
+
 **Model primary key**
 By default, Glowie assumes that your model table has a primary key named `id`. If you want to set a different column name for the primary key, use the protected `$_primaryKey` property.
 
@@ -122,6 +145,32 @@ _Example_
          * @var array
          */
         protected $_updatable = ['name', 'password'];
+
+    }
+
+?>
+```
+
+**Initial model attributes**
+When you initialize a Model entity, its attributes come empty. You can pass an associative array to the protected `$_attributes` property to set the initial values you want.
+
+_Example_
+```php
+<?php
+    namespace Glowie\Models;
+
+    use Glowie\Core\Database\Model;
+
+    class MyModel extends Model{
+
+        /**
+         * Initial model attributes.
+         * @var array
+         */
+        protected $_attributes = [
+            'is_admin' => 0,
+            'status' => 'Offline'
+        ];
 
     }
 
@@ -206,7 +255,17 @@ $model = new Users();
 $user = $model->findBy('email', 'test@glowie.tk'); // Returns first row with email field = "test@glowie.tk"
 ```
 
-In both methods, if you pass a `true` option as the last parameter the result will be returned as an associative array instead of an Element.
+You can also use an associative array of fields/values to match from the table.
+
+_Example_
+```php
+use Glowie\Models\Users;
+$model = new Users();
+$user = $model->findBy([
+    'email' => 'test@glowie.tk',
+    'enabled' => 1
+]);
+```
 
 **Retrieving all rows**
 If you want to retrieve all rows from the model table at once, use the `$model->all()` method. This will return an array with each row as an [Element](docs/%%version%%/forms-and-data/element).
@@ -216,6 +275,17 @@ _Example_
 use Glowie\Models\Users;
 $model = new Users();
 $users = $model->all(); // Returns all rows
+```
+
+You can also use the `$model->allBy()` to return all rows that match a field/value pair.
+
+_Example_
+```php
+use Glowie\Models\Users;
+$model = new Users();
+$users = $model->allBy([
+    'enabled' => 1
+]);
 ```
 
 If your model is handling timestamp fields (see above), you can retrieve all rows ordering by the latest created ones with `$model->latest()` or the oldest with `$model->oldest()`. These methods use the **created at** field value to order rows.

@@ -48,7 +48,7 @@ To retrieve the whole session data as an associative array, use `$this->session-
 You can also convert the session data to a JSON string with `$this->session->toJson()`.
 
 ### Checking for session data
-If you want to check if some property is stored, use `$this->session->has()` along with the key you want to check.
+If you want to check if some property is stored, use `$this->session->has()` along with the key you want to check. You can also use an array of keys to check for.
 
 _Example_
 ```php
@@ -63,7 +63,7 @@ $check = isset($this->session->name);
 ```
 
 ### Removing session data
-You can remove data from the session by using `$this->session->remove()` along with the key for the data you want to remove.
+You can remove data from the session by using `$this->session->remove()` along with the key for the data you want to remove. You can also use an array of keys to remove.
 
 _Example_
 ```php
@@ -78,6 +78,8 @@ unset($this->session->name);
 ```
 
 To delete all data from an session at once, use `$this->session->flush()`.
+
+If you want to delete all data from the session, but keep some specific properties, use `$this->session->only()` passing and array of the keys you want to keep.
 
 ### Session flash data
 If you want to, you can store temporary data in the session in order to use it just a single time in the next request. This is called **flash data**.
@@ -94,6 +96,11 @@ $this->session->setFlash('name', 'Glowie'); # Stores "Glowie" value into "name" 
 $name = $this->session->getFlash('name'); # Returns "Glowie"
 $name = $this->session->getFlash('name'); # Returns null, flash data was already deleted
 ```
+
+### Persisting session data
+If you want to persist the current session data to a long-life cookie (see [Cookies](docs/%%version%%/forms-and-data/cookies)), use `$this->session->persist()` method, passing the expire time in seconds.
+
+To delete the cookie with the persisted session data, use `$this->session->flushPersistent()`. This also deletes the whole session data.
 
 <div class="links">
     <a href="docs/%%version%%/forms-and-data/data-validation"><- Data validation</a>

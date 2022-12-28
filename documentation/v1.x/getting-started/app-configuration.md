@@ -12,6 +12,18 @@ From [Firefly](docs/%%version%%/extra/cli) CLI you can use the following command
 php firefly init
 ```
 
+Anywhere in your application you can retrieve an environment config by using `Env::get()` method, passing the configuration key you want to retrieve.
+
+_Example_
+```php
+use Glowie\Core\Env;
+$value = Env::get('my_config');
+```
+
+You can also pass an optional default value as the second parameter, and this value will be returned if the key you provide does not exist in the current environment.
+
+If you want to check if an environment setting is available, use `Env::has()`. Also, you can set a environment configuration during runtime by using `Env::set()` method.
+
 ### Config file
 Your application general configuration file is stored in `app/config/Config.php`. These configurations are shared between all environments.
 
@@ -31,17 +43,41 @@ Enables [Skeltch](docs/%%version%%/extra/skeltch) templating engine to compile y
 **skeltch.cache**
 Enables views caching for Skeltch. This is highly recommended in a production environment.
 
+**skeltch.path**
+Path where to store the cached views.
+
 **error_reporting.level**
 The error reporting level for PHP exceptions.
 
 **error_reporting.logging**
 Enables or disables error logging for your application.
 
+**error_reporting.file**
+Location of the error log file.
+
+**session.name**
+Name for the session cookie of your application.
+
 **session.lifetime**
 Maximum amount of time (in seconds) for storing unused session files.
 
 **session.gc_cleaning**
 Number of requests when to run the garbage collector and delete unused session files.
+
+**session.path**
+Path where to store the session files. **Caution:** It must not be a public accessible path, since it will contain sensitive data from your users.
+
+**session.secure**
+Blocks your application to use sessions while in non-HTTPS protocol.
+
+**session.restrict**
+Blocks your application scripts (like JS) from reading the session data.
+
+**cookies.secure**
+Blocks your application to use cookies while in non-HTTPS protocol.
+
+**cookies.restrict**
+Blocks your application scripts (like JS) from reading the cookies data.
 
 **secret.app_key**
 Key to use with encrypting functions. Be sure to use a strong key.
@@ -58,17 +94,21 @@ The database connection settings available for your application. Each database i
 - **db** - Database name to connect to.
 - **port** - Database connection port.
 - **charset** - Database charset.
+- **strict** - Enable database strict mode.
+
+Sensitive settings must not be stored in the config file. Use your `.env` instead.
 
 _Example_
 ```php
 'database' => [
     'default' => [
-        'host' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'db' => 'glowie',
-        'port' => 3306,
-        'charset' => 'utf8'
+        'host' => Env::get('DB_HOST', 'localhost'),
+        'username' => Env::get('DB_USERNAME', 'root'),
+        'password' => Env::get('DB_PASSWORD', ''),
+        'db' => Env::get('DB_DATABASE', 'glowie'),
+        'port' => Env::get('DB_PORT', 3306),
+        'charset' => 'utf8',
+        'strict' => true
     ],
 
     'external' => [
@@ -80,8 +120,41 @@ _Example_
 **migrations.table**
 Name of the table used for tracking current database migrations. See [Migrations](docs/%%version%%/extra/migrations).
 
+**cors.enabled**
+Enable Cross-Origin Resource Sharing (CORS) settings.
+
+**cors.allowed_methods**
+Array of allowed CORS methods.
+
+**cors.allowed_origins**
+Array of allowed CORS origins.
+
+**cors.allowed_headers**
+Array of allowed CORS headers.
+
+**cors.exposed_headers**
+Array of exposed CORS headers.
+
+**cors.max_age**
+CORS preflight request cache time.
+
+**cors.allow_credentials**
+Allow CORS credentials to be exposed.
+
+**plugins**
+Array of classnames of your application plugins. See [Plugins](docs/%%version%%/extra/plugins).
+
+**sandbox.alias**
+Array of class alias to use in Firefly Sandbox REPL. See [CLI](docs/%%version%%/extra/cli).
+
+**other.language**
+Default language to use in internationalization. See [Internationalization](docs/%%version%%/extra/internationalization).
+
 **other.timezone**
 Default timezone to use with PHP date functions. Must be a valid [PHP timezone](https://php.net/manual/en/timezones.php).
+
+**other.request_vars**
+Precedence of request variables accessible through Request instance. If you use `GET_POST`, `POST` variables will override `GET` variables with the same name. If you want the inverse behavior, use `POST_GET`.
 
 ### Custom configuration variables
 If you want to work with aditional configuration variables, create a new key in the configuration array with the value you want.
@@ -108,6 +181,8 @@ _Example_
 use Glowie\Core\Config;
 $exists = Config::has('my_config'); # returns true
 ```
+
+You can also use `Config::set()` to set a config value during runtime.
 
 <div class="links">
     <a href="docs/%%version%%/getting-started/folder-structure"><- Folder structure</a>

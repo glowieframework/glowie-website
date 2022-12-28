@@ -21,7 +21,14 @@ $this->response->setStatusCode(Response::HTTP_FORBIDDEN);
 $this->response->setStatusCode(Response::HTTP_FORBIDDEN, 'You cannot see this now!');
 ```
 
-There is also the shortcut `$this->response->fail()` that sets a **500 Internal Server Error** response code.
+**Shortcuts**
+There are some shortcuts for the most common response codes:
+
+- `$this->response->deny()` - sets a **403 Forbidden** response code.
+
+- `$this->response->notFound()` - sets a **404 Not Found** response code.
+
+- `$this->response->fail()` - sets a **500 Internal Server Error** response code.
 
 ### Setting the response body
 **As plain text**
@@ -70,6 +77,10 @@ There are also a few shortcuts to the most commonly used headers:
 - `$this->response->setAuthorization()` - Sets a basic `Authorization` header. The first parameter is the username and the second is the password.
 
 - `$this->response->setBearer()` - Sets a bearer `Authorization` header. The first parameter is the bearer token you want to set.
+
+- `$this->response->setDownload()` - Forces a download of the content by setting the `Content-Disposition` header. The first parameter is the filename to set.
+
+- `$this->response->disableCache()` - Disables the browser caching by setting the `Cache-Control` header.
 
 ### Redirecting URLs
 In order to redirect your response to another URL, you can use the `$this->response->redirect()` method. The first parameter is the target URL to redirect to and the second an optional HTTP status code to pass with the redirect (default is **307**).

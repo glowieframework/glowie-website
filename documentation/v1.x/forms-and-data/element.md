@@ -51,7 +51,7 @@ To retrieve the whole Element data as an associative array, use `$element->toArr
 You can also convert the Element data to a JSON string with `$element->toJson()`.
 
 ### Checking for data
-If you want to check if some property is stored, use `$element->has()` along with the key you want to check.
+If you want to check if some property is stored, use `$element->has()` along with the key you want to check. You can also use an array of keys to check for.
 
 _Example_
 ```php
@@ -66,7 +66,7 @@ $check = isset($element->name);
 ```
 
 ### Removing data
-You can remove data from the Element by using `$element->remove()` along with the key for the data you want to remove.
+You can remove data from the Element by using `$element->remove()` along with the key for the data you want to remove. You can also use an array of keys to remove.
 
 _Example_
 ```php
@@ -81,6 +81,8 @@ unset($element->name);
 ```
 
 To delete all data from an Element at once, use `$element->flush()`.
+
+If you want to delete all data from the Element, but keep some specific properties, use `$element->only()` passing and array of the keys you want to keep.
 
 <div class="links">
     <a href="docs/%%version%%/basic-application-modules/response"><- Response</a>

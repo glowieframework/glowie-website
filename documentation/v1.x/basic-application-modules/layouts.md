@@ -17,7 +17,7 @@ $this->renderLayout('default', 'index'); # renders layout 'default' with view 'i
 ```
 
 ### Placing dynamic view content inside layouts
-When passing a view as the second parameter of `$this->renderLayout()` function, from the layout file you can retrieve its content dynamically by using `$this->getContent()` function.
+When passing a view as the second parameter of `$this->renderLayout()` function, from the layout file you can retrieve its content dynamically by using `$this->getView()` function.
 
 _Example_
 **controller**
@@ -37,7 +37,7 @@ $this->renderLayout('default', 'index');
         <title>My layout</title>
     </head>
     <body>
-        <?php echo $this->getContent(); ?>
+        <?php echo $this->getView(); ?>
         <!-- Prints "<h2>Hello world!</h2>" -->
     </body>
 </html>
@@ -67,7 +67,7 @@ $this->renderLayout('default', 'index', ['name' => 'Glowie']);
         <!-- Prints "Hello, Glowie!" -->
     </head>
     <body>
-        <?php echo $this->getContent(); ?>
+        <?php echo $this->getView(); ?>
         <!-- Prints "<h2>Hello, Glowie!</h2>" -->
     </body>
 </html>
