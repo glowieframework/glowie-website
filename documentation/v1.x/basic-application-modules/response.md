@@ -1,4 +1,8 @@
 # Response
+
+[toc]
+
+### Introduction
 A response tells your application what to send back to the user that made a request.
 
 In order to manage the response, Glowie has the `Glowie\Core\Http\Response` class. From a controller or middleware, you don't need to instantiate this class to work with it, simply use `$this->response` property to directly access the `Response` object. If you want to retrieve the instance from other places, use the static `Rails::getResponse()` method.
@@ -122,6 +126,6 @@ There is also an optional third parameter with the HTTP status code to pass with
 If the route name is not valid or has missing parameters, Glowie will trigger an error.
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/request"><- Request</a>
-    <a href="docs/%%version%%/forms-and-data/element">Element -></a>
+    <a href="docs/%%version%%/basic-application-modules/request">&lt; Request</a>
+    <a href="docs/%%version%%/forms-and-data/element">Element &gt;</a>
 </div>

@@ -1,4 +1,8 @@
 # Models
+
+[toc]
+
+### Introduction
 A model is a way to interact with your database tables in an object-oriented way. Each model corresponds to a table from your database. Within the model you can find some methods to retrieve, update and delete data from the table very easily, surpassing the needs of relying on [Kraken](docs/%%version%%/forms-and-data/query-builder) query builder all the time.
 
 ### Creating models
@@ -404,6 +408,6 @@ $model->save(); // Creates the new row with the entity data
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/forms-and-data/query-builder"><- Query Builder</a>
-    <a href="docs/%%version%%/extra/cli">CLI -></a>
+    <a href="docs/%%version%%/forms-and-data/query-builder">&lt; Query Builder</a>
+    <a href="docs/%%version%%/extra/cli">CLI &gt;</a>
 </div>

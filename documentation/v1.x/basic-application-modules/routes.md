@@ -1,4 +1,8 @@
 # Routes
+
+[toc]
+
+### Introduction
 A route defines how your application will handle what the user types into the URL and take the correct action from there.
 
 All your application route configuration is stored in `app/config/Routes.php` and handled by the `Glowie\Core\Http\Rails` class.
@@ -161,6 +165,6 @@ echo $this->params->param2; # returns abc
 If a corresponding controller or action is not found, Glowie will return a 404 Not Found error response.
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/actions"><- Actions</a>
-    <a href="docs/%%version%%/basic-application-modules/views">Views -></a>
+    <a href="docs/%%version%%/basic-application-modules/actions">&lt; Actions</a>
+    <a href="docs/%%version%%/basic-application-modules/views">Views &gt;</a>
 </div>

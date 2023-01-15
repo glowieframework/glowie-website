@@ -1,4 +1,8 @@
 # Migrations
+
+[toc]
+
+### Introduction
 A migration is a way to version control your application database. When working with migrations you can ensure that every developer that will work with your app has the same database structure, avoiding errors and tracking database changes.
 
 ### Creating migrations
@@ -140,6 +144,6 @@ php firefly rollback --steps=all
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/extra/http-requests"><- HTTP requests</a>
-    <a href="docs/%%version%%/extra/skeleton">Skeleton -></a>
+    <a href="docs/%%version%%/extra/http-requests">&lt; HTTP requests</a>
+    <a href="docs/%%version%%/extra/skeleton">Skeleton &gt;</a>
 </div>

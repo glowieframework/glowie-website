@@ -1,4 +1,8 @@
 # Layouts
+
+[toc]
+
+### Introduction
 A layout is a way to render views dynamically into a predefined file. When using a layout you can create a single file with all common parts of code from your application views (like headers, footers, meta tags, scripts, etc) and just change the content inside of it dynamically, making your application views easier to mantain.
 
 ### Layout files location
@@ -76,6 +80,6 @@ $this->renderLayout('default', 'index', ['name' => 'Glowie']);
 You can also pass parameters to the layout file by using `$this->view` object (see [Views](docs/%%version%%/basic-application-modules/views)).
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/views"><- Views</a>
-    <a href="docs/%%version%%/basic-application-modules/middlewares">Middlewares -></a>
+    <a href="docs/%%version%%/basic-application-modules/views">&lt; Views</a>
+    <a href="docs/%%version%%/basic-application-modules/middlewares">Middlewares &gt;</a>
 </div>

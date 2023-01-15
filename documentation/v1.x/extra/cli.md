@@ -1,4 +1,7 @@
 # CLI
+
+[toc]
+
 Firefly is Glowie's command line tool. This tool is suited to help you increase your workflow speed and have access to several Glowie utilities.
 
 To run Firefly, from your console navigate to the application root folder and run:
@@ -273,6 +276,6 @@ $name = $this->argOrFail('name');
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/forms-and-data/models"><- Models</a>
-    <a href="docs/%%version%%/extra/error-handling">Error handling -></a>
+    <a href="docs/%%version%%/forms-and-data/models">&lt; Models</a>
+    <a href="docs/%%version%%/extra/authentication">Authentication &gt;</a>
 </div>

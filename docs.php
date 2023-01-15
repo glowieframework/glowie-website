@@ -27,9 +27,12 @@
     $title = str_replace('# ', '', strtok($content, "\n"));
 
     // Parses the content
-    require_once 'includes/lib/ParsedownBootstrapper.php';
-    $parser = new ParsedownBootstrapper();
-    $content = str_replace('%%version%%', $version, $parser->body($content));
+    require_once 'includes/lib/bootstrap.php';
+    $parser = new ParsedownToC([
+        'selectors' => ['h2', 'h3', 'h4', 'h5', 'h6'],
+        'url' => $_SERVER['REQUEST_URI']
+    ]);
+    $content = str_replace('%%version%%', $version, $parser->text($content));
     $menu = str_replace('%%version%%', $version, $parser->body($menu));
 ?>
 <html>

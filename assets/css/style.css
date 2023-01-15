@@ -7,6 +7,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-primary: #a4c3d3;
     --color-soft: #263238;
     --color-strong: white;
     --color-gradient: linear-gradient(90deg, #212121 0, #303030 100%);
@@ -252,6 +253,11 @@ section.index-banner .button.docs {
   background: white;
   color: var(--color-primary);
 }
+@media (prefers-color-scheme: dark) {
+  section.index-banner .button.docs {
+    color: var(--color-soft);
+  }
+}
 section.index-banner .fa-ul {
   display: flex;
   justify-content: space-between;
@@ -325,6 +331,11 @@ section.index-separator .button.docs {
   margin-left: 10px;
   background: white;
   color: var(--color-primary);
+}
+@media (prefers-color-scheme: dark) {
+  section.index-separator .button.docs {
+    color: var(--color-soft);
+  }
 }
 section.index-separator h1 {
   font-size: 36px;
@@ -475,6 +486,11 @@ footer a:hover {
   color: var(--color-soft);
   text-decoration: none;
 }
+@media (prefers-color-scheme: dark) {
+  footer a:hover {
+    color: lightgray;
+  }
+}
 footer i {
   color: var(--color-soft);
 }
@@ -579,6 +595,13 @@ section.docs h3 {
   font-weight: 600;
   font-size: 20px;
   margin-top: 30px;
+}
+section.docs code {
+  font-family: "Roboto Mono", monospace;
+  font-weight: inherit;
+}
+section.docs code:not(.hljs) {
+  color: var(--color-primary);
 }
 section.docs pre .hljs {
   position: relative;

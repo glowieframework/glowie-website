@@ -1,4 +1,8 @@
 # Session
+
+[toc]
+
+### Introduction
 A session is a way to store data temporarily in the web browser and then retrieve it dynamically between all pages in your application.
 
 _Example:_ A user logs in into your application using its email and password. Using sessions you can store this information and automatically validate the login in each page without prompting the user again for the login data.
@@ -103,6 +107,6 @@ If you want to persist the current session data to a long-life cookie (see [Cook
 To delete the cookie with the persisted session data, use `$this->session->flushPersistent()`. This also deletes the whole session data.
 
 <div class="links">
-    <a href="docs/%%version%%/forms-and-data/data-validation"><- Data validation</a>
-    <a href="docs/%%version%%/forms-and-data/cookies">Cookies -></a>
+    <a href="docs/%%version%%/forms-and-data/data-validation">&lt; Data validation</a>
+    <a href="docs/%%version%%/forms-and-data/cookies">Cookies &gt;</a>
 </div>

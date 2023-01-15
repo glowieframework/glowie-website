@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/lib/ParsedownBootstrapper.php';
-$parser = new ParsedownBootstrapper();
+require_once '../includes/lib/bootstrap.php';
+$parser = new ParsedownToC();
 $content = $parser->text(file_get_contents('docs.md'));
 ?>
 

@@ -1,4 +1,8 @@
 # CSRF Protection
+
+[toc]
+
+### Introduction
 **Cross-Site Request Forgery** (CSRF) is a type of malicious attack when an untrusted source can make a request to your application and take actions when the user is authenticated, exploiting the current active session in your application.
 
 _Example:_ Your application has a route that changes a user's password. This route is protected through an authentication middleware, that validates if the user is logged in by comparing the [Session](docs/%%version%%/forms-and-data/session) data related to that user. If your user has already logged in into your application, a malicious website can make a request to this route from another source and change its password by exploiting this vulnerability. Since the session has already been started, the malicious script will bypass the authentication middleware and gain access to your application.
@@ -68,6 +72,6 @@ $.ajaxSetup({
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/forms-and-data/cookies"><- Cookies</a>
-    <a href="docs/%%version%%/forms-and-data/databases">Databases -></a>
+    <a href="docs/%%version%%/forms-and-data/cookies">&lt; Cookies</a>
+    <a href="docs/%%version%%/forms-and-data/databases">Databases &gt;</a>
 </div>

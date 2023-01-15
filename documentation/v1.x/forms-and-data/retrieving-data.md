@@ -44,6 +44,6 @@ $isSearching = $this->get->has('query'); # returns true
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/forms-and-data/element"><- Element</a>
-    <a href="docs/%%version%%/forms-and-data/data-validation">Data validation -></a>
+    <a href="docs/%%version%%/forms-and-data/element">&lt; Element</a>
+    <a href="docs/%%version%%/forms-and-data/data-validation">Data validation &gt;</a>
 </div>

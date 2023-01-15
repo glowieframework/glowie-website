@@ -1,4 +1,8 @@
 # Request
+
+[toc]
+
+### Introduction
 Whenever one of your application URLs are called, a request is received. This request carries the information that will be delivered to your application in order to get a proper response, this means, tell your application what to do and how to do, also sending data to your application.
 
 In order to manage and work with this requests, Glowie has the `Glowie\Core\Http\Request` class. This class has useful methods to help you handle every kind of request your application receives.
@@ -91,6 +95,6 @@ There are a few shortcuts to the most commonly used headers:
 - `$this->request->isMobile()` - Returns `true` if the request was made using a mobile device. This information relies in the `User-Agent` header matching a list of mobile devices.
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/middlewares"><- Middlewares</a>
-    <a href="docs/%%version%%/basic-application-modules/response">Response -></a>
+    <a href="docs/%%version%%/basic-application-modules/middlewares">&lt; Middlewares</a>
+    <a href="docs/%%version%%/basic-application-modules/response">Response &gt;</a>
 </div>

@@ -1,4 +1,8 @@
 # Requirements
+
+[toc]
+
+### Minimum requirements
 In order to run Glowie you will need a web server that meets the following requirements:
 
 - PHP version **7.4** or higher with `curl`, `mbstring` and `openssl` extensions
@@ -16,6 +20,6 @@ If you want to test Glowie locally on your machine, we recommend using an Apache
 Glowie is also bundled with a local PHP development server in [Firefly CLI](docs/%%version%%/extra/cli), but it **does not** includes a database server. It should not be used in production.
 
 <div class="links">
-    <a href="docs/%%version%%"><- Welcome</a>
-    <a href="docs/%%version%%/getting-started/installation">Installation -></a>
+    <a href="docs/%%version%%">&lt; Welcome</a>
+    <a href="docs/%%version%%/getting-started/installation">Installation &gt;</a>
 </div>

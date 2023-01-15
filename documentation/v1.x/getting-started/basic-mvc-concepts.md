@@ -1,4 +1,8 @@
 # Basic MVC concepts
+
+[toc]
+
+### What is MVC?
 **Model-View-Controller** (MVC) is an architectural pattern that separates an application into three main logical components: the model, the view, and the controller. Each of these components are built to handle specific development aspects of an application. MVC is one of the most frequently used industry-standard development pattern, and Glowie was built on top of it.
 
 - **The model** corresponds to all the data-related logic that the user works with (see [Models](docs/%%version%%/forms-and-data/models)).
@@ -17,6 +21,6 @@ Now, if the matching route is protected by any **Middlewares**, the request will
 In the **Controller**, the application business logic will be applied and a **Response** will be sent back to the user. In this step, your application can also interact with the **Model** or **View** layer.
 
 <div class="links">
-    <a href="docs/%%version%%/getting-started/installation"><- Installation</a>
-    <a href="docs/%%version%%/getting-started/folder-structure">Folder structure -></a>
+    <a href="docs/%%version%%/getting-started/installation">&lt; Installation</a>
+    <a href="docs/%%version%%/getting-started/folder-structure">Folder structure &gt;</a>
 </div>

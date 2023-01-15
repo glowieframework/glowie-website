@@ -1,4 +1,8 @@
 # Skeltch
+
+[toc]
+
+### Introduction
 Skeltch is a templating engine for Glowie views. When working with Skeltch you can simplify the amount of PHP code in your views and make them a lot prettier and easier to understand.
 
 ### Processing views with Skeltch
@@ -204,6 +208,6 @@ _Example_
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/extra/view-helpers"><- View Helpers</a>
-    <a href="docs/%%version%%/extra/file-uploads">File uploads -></a>
+    <a href="docs/%%version%%/extra/view-helpers">&lt; View Helpers</a>
+    <a href="docs/%%version%%/extra/file-uploads">File uploads &gt;</a>
 </div>

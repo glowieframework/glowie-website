@@ -1,4 +1,8 @@
 # Actions
+
+[toc]
+
+### Introduction
 Actions are methods from a controller that organizes the way every request is handled. An action is basically a method from a controller that does a specific job for a specific task.
 
 _Example_: You have `ProductsController`, a controller that is responsible for organizing a product catalog from an ecommerce website. Within this controller you need to have specific actions for each functionality needed, like `listProducts()`, `addProduct()`, `editProduct()` and `deleteProduct()`.
@@ -26,7 +30,7 @@ _Example_
 ?>
 ```
 
-### init()
+### The `init()` method
 Every controller can have an optional `init()` method. If this method exists, it will be called before any other actions from the same controller are instantiated.
 
 This way you create common functions that will be propagated to the whole controller before anything happens, instead of using the controller constructor for that.
@@ -56,6 +60,6 @@ _Example_
 **Important!** If you have a `init()` method in the `BaseController`, don't forget to call `parent::init()` inside all other controllers `init()` functions. This ensures that the function from `BaseController` will also be called.
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/controllers"><- Controllers</a>
-    <a href="docs/%%version%%/basic-application-modules/routes">Routes -></a>
+    <a href="docs/%%version%%/basic-application-modules/controllers">&lt; Controllers</a>
+    <a href="docs/%%version%%/basic-application-modules/routes">Routes &gt;</a>
 </div>

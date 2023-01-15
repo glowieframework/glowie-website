@@ -1,4 +1,8 @@
 # App configuration
+
+[toc]
+
+### Introduction
 After installing Glowie into your server, you must configure your application before starting.
 
 ### Environment config
@@ -185,6 +189,6 @@ $exists = Config::has('my_config'); # returns true
 You can also use `Config::set()` to set a config value during runtime.
 
 <div class="links">
-    <a href="docs/%%version%%/getting-started/folder-structure"><- Folder structure</a>
-    <a href="docs/%%version%%/getting-started/autoloading">Autoloading -></a>
+    <a href="docs/%%version%%/getting-started/folder-structure">&lt; Folder structure</a>
+    <a href="docs/%%version%%/getting-started/autoloading">Autoloading &gt;</a>
 </div>

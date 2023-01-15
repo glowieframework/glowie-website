@@ -1,4 +1,8 @@
 # Error handling
+
+[toc]
+
+### Introduction
 In order to handle and display custom HTTP error pages, Glowie has the `Glowie\Controllers\Error` controller, that comes by default with every Glowie installation.
 
 This controller works as any other [Controller](docs/%%version%%/basic-application-modules/controllers) from your application, with the slight difference that it will be called automatically by the router when an HTTP error is raised.
@@ -48,6 +52,6 @@ public function methodNotAllowed(){
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/extra/cli"><- CLI</a>
-    <a href="docs/%%version%%/extra/internationalization">Internationalization -></a>
+    <a href="docs/%%version%%/extra/authentication">&lt; Authentication</a>
+    <a href="docs/%%version%%/extra/internationalization">Internationalization &gt;</a>
 </div>

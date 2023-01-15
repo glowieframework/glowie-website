@@ -7,6 +7,7 @@
     --color-gradient: linear-gradient(90deg, rgba(237, 87, 139, 1) 0%, rgba(237, 87, 106, 1) 100%);
 
     @media (prefers-color-scheme: dark) {
+        --color-primary: #a4c3d3;
         --color-soft: #263238;
         --color-strong: white;
         --color-gradient: linear-gradient(90deg, #212121 0, #303030 100%);

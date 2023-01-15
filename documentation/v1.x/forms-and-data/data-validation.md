@@ -1,4 +1,8 @@
 # Data validation
+
+[toc]
+
+### Introduction
 Forms and data validation can be achieved easily using Glowie `Validator` class.
 
 From your controller, create a new instance of `Glowie\Core\Tools\Validator` using:
@@ -249,6 +253,6 @@ $isValid = $validator->validate(8, ['custom:even']); # returns true
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/forms-and-data/retrieving-data"><- Retrieving data</a>
-    <a href="docs/%%version%%/forms-and-data/session">Session -></a>
+    <a href="docs/%%version%%/forms-and-data/retrieving-data">&lt; Retrieving data</a>
+    <a href="docs/%%version%%/forms-and-data/session">Session &gt;</a>
 </div>

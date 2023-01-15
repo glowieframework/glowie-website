@@ -39,6 +39,6 @@ _Example_
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/extra/internationalization"><- Internationalization</a>
-    <a href="docs/%%version%%/extra/skeltch">Skeltch -></a>
+    <a href="docs/%%version%%/extra/internationalization">&lt; Internationalization</a>
+    <a href="docs/%%version%%/extra/skeltch">Skeltch &gt;</a>
 </div>

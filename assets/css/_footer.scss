@@ -12,6 +12,10 @@ footer {
         &:hover {
             color: var(--color-soft);
             text-decoration: none;
+
+            @media (prefers-color-scheme: dark) {
+                color: lightgray;
+            }
         }
     }
 

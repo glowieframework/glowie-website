@@ -1,4 +1,8 @@
 # Middlewares
+
+[toc]
+
+### Introduction
 A middleware is a mechanism designed to protect routes and filter incoming requests to your application. This means, before entering a controller and calling an action, the middleware will perform some tasks to ensure that this process is allowed, and then tell Glowie router to continue or not the execution.
 
 _Example:_ Authentication. You have an admin page that only logged in users are allowed to access. With a middleware you can protect this restricted areas to properly check if the user is logged in before entering them. If he is not, the user is redirected back to the login page.
@@ -180,7 +184,7 @@ _Example_
 ?>
 ```
 
-### init()
+### The `init()` method
 Every middleware can have an optional `init()` method. If this method exists, it will be called before the middleware handler.
 
 This way you create common functions that will be propagated to the whole middleware before anything happens.
@@ -215,6 +219,6 @@ _Example_
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/layouts"><- Layouts</a>
-    <a href="docs/%%version%%/basic-application-modules/request">Request -></a>
+    <a href="docs/%%version%%/basic-application-modules/layouts">&lt; Layouts</a>
+    <a href="docs/%%version%%/basic-application-modules/request">Request &gt;</a>
 </div>

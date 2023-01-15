@@ -17,5 +17,5 @@ Want to help improve this documentation? [Contribute!](https://github.com/glowie
 
 <div class="links">
     <div></div>
-    <a href="docs/%%version%%/getting-started/requirements">Requirements -></a>
+    <a href="docs/%%version%%/getting-started/requirements">Requirements &gt;</a>
 </div>

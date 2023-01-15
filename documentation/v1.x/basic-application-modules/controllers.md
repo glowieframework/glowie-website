@@ -1,4 +1,8 @@
 # Controllers
+
+[toc]
+
+### Introduction
 A controller is the heart of your application. It is responsible for handling user requests and controlling the flow of your app, making the interconnection between all its modules. This means loading graphic interfaces, doing database requests, running business logics and every other awesome functionalities.
 
 ### Creating controllers
@@ -29,7 +33,7 @@ This is the default snippet for a controller file:
 
 Next step is create some actions for your controller, see [Actions](docs/%%version%%/basic-application-modules/actions) for more info.
 
-### BaseController
+### The BaseController
 `BaseController` is a default controller class located in the controllers folder (`app/controllers/BaseController.php`) who is extended by every other controller of your application.
 
 This means you can create any methods and properties in this controller and they can be reused from any other controller. This is useful when creating global functions or properties that need to be accessed from your whole application, removing the need of rewriting code.
@@ -53,6 +57,6 @@ _Example_
 ```
 
 <div class="links">
-    <a href="docs/%%version%%/getting-started/autoloading"><- Autoloading</a>
-    <a href="docs/%%version%%/basic-application-modules/actions">Actions -></a>
+    <a href="docs/%%version%%/getting-started/autoloading">&lt; Autoloading</a>
+    <a href="docs/%%version%%/basic-application-modules/actions">Actions &gt;</a>
 </div>

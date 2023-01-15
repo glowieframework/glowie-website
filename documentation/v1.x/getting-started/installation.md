@@ -1,4 +1,8 @@
 # Installation
+
+[toc]
+
+### Installing Glowie
 To install Glowie and start a fresh new project, from your console use:
 
 ```plaintext
@@ -21,6 +25,6 @@ This will update Glowie core modules to the latest version available.
 **Important!** Glowie follows [Semantic Versioning](https://semver.org) standards, so don't forget to read the [releases changelog](https://github.com/glowieframework/glowie/releases) and be aware of all breaking changes before running any updates.
 
 <div class="links">
-    <a href="docs/%%version%%/getting-started/requirements"><- Requirements</a>
-    <a href="docs/%%version%%/getting-started/basic-mvc-concepts">Basic MVC concepts -></a>
+    <a href="docs/%%version%%/getting-started/requirements">&lt; Requirements</a>
+    <a href="docs/%%version%%/getting-started/basic-mvc-concepts">Basic MVC concepts &gt;</a>
 </div>

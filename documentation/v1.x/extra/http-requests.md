@@ -1,4 +1,8 @@
 # HTTP requests
+
+[toc]
+
+### Introduction
 An HTTP request is a way to "communicate" your application with external sources on the web. Using requests you can call APIs, retrieve data from another websites, among other functionalities.
 
 You can make HTTP requests in a very simple and intuitive way using Glowie `Crawler` class.
@@ -111,6 +115,6 @@ The parameters for this functions are the same from `$crawler->request()`, excep
 If the HTTP request is done successfully (with a 200 response code), Crawler will return the response body as a string, otherwise it returns `false`.
 
 <div class="links">
-    <a href="docs/%%version%%/extra/file-uploads"><- File uploads</a>
-    <a href="docs/%%version%%/extra/migrations">Migrations -></a>
+    <a href="docs/%%version%%/extra/file-uploads">&lt; File uploads</a>
+    <a href="docs/%%version%%/extra/migrations">Migrations &gt;</a>
 </div>

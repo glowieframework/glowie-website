@@ -104,6 +104,15 @@ section.docs {
         margin-top: 30px;
     }
 
+    code {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: inherit;
+
+        &:not(.hljs) {
+            color: var(--color-primary);
+        }
+    }
+
     pre {
         .hljs {
             position: relative;

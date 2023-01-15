@@ -166,7 +166,12 @@ $name = $this->component->name; # or
 $name = $this->component->get('name');
 
 // Checking if a property exists
-$hasName = $this->component->has('name');
+$hasName = $this->component->has('name'); # or
+$hasName = isset($this->component->name);
+
+// Removing a property
+$this->component->remove('name'); # or
+unset($this->component->name);
 ```
 
 ## The component view
@@ -271,4 +276,5 @@ In the controller, the component property will be an array filled with the selec
 $vehicles = $this->component->vehicles; // ['B', 'C']
 ```
 
-## Actions
+----
+_This documentation is currently a work in progress!_

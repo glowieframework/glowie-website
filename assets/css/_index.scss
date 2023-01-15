@@ -118,6 +118,10 @@ section.index-banner {
             margin-left: 10px;
             background: white;
             color: var(--color-primary);
+
+            @media (prefers-color-scheme: dark) {
+                color: var(--color-soft);
+            }
         }
     }
 
@@ -207,6 +211,10 @@ section.index-separator {
             margin-left: 10px;
             background: white;
             color: var(--color-primary);
+
+            @media (prefers-color-scheme: dark) {
+                color: var(--color-soft);
+            }
         }
     }
 

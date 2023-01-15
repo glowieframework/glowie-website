@@ -1,4 +1,8 @@
 # Internationalization
+
+[toc]
+
+### Introduction
 Glowie provides a very simple, yet powerful module to work with multilanguage applications. This is a static class called `Babel`.
 
 ### Creating a language file
@@ -43,6 +47,6 @@ All `Babel::get()` functions (those used without the second parameter) from this
 To retrieve the current active language name, use `Babel::getActiveLanguage()`.
 
 <div class="links">
-    <a href="docs/%%version%%/extra/error-handling"><- Error handling</a>
-    <a href="docs/%%version%%/extra/view-helpers">View Helpers -></a>
+    <a href="docs/%%version%%/extra/error-handling">&lt; Error handling</a>
+    <a href="docs/%%version%%/extra/view-helpers">View Helpers &gt;</a>
 </div>

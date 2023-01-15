@@ -52,7 +52,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/latest/forms-and-data/working-with-databases">
+                            <a href="docs/latest/forms-and-data/databases">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-database"></i>
@@ -94,7 +94,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/latest/extra/mail">
+                            <a href="docs/latest/extra/sending-mail">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-envelope"></i>
@@ -114,7 +114,7 @@
                             </a>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <a href="docs/latest/extra/firefly">
+                            <a href="docs/latest/extra/cli">
                                 <div class="card">
                                     <div class="card-body">
                                         <i class="fas fa-terminal"></i>

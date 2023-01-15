@@ -1,4 +1,8 @@
 # Element
+
+[toc]
+
+### Introduction
 Element is a Glowie generic object instance used to store and handle data. Basically everything data-related in Glowie will use an object of type `Element`. Here you'll find more about this class and how to work with it.
 
 ### Creating an Element
@@ -85,6 +89,6 @@ To delete all data from an Element at once, use `$element->flush()`.
 If you want to delete all data from the Element, but keep some specific properties, use `$element->only()` passing and array of the keys you want to keep.
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/response"><- Response</a>
-    <a href="docs/%%version%%/forms-and-data/retrieving-data">Retrieving data -></a>
+    <a href="docs/%%version%%/basic-application-modules/response">&lt; Response</a>
+    <a href="docs/%%version%%/forms-and-data/retrieving-data">Retrieving data &gt;</a>
 </div>

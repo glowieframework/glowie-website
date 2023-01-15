@@ -1,4 +1,8 @@
 # Views
+
+[toc]
+
+### Introduction
 Views are simple files with HTML content (and preferably little to none simple PHP code) that displays information and visual feedback to the user. Basically, this is what the user "sees" when he is in your application.
 
 A view can be a whole page or fragment of page. This is useful to show common parts of a website (like a header or footer) in multiple pages, since when editing a single file it will reflect the changes dinamically to all pages.
@@ -67,6 +71,6 @@ $this->renderView('about');
 If you want to learn a new way to create dynamic, pretty and professional coded views, take a look at [Skeltch](docs/%%version%%/extra/skeltch), Glowie built-in templating engine.
 
 <div class="links">
-    <a href="docs/%%version%%/basic-application-modules/routes"><- Routes</a>
-    <a href="docs/%%version%%/basic-application-modules/layouts">Layouts -></a>
+    <a href="docs/%%version%%/basic-application-modules/routes">&lt; Routes</a>
+    <a href="docs/%%version%%/basic-application-modules/layouts">Layouts &gt;</a>
 </div>
