@@ -21,7 +21,7 @@
     }
 
     // Gets docs content
-    if(!file_exists($file)) header('Location: https://glowie.tk/404');
+    if(!file_exists($file)) header('Location: https://eugabrielsilva.tk/glowie/404');
     $content = file_get_contents($file);
     $menu = file_get_contents("documentation/{$version}/_menu.md");
     $title = str_replace('# ', '', strtok($content, "\n"));

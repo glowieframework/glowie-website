@@ -8,5 +8,5 @@ RewriteRule ^docs/([a-z0-9\-.]*)/(.*)$ docs.php?version=$1&route=$2 [NC,L]
 RewriteRule ^docs/([a-z0-9\-.]*)$ docs.php?version=$1 [NC,L]
 RewriteRule ^docs$ docs.php [NC,L]
 
-ErrorDocument 403 https://glowie.tk/403
-ErrorDocument 404 https://glowie.tk/404
+ErrorDocument 403 https://eugabrielsilva.tk/glowie/403
+ErrorDocument 404 https://eugabrielsilva.tk/glowie/404

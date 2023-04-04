@@ -154,7 +154,7 @@ public function update(){
 ```
 
 ### Manipulating the component data
-From the component controller, you can manipulate its data through the `$this->component` object. It is a Glowie <a href="https://glowie.tk/docs/latest/forms-and-data/element" target="_blank">Element</a> instance with your component data.
+From the component controller, you can manipulate its data through the `$this->component` object. It is a Glowie <a href="https://eugabrielsilva.tk/glowie/docs/latest/forms-and-data/element" target="_blank">Element</a> instance with your component data.
 
 ```php
 // Setting a property
