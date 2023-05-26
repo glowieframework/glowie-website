@@ -27,6 +27,9 @@ header h3 {
 main a {
   color: #512da8;
 }
+main a:hover {
+  color: #512da8;
+}
 main h2 {
   font-size: 24px;
   font-weight: 600;
@@ -56,4 +59,26 @@ main pre .hljs:hover::-webkit-scrollbar-thumb {
 main pre * {
   font-family: "Roboto Mono", monospace;
   font-weight: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #263238;
+    color: white;
+  }
+  main a {
+    color: #a4c3d3;
+  }
+  main a:hover {
+    color: #a4c3d3;
+  }
+  main code {
+    color: #a4c3d3;
+  }
+  header .logo {
+    filter: grayscale(1) invert(1);
+  }
+  header pre {
+    background-color: #3b414a;
+  }
 }

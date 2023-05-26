@@ -31,6 +31,10 @@ header {
 main {
     a {
         color: #512da8;
+
+        &:hover {
+            color: #512da8;
+        }
     }
 
     h2 {
@@ -72,6 +76,37 @@ main {
         * {
             font-family: 'Roboto Mono', monospace;
             font-weight: inherit;
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #263238;
+        color: white;
+    }
+
+    main {
+        a {
+            color: #a4c3d3;
+
+            &:hover {
+                color: #a4c3d3;
+            }
+        }
+
+        code {
+            color: #a4c3d3;
+        }
+    }
+
+    header {
+        .logo {
+            filter: grayscale(1) invert(1);
+        }
+
+        pre {
+            background-color: #3b414a;
         }
     }
 }

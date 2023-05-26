@@ -131,16 +131,7 @@ section.index-banner .img-banner .anim1 {
   position: absolute;
   top: 10px;
   left: 0;
-  -webkit-animation: anim1 1s linear alternate infinite;
-          animation: anim1 1s linear alternate infinite;
-}
-@-webkit-keyframes anim1 {
-  from {
-    top: 0px;
-  }
-  to {
-    top: 10px;
-  }
+  animation: anim1 1s linear alternate infinite;
 }
 @keyframes anim1 {
   from {
@@ -164,16 +155,7 @@ section.index-banner .img-banner .anim4 {
   position: absolute;
   top: 50px;
   right: 0;
-  -webkit-animation: anim4 1s linear alternate infinite;
-          animation: anim4 1s linear alternate infinite;
-}
-@-webkit-keyframes anim4 {
-  from {
-    right: 0px;
-  }
-  to {
-    right: 10px;
-  }
+  animation: anim4 1s linear alternate infinite;
 }
 @keyframes anim4 {
   from {
@@ -197,7 +179,6 @@ section.index-banner pre {
   padding: 10px 25px;
   display: block;
   width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content;
   max-width: 100%;
 }
@@ -212,16 +193,7 @@ section.index-banner h1 {
   color: var(--color-strong);
   border-right: 5px solid var(--color-primary);
   display: inline;
-  -webkit-animation: blink 1s step-end infinite;
-          animation: blink 1s step-end infinite;
-}
-@-webkit-keyframes blink {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--color-primary);
-  }
+  animation: blink 1s step-end infinite;
 }
 @keyframes blink {
   from, to {
@@ -303,9 +275,9 @@ section.index-banner .fa-ul li {
 }
 @media (max-width: 1199px) {
   section.index-banner .img-banner .anim1,
-section.index-banner .img-banner .anim2,
-section.index-banner .img-banner .anim3,
-section.index-banner .img-banner .anim4 {
+  section.index-banner .img-banner .anim2,
+  section.index-banner .img-banner .anim3,
+  section.index-banner .img-banner .anim4 {
     transform: scale(0.8);
   }
 }
@@ -516,7 +488,6 @@ section.docs-header .version {
   background-color: white;
   font-size: 13px;
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 2px 5px;

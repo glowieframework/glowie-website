@@ -8,7 +8,7 @@ $content = $parser->text(file_get_contents('docs.md'));
 
 <head>
     <title>Reactables by Glowie</title>
-    <base href="<?= $_SERVER['HTTP_HOST'] == 'localhost' ? '/glowie-website/reactables/' : '/reactables/'; ?>">
+    <base href="<?= '/' . trim(dirname($_SERVER['PHP_SELF']), '/\\') . '/'; ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css">
