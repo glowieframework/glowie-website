@@ -256,7 +256,7 @@ _Example_
 ```php
 use Glowie\Models\Users;
 $model = new Users();
-$user = $model->findBy('email', 'glowie@eugabrielsilva.tk'); // Returns first row with email field = "glowie@eugabrielsilva.tk"
+$user = $model->findBy('email', 'glowie@gabrielsilva.dev.br'); // Returns first row with email field = "glowie@gabrielsilva.dev.br"
 ```
 
 You can also use an associative array of fields/values to match from the table.
@@ -266,7 +266,7 @@ _Example_
 use Glowie\Models\Users;
 $model = new Users();
 $user = $model->findBy([
-    'email' => 'glowie@eugabrielsilva.tk',
+    'email' => 'glowie@gabrielsilva.dev.br',
     'enabled' => 1
 ]);
 ```
@@ -313,7 +313,7 @@ use Glowie\Models\Users;
 $model = new Users();
 $users->create([
     'name' => 'Glowie'
-    'email' => 'glowie@eugabrielsilva.tk'
+    'email' => 'glowie@gabrielsilva.dev.br'
 ]);
 ```
 
@@ -331,7 +331,7 @@ $model = new Users();
 $users->updateOrCreate([
     'id' => 1,
     'name' => 'Glowie'
-    'email' => 'glowie@eugabrielsilva.tk'
+    'email' => 'glowie@gabrielsilva.dev.br'
 ]);
 ```
 

@@ -17,10 +17,10 @@
                             <a href="docs" class="nav-link <?= $page == 'docs' ? 'active' : '' ?>">Documentation</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://github.com/glowieframework" class="nav-link">GitHub</a>
+                            <a href="https://github.com/glowieframework" target="_blank" class="nav-link">GitHub</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://github.com/glowieframework/glowie/discussions" class="nav-link">Support</a>
+                            <a href="https://github.com/glowieframework/glowie/discussions" target="_blank" class="nav-link">Support</a>
                         </li>
                     </ul>
                 </div>

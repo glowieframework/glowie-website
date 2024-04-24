@@ -1,6 +1,6 @@
 <section class="docs-header">
     <div class="container">
-        <a href="docs"><h1>Documentation</h1></a>
+        <a href="docs"><h1>Documentation <small>(wip)</small></h1></a>
         <a class="version dropdown-toggle">
             version <strong><?=$version?></strong>
             <?=$version == $lastVersion ? '<span>(latest)</span>' : ''?>

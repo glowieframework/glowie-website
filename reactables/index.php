@@ -17,6 +17,7 @@ $content = $parser->text(file_get_contents('docs.md'));
     <meta name="robots" content="index,follow">
     <link rel="shortcut icon" href="favicon-react.png">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="color-scheme" content="dark light">
 </head>
 
 <body>

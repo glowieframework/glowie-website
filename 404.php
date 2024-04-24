@@ -11,7 +11,7 @@
                     <img src="assets/images/404.png">
                     <a class="attrib" href="http://www.freepik.com">Designed by pikisuperstar / Freepik</a>
                     <h3>It looks like the page you were looking for was not found</h3>
-                    <a class="button" href="https://eugabrielsilva.tk/glowie"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go Back</a>
+                    <a class="button" href="https://gabrielsilva.dev.br/glowie"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;Go Back</a>
                 </div>
             </section>
         </main>

@@ -1,24 +1,6 @@
 <?php
 
-if (class_exists('ParsedownExtra')) {
-    class DynamicParent extends \ParsedownExtra
-    {
-        public function __construct()
-        {
-            parent::__construct();
-        }
-    }
-} else {
-    class DynamicParent extends \Parsedown
-    {
-        public function __construct()
-        {
-            //
-        }
-    }
-}
-
-class ParsedownToC extends DynamicParent
+class ParsedownToC extends ParsedownExtra
 {
     /**
      * ------------------------------------------------------------------------
@@ -82,7 +64,7 @@ class ParsedownToC extends DynamicParent
     protected function blockHeader($Line)
     {
         // Use parent blockHeader method to process the $Line to $Block
-        $Block = DynamicParent::blockHeader($Line);
+        $Block = ParsedownExtra::blockHeader($Line);
 
         if (!empty($Block)) {
             // Get the text of the heading
@@ -127,7 +109,7 @@ class ParsedownToC extends DynamicParent
     protected function blockSetextHeader($Line, array $Block = null)
     {
         // Use parent blockHeader method to process the $Line to $Block
-        $Block = DynamicParent::blockSetextHeader($Line, $Block);
+        $Block = ParsedownExtra::blockSetextHeader($Line, $Block);
 
         if (!empty($Block)) {
             // Get the text of the heading
@@ -162,7 +144,7 @@ class ParsedownToC extends DynamicParent
 
     /**
      * Parses the given markdown string to an HTML string but it leaves the ToC
-     * tag as is. It's an alias of the parent method "\DynamicParent::text()".
+     * tag as is. It's an alias of the parent method "\ParsedownExtra::text()".
      *
      * @param  string $text  Markdown string to be parsed.
      * @return string        Parsed HTML string.
@@ -170,7 +152,7 @@ class ParsedownToC extends DynamicParent
     public function body($text) : string
     {
         $text = $this->encodeTagToHash($text);   // Escapes ToC tag temporary
-        $html = DynamicParent::text($text);      // Parses the markdown text
+        $html = ParsedownExtra::text($text);      // Parses the markdown text
         $html = $this->decodeTagFromHash($html); // Unescape the ToC tag
 
         return $html;

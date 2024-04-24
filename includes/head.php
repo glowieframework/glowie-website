@@ -10,7 +10,8 @@
 <meta name="robots" content="index,follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://eugabrielsilva.tk/glowie/">
+<meta property="og:url" content="https://gabrielsilva.dev.br/glowie/">
 <meta property="og:title" content="Glowie | Powerful and lightweight PHP framework">
 <meta property="og:description" content="Glowie is a PHP framework designed to be as light, fast and powerful as possible for developing applications and dynamic websites the easiest way">
-<meta property="og:image" content="https://eugabrielsilva.tk/glowie/assets/images/ogicon.png">
+<meta property="og:image" content="https://gabrielsilva.dev.br/glowie/assets/images/ogicon.png">
+<meta name="color-scheme" content="dark light">
