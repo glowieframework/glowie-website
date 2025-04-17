@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+header {
+    .menu {
+        position: fixed;
+        right: 2rem;
+        top: 2rem;
+        display: flex;
+        z-index: 5;
+
+        a {
+            font-size: 1rem;
+        }
+    }
+}
+
+section.hero {
+    .logo {
+        filter: brightness(100);
+    }
+
+    code {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 0.7rem 1rem;
+        border-radius: calc(var(--radius) + 4px);
+        background-color: rgb(24 24 27);
+        font-family: 'Geist Mono', monospace;
+
+        span {
+            color: var(--bs-gray-400);
+        }
+
+        .btn-copy {
+            box-shadow: none !important;
+            padding: 0.7rem !important;
+        }
+
+        .btn-copy:not(:hover) {
+            background-color: rgb(24 24 27);
+            color: var(--bs-gray-400);
+        }
+    }
+
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+}
+
+section.copyright {
+    position: fixed;
+    bottom: 3rem;
+    width: 100%;
+    text-align: center;
+}
