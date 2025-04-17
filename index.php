@@ -36,14 +36,14 @@ function asset($file)
     <header>
         <div class="menu">
             <a class="btn btn-link" href="./">Home</a>
-            <a class="btn btn-link" href="./docs">Documentation</a>
+            <a class="btn btn-link" href="./docs" target="_blank">Documentation</a>
             <a class="btn btn-link" href="https://github.com/glowieframework" target="_blank">GitHub</a>
             <a class="btn btn-link" href="https://github.com/glowieframework/glowie/discussions" target="_blank">Support</a>
         </div>
     </header>
 
     <section class="screen-centered hero">
-        <img src="<?= asset('images/logo.png') ?>" class="logo">
+        <img src="<?= asset('images/logo-dark.png') ?>" class="logo">
 
         <h1>The only web framework <br> you'll ever need.</h1>
 
@@ -56,7 +56,7 @@ function asset($file)
         </code>
 
         <div class="flex mt-4">
-            <a href="./docs" class="btn">Documentation</a>
+            <a href="./docs" target="_blank" class="btn">Documentation</a>
             <a href="https://github.com/glowieframework/glowie" target="_blank" class="btn btn-outline">GitHub</a>
         </div>
     </section>

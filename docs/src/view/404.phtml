@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title><?= $title; ?></title>
+    <base href="<?= $base_url; ?>">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- CSS plugins -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css">
+
+    <!-- ButterDocs CSS -->
+    <link rel="stylesheet" href="assets/css/themes/light.css" id="theme-light">
+    <link rel="stylesheet" href="assets/css/themes/dark.css" id="theme-dark" disabled>
+    <link rel="stylesheet" href="assets/css/butterdocs.css">
+</head>
+
+<body>
+    <section class="not-found">
+        <section class="inner">
+            <h1>404</h1>
+            <h3><?= get_lang('not_found', 'Page not found'); ?></h3>
+            <a href="">
+                <i class="fas fa-chevron-left"></i>
+                <?= get_lang('back', 'Back to docs'); ?>
+            </a>
+        </section>
+    </section>
+
+    <!-- JS plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+
+    <!-- ButterDocs JS -->
+    <script src="assets/js/butterdocs.js"></script>
+</body>
+
+</html>

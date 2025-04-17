@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
+html {
+  font-size: 16px;
+}
+
 header .menu {
   position: fixed;
   right: 2rem;
@@ -10,9 +14,6 @@ header .menu a {
   font-size: 1rem;
 }
 
-section.hero .logo {
-  filter: brightness(100);
-}
 section.hero code {
   display: flex;
   align-items: center;
@@ -43,4 +44,21 @@ section.copyright {
   bottom: 3rem;
   width: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  header .menu {
+    width: 100%;
+    right: 0;
+    justify-content: center;
+  }
+  section.hero .logo {
+    height: 4rem;
+  }
+  section.hero h1 {
+    font-size: 2rem;
+  }
 }

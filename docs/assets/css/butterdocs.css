@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-color);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+section.layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+section.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--header-bg-color);
+    padding: 15px 60px;
+    text-align: center;
+    display: none;
+    font-size: 18px;
+}
+
+section.header a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section.header .menu-button {
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 10px);
+    font-size: 20px;
+}
+
+section.header .menu-edit {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 10px);
+    font-size: 20px;
+}
+
+section.edit {
+    position: fixed;
+    right: 0;
+    top: 30px;
+}
+
+section.edit a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 10px 20px;
+    font-size: 13px;
+    line-height: 1.1;
+}
+
+section.edit i {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+section.menu {
+    flex: 0 0 250px;
+    background-color: var(--menu-bg-color);
+    border-right: 1px solid var(--menu-border-color);
+    overflow-y: auto;
+    padding: 30px 20px;
+    font-size: 14px;
+    transition: 0.3s all;
+}
+
+section.menu:hover::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+}
+
+section.menu .logo,
+section.menu .logo-dark {
+    height: 45px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: auto;
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    section.menu .logo {
+        display: none;
+    }
+
+    section.menu .logo-dark {
+        display: block;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    section.menu .logo {
+        display: block;
+    }
+
+    section.menu .logo-dark {
+        display: none;
+    }
+}
+
+section.menu .dropdown {
+    margin: 15px 0;
+}
+
+section.menu .dropdown span {
+    color: var(--secondary-color);
+    font-size: 12px;
+}
+
+section.menu .dropdown .dropdown-toggle {
+    cursor: pointer;
+}
+
+section.menu .dropdown-menu a {
+    font-size: 14px;
+}
+
+section.menu h3 {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+section.menu a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section.menu .search-bar input {
+    width: 100%;
+    border-radius: 4px;
+    max-width: 300px;
+    outline: none;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px 15px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+section.menu .dropdown-menu {
+    background-color: var(--bg-color);
+}
+
+section.content {
+    padding: 50px 80px;
+    overflow-y: auto;
+    flex: 0 1 100%;
+    transition: 0.3s all;
+}
+
+section.content:hover::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+}
+
+section.content a {
+    color: var(--primary-color);
+}
+
+section.content img {
+    max-width: 100%;
+}
+
+section.content code:not(.hljs) {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+section.content table {
+    width: 100%;
+}
+
+section.content table thead th {
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+section.content table tbody tr:nth-of-type(odd) {
+    background-color: var(--code-block-color);
+}
+
+section.content table tbody td {
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--menu-border-color);
+}
+
+section.content blockquote {
+    background-color: var(--code-block-color);
+    padding: 10px 20px;
+    border-left: 5px solid var(--primary-color);
+}
+
+section.content blockquote p {
+    margin-bottom: 0;
+}
+
+section.content h1 {
+    font-weight: 500;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+section.content h2 {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+section.content h3 {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+section.content h4 {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-top: 30px;
+}
+
+section.content h5,
+h6 {
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 30px;
+}
+
+section.content pre * {
+    font-weight: inherit;
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+section.copyright {
+    font-size: 12px;
+}
+
+section.copyright hr {
+    margin: 35px 0 20px;
+}
+
+section.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+section.not-found h1 {
+    color: var(--primary-color);
+    font-size: 10em;
+    font-weight: 300;
+}
+
+section.not-found h3 {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+section.not-found a {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+section.not-found a i {
+    margin-right: 7px;
+}
+
+@media (max-width: 991px) {
+    body {
+        font-size: 14px;
+    }
+
+    section.edit {
+        display: none;
+    }
+
+    section.menu {
+        position: fixed;
+        z-index: 1;
+        left: -100%;
+        top: 0;
+        width: 90%;
+        height: 100%;
+        padding: 10px 20px;
+        padding-top: 67px;
+    }
+
+    section.menu.show {
+        left: 0;
+    }
+
+    section.menu .logo,
+    section.menu .logo-dark {
+        display: none;
+    }
+
+    section.content {
+        padding: 40px 30px;
+        padding-top: 87px;
+    }
+
+    section.header {
+        display: block;
+        z-index: 2;
+    }
+
+    section.not-found {
+        font-size: 13px;
+    }
+
+    section.not-found h1 {
+        font-size: 7em;
+    }
+
+    section.not-found a {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+}
