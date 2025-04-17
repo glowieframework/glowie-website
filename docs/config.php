@@ -27,7 +27,7 @@ return [
     'git_edit' => true,
 
     // GitHub edit URL (including branch)
-    'git_url' => 'https://github.com/glowieframework/glowie-website-new/edit/master/docs',
+    'git_url' => 'https://github.com/glowieframework/glowie-website/tree/main/docs',
 
     // Enable single line breaks
     'md_breaks' => true,

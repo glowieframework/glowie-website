@@ -1,1 +1,5 @@
 Options -Indexes -MultiViews
+
+RewriteEngine On
+RewriteRule ^reactables/?$ /docs/v1.x/plugins/reactables [R=301,L]
+RewriteRule ^deploy/?$ /docs/v1.x/plugins/deploy [R=301,L]

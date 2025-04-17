@@ -45,3 +45,9 @@
 - [Skeleton](extra/skeleton)
 - [Sending mail](extra/sending-mail)
 - [Util](extra/util)
+
+### Plugins
+- [Reactables](plugins/reactables)
+- [Deploy](plugins/deploy)
+- [Sentry](plugins/sentry)
+- [Debugger](plugins/debugger)
