@@ -36,27 +36,27 @@ function asset($file)
     <header>
         <div class="menu">
             <a class="btn btn-link" href="./">Home</a>
-            <a class="btn btn-link" href="./docs" target="_blank">Documentation</a>
+            <a class="btn btn-link" href="./docs">Documentation</a>
             <a class="btn btn-link" href="https://github.com/glowieframework" target="_blank">GitHub</a>
             <a class="btn btn-link" href="https://github.com/glowieframework/glowie/discussions" target="_blank">Support</a>
         </div>
     </header>
 
-    <section class="screen-centered hero">
+    <section class="hero">
         <img src="<?= asset('images/logo-dark.png') ?>" class="logo">
 
-        <h1>The only web framework <br> you'll ever need.</h1>
+        <h1 class="typewritter">The only web framework <br> you'll ever need.</h1>
 
         <code>
-            <span>$</span> composer create-project glowieframework/glowie
-
+            <span>$</span>
+            <div class="block">composer create-project glowieframework/glowie</div>
             <button class="btn btn-ghost btn-copy">
                 <i class="far fa-clipboard"></i>
             </button>
         </code>
 
         <div class="flex mt-4">
-            <a href="./docs" target="_blank" class="btn">Documentation</a>
+            <a href="./docs" class="btn">Documentation</a>
             <a href="https://github.com/glowieframework/glowie" target="_blank" class="btn btn-outline">GitHub</a>
         </div>
     </section>
