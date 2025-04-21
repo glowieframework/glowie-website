@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: var(--font);
+    font-family: var(--font), 'Segoe UI', 'Tahoma', 'Ubuntu', sans-serif;
     background: var(--bg-color);
     color: var(--text-color);
     font-size: 16px;
@@ -253,7 +253,7 @@ h6 {
 
 section.content pre * {
     font-weight: inherit;
-    font-family: var(--code-font) !important;
+    font-family: var(--code-font), 'Courier', 'Consolas', monospace !important;
 }
 
 section.copyright {
