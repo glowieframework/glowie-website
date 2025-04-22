@@ -22,7 +22,7 @@ $meta =  [
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, maximum-scale=1.0, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="shortcut icon" href="<?= asset('images/favicon.png') ?>">
     <title><?= $meta['title'] ?></title>
 
@@ -63,14 +63,14 @@ $meta =  [
     </header>
 
     <section class="hero">
-        <img src="<?= asset('images/logo-dark.png') ?>" class="logo">
+        <img src="<?= asset('images/logo-dark.png') ?>" class="logo" alt="Glowie logo">
 
         <h1 class="typewritter">The only web framework <br> you'll ever need.</h1>
 
         <code>
             <span>$</span>
             <div class="block">composer create-project glowieframework/glowie</div>
-            <button class="btn btn-ghost btn-copy">
+            <button class="btn btn-ghost btn-copy" aria-label="Copy" title="Copy">
                 <i class="far fa-clipboard"></i>
             </button>
         </code>
