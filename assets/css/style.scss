@@ -12,17 +12,15 @@ section.hero {
     overflow: hidden;
 }
 
-header {
-    .menu {
-        position: fixed;
-        right: 2rem;
-        top: 2rem;
-        display: flex;
-        z-index: 5;
+header .menu {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    z-index: 5;
 
-        a {
-            font-size: 1rem;
-        }
+    a {
+        font-size: 1rem;
     }
 }
 
@@ -44,7 +42,7 @@ section.hero {
         gap: 0.7rem;
         padding: 0.7rem 1rem;
         border-radius: calc(var(--radius) + 4px);
-        background-color: rgb(24 24 27);
+        background-color: #18181b;
         font-family: 'Geist Mono', monospace;
         max-width: 100%;
 
@@ -68,11 +66,11 @@ section.hero {
         .btn-copy {
             box-shadow: none !important;
             padding: 0.7rem !important;
-        }
 
-        .btn-copy:not(:hover) {
-            background-color: rgb(24 24 27);
-            color: var(--bs-gray-400);
+            &:not(:hover) {
+                background-color: #18181b;
+                color: var(--bs-gray-400);
+            }
         }
     }
 
@@ -83,7 +81,7 @@ section.hero {
     }
 }
 
-section.copyright {
+footer .copyright {
     position: fixed;
     bottom: 3rem;
     width: 100%;
@@ -95,12 +93,10 @@ section.copyright {
         font-size: 14px;
     }
 
-    header {
-        .menu {
-            width: 100%;
-            right: 0;
-            justify-content: center;
-        }
+    header .menu {
+        width: 100%;
+        right: 0;
+        justify-content: center;
     }
 
     section.hero {

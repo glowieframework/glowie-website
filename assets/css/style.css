@@ -39,7 +39,7 @@ section.hero code {
   gap: 0.7rem;
   padding: 0.7rem 1rem;
   border-radius: calc(var(--radius) + 4px);
-  background-color: rgb(24, 24, 27);
+  background-color: #18181b;
   font-family: "Geist Mono", monospace;
   max-width: 100%;
 }
@@ -62,7 +62,7 @@ section.hero code .btn-copy {
   padding: 0.7rem !important;
 }
 section.hero code .btn-copy:not(:hover) {
-  background-color: rgb(24, 24, 27);
+  background-color: #18181b;
   color: var(--bs-gray-400);
 }
 section.hero h1 {
@@ -71,7 +71,7 @@ section.hero h1 {
   max-width: 50rem;
 }
 
-section.copyright {
+footer .copyright {
   position: fixed;
   bottom: 3rem;
   width: 100%;
