@@ -48,8 +48,7 @@ $meta =  [
     <meta property="twitter:image:height" content="256">
     <meta name="color-scheme" content="dark light">
 
-    <link rel="stylesheet" href="<?= asset('css/shadstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?= asset('css/style.min.css') ?>">
+    <link rel="stylesheet" href="<?= asset('css/dist/glowie.min.css') ?>">
 </head>
 
 <body>
@@ -63,9 +62,9 @@ $meta =  [
     </header>
 
     <section class="hero">
-        <img src="<?= asset('images/logo-dark.png') ?>" class="logo" alt="Glowie logo">
+        <h1 class="logo">glowie</h1>
 
-        <h1 class="typewritter">The only web framework <br> you'll ever need.</h1>
+        <h2 class="typewritter">The only web framework <br> you'll ever need.</h2>
 
         <code>
             <span>$</span>
@@ -89,7 +88,7 @@ $meta =  [
         </div>
     </footer>
 
-    <script src="<?= asset('js/script.min.js') ?>"></script>
+    <script src="<?= asset('js/dist/glowie.min.js') ?>"></script>
 </body>
 
 </html>
