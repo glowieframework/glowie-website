@@ -47,8 +47,7 @@ php firefly deploy:create
 
 When you publish the plugin files, a configuration file named `Deploy.php` will be created in your `app/config` folder. This file is responsible for defining your deploy servers and notification settings.
 
-> [!IMPORTANT]
-> Never store sensitive credentials (like passwords or API keys) directly in this file. Always use environment variables.
+> [!CAUTION] Never store sensitive credentials (like passwords or API keys) directly in this file. Always use environment variables.
 
 ### Servers
 
@@ -264,8 +263,7 @@ Then, in your task, simply call:
 $this->notifyPush('Write a message to your phone here!');
 ```
 
-> [!IMPORTANT]
-> Alertzy has a limit of **100 push notifications per day**. After that limit is reached, notifications will stop being delivered.
+> [!NOTE] Alertzy has a limit of 100 push notifications per day. After that limit is reached, notifications will stop being delivered.
 
 ## Credits
 
