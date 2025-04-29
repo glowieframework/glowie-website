@@ -74,8 +74,8 @@ section.hero {
 
     h1 {
         font-family: 'Poppins', sans-serif;
-        font-size: 4.5rem;
-        font-weight: 500;
+        font-size: 5rem;
+        font-weight: 400;
         letter-spacing: -2px;
         margin: 0;
     }
@@ -94,11 +94,13 @@ footer .copyright {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     html {
         font-size: 14px;
     }
+}
 
+@media screen and (max-width: 600px) {
     header .menu {
         width: 100%;
         right: 0;
