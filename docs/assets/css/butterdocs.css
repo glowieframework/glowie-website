@@ -1,3 +1,5 @@
+/* This is the core theme for ButterDocs. You do not need to edit this file, you can customize the theme in the CSS files inside the "themes" folder. */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -189,6 +191,38 @@ section.content img {
 section.content code:not(.hljs) {
     color: var(--primary-color);
     font-weight: 600;
+}
+
+section.content code.hljs {
+    position: relative;
+}
+
+section.content code.hljs .btn-copy-code {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid var(--text-color);
+    border-radius: 3px;
+    font-size: 16px;
+    opacity: 0.3;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+section.content code.hljs:hover .btn-copy-code {
+    opacity: 0.8;
+}
+
+section.content code.hljs .btn-copy-code i:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+section.content code.hljs .btn-copy-code i.fas:before {
+    font-weight: 700;
 }
 
 section.content table {

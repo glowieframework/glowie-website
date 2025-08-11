@@ -8,4 +8,4 @@
 */
 
 // Load the bootstrapper
-require_once('src/bootstrapper.php');
+require_once(__DIR__ . '/src/bootstrapper.php');

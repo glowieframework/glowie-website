@@ -10,18 +10,18 @@
 */
 
 // Include helpers
-require_once('core/_helpers.php');
+require_once(__DIR__ . '/core/_helpers.php');
 
 // Include dependencies
-require_once('core/Parsedown.php');
-require_once('core/ParsedownExtra.php');
-require_once('core/ParsedownExtended.php');
+require_once(__DIR__ . '/core/Parsedown.php');
+require_once(__DIR__ . '/core/ParsedownExtra.php');
+require_once(__DIR__ . '/core/ParsedownExtended.php');
 
 // Include ButterDocs core
-require_once('core/ButterDocs.php');
+require_once(__DIR__ . '/core/ButterDocs.php');
 
 // Include the global configuration file
-$config = require_once('config.php');
+$config = require_once(__DIR__ . '/../config.php');
 
 // Unleash ButterDocs!
 $app = new ButterDocs($config);

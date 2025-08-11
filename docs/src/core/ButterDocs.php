@@ -130,7 +130,7 @@ class ButterDocs
         // Validate docs content
         if (!file_exists($file)) {
             http_response_code(404);
-            return $this->view('404.phtml', [
+            return view('404', [
                 'title' => get_lang('not_found', 'Page not found') . ' | ' . get_config('application', 'ButterDocs'),
                 'base_url' => $this->baseUrl
             ]);
@@ -146,7 +146,7 @@ class ButterDocs
         $content = $this->doReplaces($content);
 
         // Includes the main view
-        return $this->view('main.phtml', [
+        return view('main', [
             'title' => $title . ' | ' . get_config('application', 'ButterDocs'),
             'menu' => $this->getMenu(),
             'content' => $content,
@@ -214,10 +214,10 @@ class ButterDocs
         }
 
         // Includes the search view
-        return $this->view('search.phtml', [
+        return view('search', [
             'title' => get_lang('search_results', 'Search Results') . ' | ' . get_config('application', 'ButterDocs'),
             'menu' => $this->getMenu(),
-            'results' => $matches,
+            'results' => array_values($matches),
             'search' => $query,
             'application' => get_config('application', 'ButterDocs'),
             'base_url' => $this->baseUrl,
@@ -292,19 +292,6 @@ class ButterDocs
 
         // Returns the result
         return $result;
-    }
-
-    /**
-     * Renders a view file.
-     * @param string $filename View filename.
-     * @param array $parameters (Optional) Associative array of parameters to pass to the view.
-     */
-    public function view(string $filename, array $parameters = [])
-    {
-        ob_start();
-        extract($parameters);
-        include('src/view/' . $filename);
-        echo ob_get_clean();
     }
 
     /**

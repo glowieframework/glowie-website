@@ -48,6 +48,7 @@ $meta =  [
     <meta property="twitter:image:height" content="256">
     <meta name="color-scheme" content="dark light">
 
+    <link rel="stylesheet" href="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.css">
     <link rel="stylesheet" href="<?= asset('css/dist/glowie.min.css') ?>">
 </head>
 
@@ -66,13 +67,12 @@ $meta =  [
 
         <h2 class="typewritter">The only web framework <br> you'll ever need.</h2>
 
-        <code>
-            <span>$</span>
-            <div class="block">composer create-project glowieframework/glowie</div>
-            <button class="btn btn-ghost btn-copy" aria-label="Copy" title="Copy">
+        <div class="code single-line">
+            <code><span class="text-muted">$</span> <span id="code">composer create-project glowieframework/glowie</span></code>
+            <button class="btn btn-ghost btn-copy position-relative" data-ss-copy="#code" data-ss-tooltip="Copy">
                 <i class="far fa-clipboard"></i>
             </button>
-        </code>
+        </div>
 
         <div class="flex mt-4">
             <a href="./docs" class="btn">Documentation</a>
@@ -88,6 +88,7 @@ $meta =  [
         </div>
     </footer>
 
+    <script src="https://eugabrielsilva.github.io/shadstrap/dist/shadstrap.min.js"></script>
     <script src="<?= asset('js/dist/glowie.min.js') ?>"></script>
 </body>
 

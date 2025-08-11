@@ -1,0 +1,9 @@
+<section class="header">
+    <a class="menu-button toggle-sidenav"><i class="fas fa-bars"></i></a>
+    <a href="../<?= $version; ?>">
+        <?= $application; ?>
+    </a>
+    <?php if (!empty($git)) : ?>
+        <a href="<?= $git; ?>" target="_blank" class="menu-edit"><i class="fas fa-pencil-alt"></i></a>
+    <?php endif; ?>
+</section>

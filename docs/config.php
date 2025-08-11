@@ -13,6 +13,9 @@ return [
 
     // Application title
     'application' => 'Glowie',
+    
+    // CSS theme,
+    'theme' => 'shadcn',
 
     // Documentation starting point file
     'start_point' => 'README',

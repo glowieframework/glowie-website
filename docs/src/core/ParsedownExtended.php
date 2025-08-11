@@ -70,7 +70,7 @@ class ParsedownExtended extends ParsedownExtra
         }
 
         // Support for GitHub alerts, made by Meng-Heng and improved by Gabriel Silva
-        $this->BlockTypes['>'][] = 'Alert';
+        $this->BlockTypes['>'][] = 'alert';
 
         // Initialize default options
         $this->options = $this->defaultOptions;
@@ -991,36 +991,84 @@ class ParsedownExtended extends ParsedownExtra
         Support for GitHub alerts, made by Meng-Heng and improved by Gabriel Silva
         source: https://github.com/Meng-Heng/WebsiteAlerts
     */
-    protected function blockQuote($block)
+    protected function blockQuote($Line)
     {
-        try {
-            if (preg_match('/^\>\s*\[\!(IMPORTANT|TIP|NOTE|WARNING|CAUTION)\]\s(.*)/i', $block['text'], $matches)) {
-                $alertType = strtolower($matches[1]);
-                $alertTitle = ucfirst($alertType);
-                $alertContent = ltrim($matches[2]);
+        if (preg_match('/^>[ ]?(.*)/', $Line['text'], $matches)) {
+            $firstLine = $matches[1];
 
-                return $block = array(
-                    'element' => array(
-                        'name' => 'div',
-                        'attributes' => array('class' => "markdown-alert markdown-alert-$alertType"),
-                        'handler' => 'elements',
-                        'text' => array(
-                            array(
-                                'name' => 'p',
-                                'attributes' => array('class' => "markdown-alert-title"),
-                                'text' => $alertTitle,
-                            ),
-                            array(
-                                'name' => 'p',
-                                'text' => $alertContent,
-                            )
-                        )
-                    )
-                );
+            if (preg_match('/^\[\!(IMPORTANT|TIP|NOTE|WARNING|CAUTION)\]\s*$/i', $firstLine, $alertMatch)) {
+                $alertType = strtolower($alertMatch[1]);
+                $alertTitle = ucfirst($alertType);
+
+                return [
+                    'alert' => true,
+                    'alertType' => $alertType,
+                    'alertTitle' => $alertTitle,
+                    'content' => [],
+                ];
             }
-            return parent::blockQuote($block);
-        } catch (Error $e) {
-            return $e;
+
+            return [
+                'element' => [
+                    'name' => 'blockquote',
+                    'handler' => 'lines',
+                    'text' => [$firstLine],
+                ],
+            ];
         }
+    }
+
+    protected function blockQuoteContinue($Line, array $Block)
+    {
+        if (isset($Block['alert']) && $Block['alert']) {
+            if (preg_match('/^>[ ]?(.*)/', $Line['text'], $matches)) {
+                $Block['content'][] = $matches[1];
+                return $Block;
+            }
+        }
+
+        if (preg_match('/^>[ ]?(.*)/', $Line['text'], $matches)) {
+            if (isset($Block['interrupted'])) {
+                $Block['element']['text'][] = '';
+                unset($Block['interrupted']);
+            }
+
+            $Block['element']['text'][] = $matches[1];
+            return $Block;
+        }
+
+        if (!isset($Block['interrupted'])) {
+            $Block['element']['text'][] = $Line['text'];
+            return $Block;
+        }
+    }
+
+    protected function blockQuoteComplete(array $Block)
+    {
+        if (isset($Block['alert']) && $Block['alert']) {
+            $alertContent = implode("\n", $Block['content']);
+
+            return [
+                'element' => [
+                    'name' => 'div',
+                    'attributes' => ['class' => "markdown-alert markdown-alert-{$Block['alertType']}"],
+                    'handler' => 'elements',
+                    'text' => [
+                        [
+                            'name' => 'p',
+                            'attributes' => ['class' => 'markdown-alert-title'],
+                            'text' => $Block['alertTitle'],
+                        ],
+                        [
+                            'name' => 'p',
+                            'handler' => 'line',
+                            'text' => $alertContent,
+                        ],
+                    ],
+                ],
+            ];
+        }
+
+        return $Block;
     }
 }

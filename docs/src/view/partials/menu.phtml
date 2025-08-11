@@ -1,0 +1,32 @@
+<section class="menu">
+    <a href="../<?= $version; ?>">
+        <img src="<?= get_config('logo_file', '../assets/images/logo-dark.png'); ?>" class="logo">
+        <img src="<?= get_config('dark_logo_file', '../assets/images/logo-dark.png'); ?>" class="logo-dark">
+    </a>
+    <?php if (get_config('search', true)) : ?>
+        <form action="search" class="search-bar">
+            <input value="<?= htmlspecialchars($search ?? ''); ?>" type="search" name="q" required placeholder="<?= get_lang('search', 'Search...'); ?>">
+        </form>
+    <?php endif; ?>
+    <div class="dropdown">
+        <a class="dropdown-toggle" data-bs-toggle="dropdown">
+            <?= $version; ?>
+            <?php if ($version == $last_version) : ?>
+                <span><?= get_lang('latest', '(latest)'); ?></span>
+            <?php endif; ?>
+        </a>
+        <ul class="dropdown-menu">
+            <?php foreach ($version_list as $v) : ?>
+                <li>
+                    <a href="../<?= $v; ?>" class="dropdown-item">
+                        <?= $v; ?>
+                        <?php if ($v == $last_version) : ?>
+                            <span><?= get_lang('latest', '(latest)'); ?></span>
+                        <?php endif; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <?= $menu; ?>
+</section>
